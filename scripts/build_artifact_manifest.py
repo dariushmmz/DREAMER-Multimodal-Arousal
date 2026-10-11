@@ -70,6 +70,7 @@ def main() -> None:
         "baseline_commit": "2c7b2fd",
         "restructure_commit": "afc21a8",
         "pipeline_commit": "43ba248",
+        "corrected_results_commit": "8aa7772",
         "entries": entries,
         "pending_after_approval": [
             "results/corrected/dreamer_arousal_3class/base_cnn/*",
@@ -84,4 +85,3 @@ def main() -> None:
 
 if __name__ == "__main__":
     main()
-
