@@ -1,0 +1,39 @@
+# Python and notebook runtime artifacts
+__pycache__/
+*.py[cod]
+.ipynb_checkpoints/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.venv/
+venv/
+
+# IDE and OS metadata
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db
+
+# Large or derived local datasets and archives
+.data/
+.temp/
+.zip/
+data/**
+!data/README.md
+!data/**/README.md
+!data/**/manifest.csv
+
+# Local experiment/runtime artifacts (curated results remain tracked)
+artifacts/
+checkpoints/
+logs/
+*.ckpt
+*.pth
+*.pt
+
+# Secrets and local environment overrides
+.env
+.env.*
+!.env.example
+modal.local.toml
+
