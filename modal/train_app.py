@@ -36,15 +36,18 @@ image = (
 
 data_volume = modal.Volume.from_name(DATA_VOLUME_NAME, create_if_missing=True)
 result_volume = modal.Volume.from_name(RESULT_VOLUME_NAME, create_if_missing=True)
-app = modal.App(APP_NAME)
+app = modal.App(
+    APP_NAME,
+    tags={"project": "StressClassification", "protocol": "dreamer_arousal_v1"},
+)
 
 
 @app.function(
     image=image,
     gpu="L4",
-    cpu=4.0,
-    memory=16_384,
-    timeout=2 * 60 * 60,
+    cpu=2.0,
+    memory=8_192,
+    timeout=90 * 60,
     scaledown_window=10,
     retries=0,
     max_containers=1,
@@ -82,4 +85,3 @@ def train(model_name: str) -> dict:
 @app.local_entrypoint()
 def main(model: str = "base_cnn") -> None:
     print(train.remote(model))
-
