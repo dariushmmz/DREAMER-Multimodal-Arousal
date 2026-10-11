@@ -1,0 +1,8 @@
+model,family,test_accuracy,test_balanced_accuracy,test_f1_macro,test_roc_auc_ovr_macro,status
+knn,classical_ml,0.3901098901098901,0.3159622827495615,0.3020411835021565,0.4578499698133988,completed
+random_forest,classical_ml,0.456043956043956,0.3449078660211355,0.2932632430428784,0.4367236327708048,completed
+logistic_regression,classical_ml,0.3360805860805861,0.2884257973546412,0.2791128837641679,0.4235538591724908,completed
+svm_rbf,classical_ml,0.4523809523809524,0.3274831715822422,0.2533134370311669,0.3945328043994042,completed
+paper_2023_adapted_stacking,classical_ensemble,0.4697802197802198,0.39295312507623265,0.3755142348929601,0.50973399034465,completed
+base_cnn,deep_learning,,,,,pending_modal_cost_approval
+paper_inspired_attention,deep_learning,,,,,pending_modal_cost_approval

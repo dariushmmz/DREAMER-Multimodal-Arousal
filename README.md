@@ -27,3 +27,18 @@ subject-independent classification using the DREAMER EEG and ECG dataset.
 The pre-correction state is preserved by Git commit `2c7b2fd`. Legacy scores
 are retained for traceability but are not valid leakage-free measurements.
 
+## Reproduce local checks and classical experiments
+
+```powershell
+$env:PYTEST_DISABLE_PLUGIN_AUTOLOAD='1'
+python -m pytest
+python scripts/audit_dreamer.py --output-dir data/processed
+python scripts/run_classical.py
+python scripts/run_modality_ablation.py
+python scripts/run_paper_adapted_stacking.py
+python scripts/build_comparison.py
+```
+
+The corrected classical results and their limitations are summarized in
+`.docs/04_performance_and_comparison.md`. Modal commands, execution limits, and
+the approval gate are documented in `modal/README.md`.

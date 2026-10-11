@@ -1,0 +1,12 @@
+model,validation_f1_macro,C,gamma,n_estimators,min_samples_leaf,n_neighbors
+logistic_regression,0.2952408272312036,0.1,,,,
+logistic_regression,0.30997104803789116,1.0,,,,
+logistic_regression,0.3179130952357632,10.0,,,,
+svm_rbf,0.28872427983539095,1.0,scale,,,
+svm_rbf,0.2736447241753644,10.0,scale,,,
+random_forest,0.26467372134038797,,,500.0,1.0,
+random_forest,0.30378338204425165,,,500.0,2.0,
+random_forest,0.3109004041884064,,,500.0,5.0,
+knn,0.3594220863435537,,,,,5.0
+knn,0.3306910440195138,,,,,11.0
+knn,0.3332274182896589,,,,,21.0
