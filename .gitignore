@@ -22,6 +22,15 @@ data/**
 !data/README.md
 !data/**/README.md
 !data/**/manifest.csv
+!data/processed/
+!data/processed/*.csv
+!data/processed/*.json
+data/processed/*.npy
+data/processed/*.npz
+data/processed/*.pkl
+!data/processed/deep_cache/
+data/processed/deep_cache/*
+!data/processed/deep_cache/manifest.json
 
 # Local experiment/runtime artifacts (curated results remain tracked)
 artifacts/
@@ -30,10 +39,10 @@ logs/
 *.ckpt
 *.pth
 *.pt
+*.joblib
 
 # Secrets and local environment overrides
 .env
 .env.*
 !.env.example
 modal.local.toml
-
