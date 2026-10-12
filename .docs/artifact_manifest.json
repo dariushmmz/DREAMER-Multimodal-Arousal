@@ -1,15 +1,19 @@
 {
-  "generated_at_utc": "2026-10-11T14:10:29.448726+00:00",
-  "git_head": "442b70ee0245338c5218d334d09985bc24bf9557",
+  "generated_at_utc": "2026-10-12T12:53:28.146861+00:00",
+  "git_head": "40e4db2dd5172deb3d5bc3e0c5cc4c882cba5c07",
   "baseline_commit": "2c7b2fd",
   "restructure_commit": "afc21a8",
   "pipeline_commit": "43ba248",
   "corrected_results_commit": "8aa7772",
+  "kaggle_workflow_commit": "0509a1e",
+  "probability_normalization_fix_commit": "60b84e8",
+  "base_cnn_results_commit": "7055739",
+  "attention_results_commit": "e035199",
   "entries": [
     {
       "path": ".docs/01_repository_audit.md",
       "size_bytes": 3339,
-      "sha256": "c4a3dc960d4f04d56f197073c3080eb61ed2ba11f5b0175fa60831b4bbf50384",
+      "sha256": "ad4369254ffe66455ed4e97134f233a8fc8954ab8823d1f2e45c1cc7bff0f97a",
       "git_tracked": true
     },
     {
@@ -20,38 +24,38 @@
     },
     {
       "path": ".docs/03_models_and_experiment_configuration.md",
-      "size_bytes": 3346,
-      "sha256": "ad5769c3522b558e34a7e223dff4dfca3f2386559a719978a8721ebbac950709",
+      "size_bytes": 4308,
+      "sha256": "762fb2b1136eb0ff001c48662f357b1a3fc6432a43bc554c726a5d50c3c9ba6d",
       "git_tracked": true
     },
     {
       "path": ".docs/04_performance_and_comparison.md",
-      "size_bytes": 2517,
-      "sha256": "1730053926d5c43d5449fef6af19fc1ae23ee8823f03f305486565d7eb161c41",
+      "size_bytes": 5556,
+      "sha256": "74d3f514a344d035a39efb27c73ee7c2b2f8bce4196641e4b13b63769172ae71",
       "git_tracked": true
     },
     {
       "path": ".docs/05_reference_paper_reproduction_and_differences.md",
-      "size_bytes": 4003,
-      "sha256": "61ce538b3251e6dbc6276f9e35f5fea17de567cdaf43fb6dbd5a54350d0680b5",
+      "size_bytes": 5007,
+      "sha256": "185f516c5500edbd52904735fd483e81e3d0b8b0496ac7186f6ad01bceb10617",
       "git_tracked": true
     },
     {
       "path": ".docs/06_modal_environment.md",
-      "size_bytes": 1601,
-      "sha256": "b92c5c698aa1f7ea51e596fa8c0c8d5c4468cb7e4f5a2b8dc69b5182afd78fcf",
+      "size_bytes": 4254,
+      "sha256": "8911cc0366633299af52f3180c590583856870539e8bbe29cbc4eec5a984e756",
       "git_tracked": true
     },
     {
       "path": ".docs/07_responses_to_reviewers_fa.md",
-      "size_bytes": 11883,
-      "sha256": "58e6e77c7417609543c198afbc444b58bed432cbb317b5d5268dda04fe3c2bfc",
+      "size_bytes": 13725,
+      "sha256": "31da764ca899303bd9f00a2ca18cc9153b5673e9164560100998bbfefb4e62db",
       "git_tracked": true
     },
     {
       "path": ".docs/08_artifact_inventory.md",
-      "size_bytes": 1876,
-      "sha256": "287e0c83d0edf59d4274d865fea3370b12de76845a53d8926d659eb89d83146c",
+      "size_bytes": 3240,
+      "sha256": "b67af173576558e8bf7153d2b833ec3ef4035c81eab1e624836b848b8926d4ba",
       "git_tracked": true
     },
     {
@@ -133,15 +137,87 @@
       "git_tracked": true
     },
     {
+      "path": "kaggle/build_kernels.py",
+      "size_bytes": 5095,
+      "sha256": "342bd9928a290fef6ba71c15487eaed29cbbf527f2fb3349caa0fd74b3b2f90e",
+      "git_tracked": true
+    },
+    {
+      "path": "kaggle/entrypoint.py",
+      "size_bytes": 8434,
+      "sha256": "b420c35f8229172fb44efaf4f7f5ba62f08bfa268f684fd23ff23dc887a7fe7e",
+      "git_tracked": true
+    },
+    {
+      "path": "kaggle/kernels/stressclassification-attention/kernel-metadata.json",
+      "size_bytes": 471,
+      "sha256": "578127a9ec09da2037b3242b7c74ab77db3fc62d5c3c1a783206ce46158149ed",
+      "git_tracked": true
+    },
+    {
+      "path": "kaggle/kernels/stressclassification-attention/notebook.ipynb",
+      "size_bytes": 38987,
+      "sha256": "ca78fa154eb77252b23a799e2322912ba42787ed8970c60bf9210748f42f164e",
+      "git_tracked": true
+    },
+    {
+      "path": "kaggle/kernels/stressclassification-attention/source_manifest.json",
+      "size_bytes": 799,
+      "sha256": "074617c97608ba8228f08888e23f30e574c4be7aa1f1129c79cdde573fd09d21",
+      "git_tracked": true
+    },
+    {
+      "path": "kaggle/kernels/stressclassification-base-cnn/kernel-metadata.json",
+      "size_bytes": 439,
+      "sha256": "89b5c11f3702a071144a96c16a842aec4e5c4c3ecf5af54e480e34ad3cba1514",
+      "git_tracked": true
+    },
+    {
+      "path": "kaggle/kernels/stressclassification-base-cnn/notebook.ipynb",
+      "size_bytes": 38971,
+      "sha256": "3337a8f37bcc9003be795ab91bcc07fcc2d138b5aae3b00fd385a7081da51aba",
+      "git_tracked": true
+    },
+    {
+      "path": "kaggle/kernels/stressclassification-base-cnn/source_manifest.json",
+      "size_bytes": 799,
+      "sha256": "074617c97608ba8228f08888e23f30e574c4be7aa1f1129c79cdde573fd09d21",
+      "git_tracked": true
+    },
+    {
+      "path": "kaggle/kernels/stressclassification-dreamer-cache/kernel-metadata.json",
+      "size_bytes": 407,
+      "sha256": "ade3b6945e03f0ce9c6a371880c5a0327981443ccf16bc22b63a3dfbd2cbab80",
+      "git_tracked": true
+    },
+    {
+      "path": "kaggle/kernels/stressclassification-dreamer-cache/notebook.ipynb",
+      "size_bytes": 38953,
+      "sha256": "1d1d8f4ee27091947197eae36c8cacf91e95c5b1fd140faa1a1ca67f733937b3",
+      "git_tracked": true
+    },
+    {
+      "path": "kaggle/kernels/stressclassification-dreamer-cache/source_manifest.json",
+      "size_bytes": 799,
+      "sha256": "074617c97608ba8228f08888e23f30e574c4be7aa1f1129c79cdde573fd09d21",
+      "git_tracked": true
+    },
+    {
+      "path": "kaggle/README.md",
+      "size_bytes": 1832,
+      "sha256": "37ebe8162e1ccf3849a50c196264d62c855d968f285eb9257da8f6277bd95f60",
+      "git_tracked": true
+    },
+    {
       "path": "modal/README.md",
-      "size_bytes": 1855,
-      "sha256": "637ded7d09856a8984ef91c3e0a2386b11cf59e7716061b981b9ff688f845af1",
+      "size_bytes": 1958,
+      "sha256": "5c1b4f3ea45d0d5e30348ef6cae2b42cf234f208c5933a69cc2d2098d1d4180b",
       "git_tracked": true
     },
     {
       "path": "modal/train_app.py",
-      "size_bytes": 2420,
-      "sha256": "807965f3edf659e161f9c412d315ae9d60a2eacd79862d99d88fa251330862af",
+      "size_bytes": 2501,
+      "sha256": "2a8cdc8f9b27ed437c50149a9946e2c38c8f11625236671031a48a5f71071853",
       "git_tracked": true
     },
     {
@@ -200,8 +276,122 @@
     },
     {
       "path": "README.md",
-      "size_bytes": 1938,
-      "sha256": "907a95c2d14863b1c9e5139a52fe552cc82d11826e6151f195553a58d0066f54",
+      "size_bytes": 2155,
+      "sha256": "e41abade5ca9d7948812907b55858b4e8956bcd2627180a73cfe2a7c9f596b4f",
+      "git_tracked": true
+    },
+    {
+      "path": "results/corrected/dreamer_arousal_3class/base_cnn/artifact_validation.json",
+      "size_bytes": 3074,
+      "sha256": "7af5bde16e5112bdcbfd93f4cb218aa07e3302d5879bab21dda2648826b06c6d",
+      "git_tracked": true
+    },
+    {
+      "path": "results/corrected/dreamer_arousal_3class/base_cnn/best_checkpoint.pt",
+      "size_bytes": 882671,
+      "sha256": "bf1e862c389b26451624cc0e425b7a1805151489d0d2e5cd11010f4233b877ec",
+      "git_tracked": false
+    },
+    {
+      "path": "results/corrected/dreamer_arousal_3class/base_cnn/confusion_matrix.png",
+      "size_bytes": 45647,
+      "sha256": "a1193cd5c99ca9c83c46647e41426117284562e681a250f15e5d4982374ace8b",
+      "git_tracked": true
+    },
+    {
+      "path": "results/corrected/dreamer_arousal_3class/base_cnn/confusion_matrix_normalized.png",
+      "size_bytes": 47089,
+      "sha256": "57c4c5ec8bc1da15e423eed231fd6ce3fc6f492ce603131a0d247efe398288fd",
+      "git_tracked": true
+    },
+    {
+      "path": "results/corrected/dreamer_arousal_3class/base_cnn/kaggle_environment.json",
+      "size_bytes": 1330,
+      "sha256": "7fff5d9c1c874b2fc8a6d3b976537f2ecd878d30db4e0aa4fced65f413d82b5c",
+      "git_tracked": true
+    },
+    {
+      "path": "results/corrected/dreamer_arousal_3class/base_cnn/kaggle_infrastructure.json",
+      "size_bytes": 933,
+      "sha256": "c7a61359a52cfa607ac1182af7be3aa8dd598514224f16fea9dcd133d8a10894",
+      "git_tracked": true
+    },
+    {
+      "path": "results/corrected/dreamer_arousal_3class/base_cnn/kaggle_kernel.log",
+      "size_bytes": 121528,
+      "sha256": "d8b8da8e531624f95310d128b5a45321269858c3f2ab1657a9c984d4d956280a",
+      "git_tracked": true
+    },
+    {
+      "path": "results/corrected/dreamer_arousal_3class/base_cnn/last_checkpoint.pt",
+      "size_bytes": 3519571,
+      "sha256": "5070117d71f1854b2a4b77f11c35d50a120acba9610a94fb01564a5a493d6ce2",
+      "git_tracked": false
+    },
+    {
+      "path": "results/corrected/dreamer_arousal_3class/base_cnn/metrics.json",
+      "size_bytes": 4234,
+      "sha256": "a3dd588936c0d94b7c82e8d7aac6ff275ca4d2e2d0f3c8e4d54790e86fcb1c2f",
+      "git_tracked": true
+    },
+    {
+      "path": "results/corrected/dreamer_arousal_3class/base_cnn/metrics_kaggle_raw.json",
+      "size_bytes": 4042,
+      "sha256": "57d825707d6b554e5a5a208e7ad4ae28b53337c1e39da9e0b7ce49e11ebbf4d8",
+      "git_tracked": true
+    },
+    {
+      "path": "results/corrected/dreamer_arousal_3class/base_cnn/model_architecture.txt",
+      "size_bytes": 2475,
+      "sha256": "ae808a89842b5ce80574ef9dfb2787689364aebb541219ab39f3b079c2ad38e4",
+      "git_tracked": true
+    },
+    {
+      "path": "results/corrected/dreamer_arousal_3class/base_cnn/predictions.csv",
+      "size_bytes": 140464,
+      "sha256": "73999046b4ffcacaf8876d3243cebac49cfab2fba32f6581ac140bab0b8980a7",
+      "git_tracked": true
+    },
+    {
+      "path": "results/corrected/dreamer_arousal_3class/base_cnn/predictions_kaggle_raw.csv",
+      "size_bytes": 99883,
+      "sha256": "f217f69bd35eb357511f8b5994d3ba6d95b840117f72a2ff44f042dedf1d6381",
+      "git_tracked": true
+    },
+    {
+      "path": "results/corrected/dreamer_arousal_3class/base_cnn/resolved_config.json",
+      "size_bytes": 1942,
+      "sha256": "baa1414e8f294f23407022a543725d8f65b5f1dbc90e7cad2db26f35c771acac",
+      "git_tracked": true
+    },
+    {
+      "path": "results/corrected/dreamer_arousal_3class/base_cnn/run_metadata.json",
+      "size_bytes": 680,
+      "sha256": "3e939bb6735f5bf47417ca6b08888109a2087a4c47b190959686cbd384491c2a",
+      "git_tracked": true
+    },
+    {
+      "path": "results/corrected/dreamer_arousal_3class/base_cnn/training_curves.png",
+      "size_bytes": 211055,
+      "sha256": "93480f349b741a3d9c858bc1450d7e9e75c464ee4b9a215f6f9175cc27260e05",
+      "git_tracked": true
+    },
+    {
+      "path": "results/corrected/dreamer_arousal_3class/base_cnn/training_history.csv",
+      "size_bytes": 5264,
+      "sha256": "c802864ae5207b641495d69343a229f4b8451e6b1761609245846b4922996965",
+      "git_tracked": true
+    },
+    {
+      "path": "results/corrected/dreamer_arousal_3class/base_cnn/training_log.jsonl",
+      "size_bytes": 10697,
+      "sha256": "cffb0ae12fea8b8b148dc42380b2ff956ca345ca73632f062243a67243407bb2",
+      "git_tracked": true
+    },
+    {
+      "path": "results/corrected/dreamer_arousal_3class/base_cnn/trial_predictions.csv",
+      "size_bytes": 3815,
+      "sha256": "9bc8945fefdfce070bb5d110a0aab655568849c0b2003bc1b76806741a316761",
       "git_tracked": true
     },
     {
@@ -404,14 +594,50 @@
     },
     {
       "path": "results/corrected/dreamer_arousal_3class/comparison_all.csv",
-      "size_bytes": 801,
-      "sha256": "49c56aac55f96623de3fd5a9298b0924c4945febacab97bed8c3e54d74b7d340",
+      "size_bytes": 1243,
+      "sha256": "3bb0395fdca9993cfb11bbb90093b60cb47c76d45b5604c88253abc3e8dbce4e",
       "git_tracked": true
     },
     {
       "path": "results/corrected/dreamer_arousal_3class/comparison_all.png",
-      "size_bytes": 84927,
-      "sha256": "5d80711c1e0b8ccff59815c24b08160f29adaf8ef782dba3c683e14ab72bae6e",
+      "size_bytes": 105117,
+      "sha256": "a5ffe08f91ff24fe07c95a19723bc47995897b0b2b2cc851cc35e7cde88d9f34",
+      "git_tracked": true
+    },
+    {
+      "path": "results/corrected/dreamer_arousal_3class/kaggle_preprocessing/dataset_summary.json",
+      "size_bytes": 1851,
+      "sha256": "09532e695fc3d834d6f14d8224c72328def162cfe400f0da04109d830ea40b5e",
+      "git_tracked": true
+    },
+    {
+      "path": "results/corrected/dreamer_arousal_3class/kaggle_preprocessing/deep_cache_manifest.json",
+      "size_bytes": 2739,
+      "sha256": "635cf0810ec4534cc8cc6bf4899b0159aacdddab4c26da27339e5a2758ebdca2",
+      "git_tracked": true
+    },
+    {
+      "path": "results/corrected/dreamer_arousal_3class/kaggle_preprocessing/kaggle_dataset_verification.json",
+      "size_bytes": 2586,
+      "sha256": "b62317bc1cffbc87f6bbd43fa272170c4e71bc3eb5a6bf6ee84523e69289091d",
+      "git_tracked": true
+    },
+    {
+      "path": "results/corrected/dreamer_arousal_3class/kaggle_preprocessing/kaggle_preprocessing_environment.json",
+      "size_bytes": 398,
+      "sha256": "fc781e25c94c136edb07b80e96a6615ade5a0a2b2130e98e4a2fc2fccaecce4a",
+      "git_tracked": true
+    },
+    {
+      "path": "results/corrected/dreamer_arousal_3class/kaggle_preprocessing/stressclassification-dreamer-corrected-cache.log",
+      "size_bytes": 52752,
+      "sha256": "8202ca4fa5a533c575f9bbca7cbbad6677d9e79f32a6b11cee92b051be1fd812",
+      "git_tracked": true
+    },
+    {
+      "path": "results/corrected/dreamer_arousal_3class/kaggle_preprocessing/subject_split.json",
+      "size_bytes": 277,
+      "sha256": "b6d903458a15ae6d6c68212ea9fe1c3b0cefe412ed4cd8b00403d66997e147d7",
       "git_tracked": true
     },
     {
@@ -661,6 +887,156 @@
       "git_tracked": true
     },
     {
+      "path": "results/corrected/dreamer_arousal_3class/paper_inspired_attention/artifact_validation.json",
+      "size_bytes": 3110,
+      "sha256": "672eb51bf23d0561e643be55b089c02a0053bf33cc9d2d446c8ef7e335da9c41",
+      "git_tracked": true
+    },
+    {
+      "path": "results/corrected/dreamer_arousal_3class/paper_inspired_attention/attention_weights.csv",
+      "size_bytes": 37189,
+      "sha256": "5ad33369d55d736047296c0185691970d3a4644e2206c709f708377e08609950",
+      "git_tracked": true
+    },
+    {
+      "path": "results/corrected/dreamer_arousal_3class/paper_inspired_attention/best_checkpoint.pt",
+      "size_bytes": 7432771,
+      "sha256": "e012474d85f294cf1282efe247f89d6d580f0e54d08986e9971aec1949e8a363",
+      "git_tracked": false
+    },
+    {
+      "path": "results/corrected/dreamer_arousal_3class/paper_inspired_attention/confusion_matrix.png",
+      "size_bytes": 52733,
+      "sha256": "76f18aed760ab8e9c51e08b03ecf51bbba3856e8e0e08f7b6cd3dd493e5cc960",
+      "git_tracked": true
+    },
+    {
+      "path": "results/corrected/dreamer_arousal_3class/paper_inspired_attention/confusion_matrix_normalized.png",
+      "size_bytes": 49581,
+      "sha256": "8a87a46f92864664fcbd12867c50f9d2c6b6cfb0575989d50f8f3397b95abe94",
+      "git_tracked": true
+    },
+    {
+      "path": "results/corrected/dreamer_arousal_3class/paper_inspired_attention/kaggle_environment.json",
+      "size_bytes": 1346,
+      "sha256": "e213c8b62cbc7cebb78c81f5602989ee507fc7005db1f37d50955e758ced283d",
+      "git_tracked": true
+    },
+    {
+      "path": "results/corrected/dreamer_arousal_3class/paper_inspired_attention/kaggle_infrastructure.json",
+      "size_bytes": 949,
+      "sha256": "35aab777ff98b3a33f78cdbdec179938d2ee732729902bc85d4384c8e7fd76fd",
+      "git_tracked": true
+    },
+    {
+      "path": "results/corrected/dreamer_arousal_3class/paper_inspired_attention/kaggle_kernel.log",
+      "size_bytes": 82898,
+      "sha256": "60df3cec977aea5bd5f256fc46a4b3979172a8e45bb2b6864fe68c2792a08c99",
+      "git_tracked": true
+    },
+    {
+      "path": "results/corrected/dreamer_arousal_3class/paper_inspired_attention/last_checkpoint.pt",
+      "size_bytes": 29700511,
+      "sha256": "be35f3c7ecd2f0c6b48e300d211b829bc211d9b15a26be99242c2aa53fedf958",
+      "git_tracked": false
+    },
+    {
+      "path": "results/corrected/dreamer_arousal_3class/paper_inspired_attention/metrics.json",
+      "size_bytes": 4221,
+      "sha256": "c0d0e704225bcc560b76100a4c05e51741fb7436dcc864e76c18fdc2a5a17338",
+      "git_tracked": true
+    },
+    {
+      "path": "results/corrected/dreamer_arousal_3class/paper_inspired_attention/metrics_kaggle_raw.json",
+      "size_bytes": 4057,
+      "sha256": "3fe30d2f3dd3f2ff5af8890967aa1f9f20ee5bb4f95f5a3aa96efe3f95b2362d",
+      "git_tracked": true
+    },
+    {
+      "path": "results/corrected/dreamer_arousal_3class/paper_inspired_attention/model_architecture.txt",
+      "size_bytes": 6007,
+      "sha256": "5de9b97b5e84896724ce76f91a89b3e7196f9d6e274a815145063142e4a2e485",
+      "git_tracked": true
+    },
+    {
+      "path": "results/corrected/dreamer_arousal_3class/paper_inspired_attention/predictions.csv",
+      "size_bytes": 136837,
+      "sha256": "077533521bbf199967aa9c264928a5a6b016705c06ad7d2c56c36d65c862f057",
+      "git_tracked": true
+    },
+    {
+      "path": "results/corrected/dreamer_arousal_3class/paper_inspired_attention/predictions_kaggle_raw.csv",
+      "size_bytes": 137697,
+      "sha256": "85f200cd9c0c56a32815f5f79772cf2d8f46be18444032af212318801b46c58a",
+      "git_tracked": true
+    },
+    {
+      "path": "results/corrected/dreamer_arousal_3class/paper_inspired_attention/resolved_config.json",
+      "size_bytes": 1942,
+      "sha256": "baa1414e8f294f23407022a543725d8f65b5f1dbc90e7cad2db26f35c771acac",
+      "git_tracked": true
+    },
+    {
+      "path": "results/corrected/dreamer_arousal_3class/paper_inspired_attention/run_metadata.json",
+      "size_bytes": 693,
+      "sha256": "b5468f25fcd5bfa48a98b5941cfc6a42aea7a88b3ca4b08613f16eacc2ea738b",
+      "git_tracked": true
+    },
+    {
+      "path": "results/corrected/dreamer_arousal_3class/paper_inspired_attention/training_curves.png",
+      "size_bytes": 174631,
+      "sha256": "b20e1f9eddb3631a211b12ccf4cb60581f44a4f28d7e0d8084089afa09fb8ef1",
+      "git_tracked": true
+    },
+    {
+      "path": "results/corrected/dreamer_arousal_3class/paper_inspired_attention/training_history.csv",
+      "size_bytes": 3450,
+      "sha256": "a274df0a3e76cecbe1b99553ae9add17ed69ec23bdf435282dd64223295bc19b",
+      "git_tracked": true
+    },
+    {
+      "path": "results/corrected/dreamer_arousal_3class/paper_inspired_attention/training_log.jsonl",
+      "size_bytes": 6933,
+      "sha256": "96fc7ebebc21ffdfec5d679792cd7f98789ceff8b46153ed171ee0bf15370990",
+      "git_tracked": true
+    },
+    {
+      "path": "results/corrected/dreamer_arousal_3class/paper_inspired_attention/trial_predictions.csv",
+      "size_bytes": 3764,
+      "sha256": "a8c5df39f4de16cc472c8170a1371e36c37405b80bb497bee5a7e697220b0d96",
+      "git_tracked": true
+    },
+    {
+      "path": "results/corrected/dreamer_arousal_3class/per_class_f1_comparison.png",
+      "size_bytes": 120636,
+      "sha256": "67e0a2d36a6477bf1203b551ca5db2b2a4575f0a5c9af84c11a63b0cd35d5a01",
+      "git_tracked": true
+    },
+    {
+      "path": "results/corrected/dreamer_arousal_3class/per_class_metrics.csv",
+      "size_bytes": 2073,
+      "sha256": "b2bdc17fda486d827beaf120ca9482ce9d5309994b72457df85806d463e11759",
+      "git_tracked": true
+    },
+    {
+      "path": "results/corrected/dreamer_arousal_3class/subject_f1_comparison.png",
+      "size_bytes": 114496,
+      "sha256": "79719bc0a4cc8e4a7b6fb9d826ca589ea6931db17147a2b41408e7416ef56356",
+      "git_tracked": true
+    },
+    {
+      "path": "results/corrected/dreamer_arousal_3class/subject_metrics.csv",
+      "size_bytes": 2059,
+      "sha256": "4bb12cbac2fbd7c7af1bacc05d8c746e9821c32ac1033299efb6b288541b291f",
+      "git_tracked": true
+    },
+    {
+      "path": "results/corrected/dreamer_arousal_3class/verification_summary.json",
+      "size_bytes": 1808,
+      "sha256": "d2b0a575a1cd3fe533f4ec3856c89574097334d012482a58d42ed9c577d16e5f",
+      "git_tracked": true
+    },
+    {
       "path": "scripts/audit_dreamer.py",
       "size_bytes": 6127,
       "sha256": "71239acf03c55567b9035d953b44a481e73bf24ccb094fc074a90fccbc8bb632",
@@ -668,14 +1044,14 @@
     },
     {
       "path": "scripts/build_artifact_manifest.py",
-      "size_bytes": 2864,
-      "sha256": "381cfe887a78f70755ea766bd2cf301d8a317e60f55bc92c07a928a88a9fe002",
+      "size_bytes": 2811,
+      "sha256": "bc2ac11204b7f6245392b91f1371c355cf4e38d857db951441b767109c048343",
       "git_tracked": true
     },
     {
       "path": "scripts/build_comparison.py",
-      "size_bytes": 2870,
-      "sha256": "d5af8c752d6d4d6eaf9610411ea4ba2fa64901385c80174ad7d2b4a4e203dea0",
+      "size_bytes": 7882,
+      "sha256": "62f7c25da1d28a24de437505ae12c6c96882138290167e438a958c7f812ff340",
       "git_tracked": true
     },
     {
@@ -685,9 +1061,15 @@
       "git_tracked": true
     },
     {
+      "path": "scripts/ingest_kaggle_results.py",
+      "size_bytes": 4951,
+      "sha256": "8dc47afbd2d3e8e28f3f4f84f7969939bfcc4e9716e3ed533ba0c06854946081",
+      "git_tracked": true
+    },
+    {
       "path": "scripts/prepare_deep_cache.py",
-      "size_bytes": 1455,
-      "sha256": "33c62a959b83e8f1161fdb95f0691604d673ff515bb20bcbfb62426b935065f1",
+      "size_bytes": 1595,
+      "sha256": "670de556690020643c665d1f3905966c50336367fb198d3e75f799abd280f4de",
       "git_tracked": true
     },
     {
@@ -698,8 +1080,8 @@
     },
     {
       "path": "scripts/run_deep.py",
-      "size_bytes": 1594,
-      "sha256": "2d5c3173b1985e70f7638a006cbc7b22fdeb7b111d3193a2d1ac07966f30bf3f",
+      "size_bytes": 1701,
+      "sha256": "8ff66737d97f19e06c27ccf9e6388912e384876639735451ab3742f1220a8c4a",
       "git_tracked": true
     },
     {
@@ -712,6 +1094,12 @@
       "path": "scripts/run_paper_adapted_stacking.py",
       "size_bytes": 9283,
       "sha256": "9dcd476dd5e8dca8292c02bba888768c7723a0e188f9e5f98b78351c7e3c856f",
+      "git_tracked": true
+    },
+    {
+      "path": "scripts/verify_corrected_results.py",
+      "size_bytes": 4358,
+      "sha256": "f846997f56345d414ca5e218451bd6c842bd0321634ec18b274025b152b0b8bd",
       "git_tracked": true
     },
     {
@@ -740,8 +1128,8 @@
     },
     {
       "path": "src/stress_classification/evaluation.py",
-      "size_bytes": 7100,
-      "sha256": "d7533b14e488e33671b4c9528f7e1e765f264cbd45ae75b6dfcc2972f95265c8",
+      "size_bytes": 8948,
+      "sha256": "e5ade3b235781fd3939101d49d5648b4b66770377bd87cbd54917937a1bf1fb1",
       "git_tracked": true
     },
     {
@@ -776,8 +1164,14 @@
     },
     {
       "path": "src/stress_classification/training.py",
-      "size_bytes": 11245,
-      "sha256": "4edd7afd025489fcb227030a3b87897d571725d8d373f1e9f07d6c50806d3d59",
+      "size_bytes": 13828,
+      "sha256": "5d3fe19746fef75911e620795b2f60aa95e8facb1d48c5e023de9f7850acaaf3",
+      "git_tracked": true
+    },
+    {
+      "path": "tests/test_evaluation.py",
+      "size_bytes": 1276,
+      "sha256": "206c33fc35839bcb78f6d600e85b48cecb9f9bb22f51850449704634f61777b0",
       "git_tracked": true
     },
     {
@@ -811,10 +1205,5 @@
       "git_tracked": true
     }
   ],
-  "pending_after_approval": [
-    "results/corrected/dreamer_arousal_3class/base_cnn/*",
-    "results/corrected/dreamer_arousal_3class/paper_inspired_attention/*",
-    "Modal runtime and billed-resource measurements",
-    "final ML-versus-deep comparison"
-  ]
+  "pending_after_approval": []
 }
