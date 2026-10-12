@@ -5,6 +5,7 @@ from __future__ import annotations
 import argparse
 import hashlib
 import json
+import re
 import shutil
 import sys
 from pathlib import Path
@@ -31,6 +32,7 @@ def sha256(path: Path) -> str:
 def main() -> None:
     parser = argparse.ArgumentParser()
     parser.add_argument("--source", type=Path, required=True)
+    parser.add_argument("--kernel-log", type=Path)
     parser.add_argument("--model", choices=("base_cnn", "paper_inspired_attention"), required=True)
     parser.add_argument(
         "--output-root",
@@ -52,6 +54,17 @@ def main() -> None:
     for item in source.iterdir():
         if item.is_file():
             shutil.copy2(item, destination / item.name)
+    embedded_source_sha256 = None
+    if args.kernel_log is not None:
+        kernel_log = args.kernel_log.resolve()
+        shutil.copy2(kernel_log, destination / "kaggle_kernel.log")
+        match = re.search(
+            r"Embedded source SHA-256:\s*([0-9a-f]{64})",
+            kernel_log.read_text(encoding="utf-8", errors="replace"),
+        )
+        if match is None:
+            raise ValueError("kernel log does not contain the embedded source SHA-256")
+        embedded_source_sha256 = match.group(1)
 
     remote_metrics = destination / "metrics.json"
     remote_predictions = destination / "predictions.csv"
@@ -91,6 +104,7 @@ def main() -> None:
     validation = {
         "source_directory": str(source),
         "model": args.model,
+        "embedded_source_sha256": embedded_source_sha256,
         "test_samples": len(predictions),
         "test_sample_order_matches_fixed_index": True,
         "saved_predictions_match_probability_argmax": True,

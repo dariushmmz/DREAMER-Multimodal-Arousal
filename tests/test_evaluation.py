@@ -30,3 +30,11 @@ def test_float16_softmax_scores_are_normalized_for_multiclass_auc() -> None:
 def test_invalid_probability_rows_are_rejected() -> None:
     with pytest.raises(ValueError, match="positive sum"):
         normalize_probabilities(np.zeros((2, 3)))
+
+
+def test_already_normalized_probabilities_are_not_perturbed() -> None:
+    probabilities = np.array([[0.1, 0.2, 0.7], [0.3, 0.3, 0.4]], dtype=np.float64)
+
+    normalized = normalize_probabilities(probabilities)
+
+    assert np.array_equal(normalized, probabilities)

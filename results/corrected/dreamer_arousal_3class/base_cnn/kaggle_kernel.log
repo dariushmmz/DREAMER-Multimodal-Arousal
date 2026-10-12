@@ -1,0 +1,686 @@
+[{"stream_name":"stderr","time":5.133358106,"data":"/usr/local/lib/python3.13/dist-packages/nbformat/validator.py:434: MissingIDFieldWarning: Cell is missing an id field, this will become a hard error in future nbformat versions. You may want to use `normalize()` on your notebooks before validations (available since nbformat 5.1.4). Previous versions of nbformat are fixing this issue transparently, and will stop doing so in the future.\n"}
+,{"stream_name":"stderr","time":5.133394125,"data":"  _validate(nbdict, ref, version, version_minor, relax_add_props)\n"}
+,{"stream_name":"stderr","time":5.911954006,"data":"0.00s - Debugger warning: It seems that frozen modules are being used, which may\n"}
+,{"stream_name":"stderr","time":5.911986482,"data":"0.00s - make the debugger miss breakpoints. Please pass -Xfrozen_modules=off\n"}
+,{"stream_name":"stderr","time":5.911991487,"data":"0.00s - to python to disable frozen modules.\n"}
+,{"stream_name":"stderr","time":5.911994964,"data":"0.00s - Note: Debugging will proceed. Set PYDEVD_DISABLE_FILE_VALIDATION=1 to disable this validation.\n"}
+,{"stream_name":"stderr","time":6.463062542,"data":"0.00s - Debugger warning: It seems that frozen modules are being used, which may\n"}
+,{"stream_name":"stderr","time":6.463089052,"data":"0.00s - make the debugger miss breakpoints. Please pass -Xfrozen_modules=off\n"}
+,{"stream_name":"stderr","time":6.463093832,"data":"0.00s - to python to disable frozen modules.\n"}
+,{"stream_name":"stderr","time":6.463097531,"data":"0.00s - Note: Debugging will proceed. Set PYDEVD_DISABLE_FILE_VALIDATION=1 to disable this validation.\n"}
+,{"stream_name":"stdout","time":7.683620616,"data":"Embedded source SHA-256: e9a21752c2361a0e18f504d7f47062d274db74ef476e208c6a836365af530398\n"}
+,{"stream_name":"stdout","time":21.139435544,"data":"+ /usr/bin/python3 /tmp/stressclassification/scripts/run_deep.py --model base_cnn --config /kaggle/input/notebooks/amirmz/stressclassification-dreamer-corrected-cache/cache_bundle/config.yaml --window-index /kaggle/input/notebooks/amirmz/stressclassification-dreamer-corrected-cache/cache_bundle/window_index.csv --cache-dir /kaggle/input/notebooks/amirmz/stressclassification-dreamer-corrected-cache/cache_bundle/deep_cache --output-dir /kaggle/working/results/base_cnn --device cuda\n"}
+,{"stream_name":"stdout","time":21.343648479,"data":"+ /usr/bin/python3 /tmp/stressclassification/scripts/run_deep.py --model base_cnn --config /kaggle/input/notebooks/amirmz/stressclassification-dreamer-corrected-cache/cache_bundle/config.yaml --window-index /kaggle/input/notebooks/amirmz/stressclassification-dreamer-corrected-cache/cache_bundle/window_index.csv --cache-dir /kaggle/input/notebooks/amirmz/stressclassification-dreamer-corrected-cache/cache_bundle/deep_cache --output-dir /kaggle/working/results/base_cnn --device cuda\n"}
+,{"stream_name":"stderr","time":31.136152764,"data":"/tmp/stressclassification/src/stress_classification/training.py:195: FutureWarning: `torch.cuda.amp.GradScaler(args...)` is deprecated. Please use `torch.amp.GradScaler('cuda', args...)` instead.\n"}
+,{"stream_name":"stderr","time":31.136175546,"data":"  scaler = torch.cuda.amp.GradScaler(enabled=use_amp)\n"}
+,{"stream_name":"stderr","time":31.339053133,"data":"/tmp/stressclassification/src/stress_classification/training.py:195: FutureWarning: `torch.cuda.amp.GradScaler(args...)` is deprecated. Please use `torch.amp.GradScaler('cuda', args...)` instead.\n"}
+,{"stream_name":"stderr","time":31.339093645,"data":"  scaler = torch.cuda.amp.GradScaler(enabled=use_amp)\n"}
+,{"stream_name":"stderr","time":31.339099853,"data":"\n"}
+,{"stream_name":"stderr","time":31.339104294,"data":"/tmp/stressclassification/src/stress_classification/training.py:195: FutureWarning: `torch.cuda.amp.GradScaler(args...)` is deprecated. Please use `torch.amp.GradScaler('cuda', args...)` instead.\n"}
+,{"stream_name":"stderr","time":31.339121337,"data":"  scaler = torch.cuda.amp.GradScaler(enabled=use_amp)\n"}
+,{"stream_name":"stderr","time":31.442374285,"data":"/tmp/stressclassification/src/stress_classification/training.py:85: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.\n"}
+,{"stream_name":"stderr","time":31.442403287,"data":"  with torch.cuda.amp.autocast(enabled=use_amp):\n"}
+,{"stream_name":"stderr","time":31.644063322,"data":"/tmp/stressclassification/src/stress_classification/training.py:85: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.\n"}
+,{"stream_name":"stderr","time":31.644093582,"data":"  with torch.cuda.amp.autocast(enabled=use_amp):\n"}
+,{"stream_name":"stderr","time":31.644098706,"data":"\n"}
+,{"stream_name":"stderr","time":31.644102461,"data":"/tmp/stressclassification/src/stress_classification/training.py:85: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.\n"}
+,{"stream_name":"stderr","time":31.644106322,"data":"  with torch.cuda.amp.autocast(enabled=use_amp):\n"}
+,{"stream_name":"stderr","time":36.115150955,"data":"/tmp/stressclassification/src/stress_classification/training.py:85: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.\n"}
+,{"stream_name":"stderr","time":36.115179191,"data":"  with torch.cuda.amp.autocast(enabled=use_amp):\n"}
+,{"stream_name":"stderr","time":36.322197698,"data":"/tmp/stressclassification/src/stress_classification/training.py:85: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.\n"}
+,{"stream_name":"stderr","time":36.322231363,"data":"  with torch.cuda.amp.autocast(enabled=use_amp):\n"}
+,{"stream_name":"stderr","time":36.322237122,"data":"\n"}
+,{"stream_name":"stderr","time":36.322241604,"data":"/tmp/stressclassification/src/stress_classification/training.py:85: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.\n"}
+,{"stream_name":"stderr","time":36.322247766,"data":"  with torch.cuda.amp.autocast(enabled=use_amp):\n"}
+,{"stream_name":"stdout","time":36.428912796,"data":"{\"epoch\": 1, \"learning_rate\": 0.0003, \"train_loss\": 1.0767159636897585, \"train_accuracy\": 0.42630898513251453, \"train_f1_macro\": 0.4205574331806506, \"validation_loss\": 1.1284193333252008, \"validation_accuracy\": 0.47527472527472525, \"validation_f1_macro\": 0.2609953315072429}\n"}
+,{"stream_name":"stderr","time":36.522582797,"data":"/tmp/stressclassification/src/stress_classification/training.py:85: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.\n"}
+,{"stream_name":"stderr","time":36.52260939,"data":"  with torch.cuda.amp.autocast(enabled=use_amp):\n"}
+,{"stream_name":"stdout","time":36.632776143,"data":"{\"epoch\": 1, \"learning_rate\": 0.0003, \"train_loss\": 1.0767159636897585, \"train_accuracy\": 0.42630898513251453, \"train_f1_macro\": 0.4205574331806506, \"validation_loss\": 1.1284193333252008, \"validation_accuracy\": 0.47527472527472525, \"validation_f1_macro\": 0.2609953315072429}\n"}
+,{"stream_name":"stderr","time":36.728004128,"data":"/tmp/stressclassification/src/stress_classification/training.py:85: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.\n"}
+,{"stream_name":"stderr","time":36.728039142,"data":"  with torch.cuda.amp.autocast(enabled=use_amp):\n"}
+,{"stream_name":"stderr","time":36.728046525,"data":"\n"}
+,{"stream_name":"stderr","time":36.72810641,"data":"/tmp/stressclassification/src/stress_classification/training.py:85: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.\n"}
+,{"stream_name":"stderr","time":36.72811289,"data":"  with torch.cuda.amp.autocast(enabled=use_amp):\n"}
+,{"stream_name":"stderr","time":39.044570996,"data":"/tmp/stressclassification/src/stress_classification/training.py:85: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.\n"}
+,{"stream_name":"stderr","time":39.044602427,"data":"  with torch.cuda.amp.autocast(enabled=use_amp):\n"}
+,{"stream_name":"stderr","time":39.249635799,"data":"/tmp/stressclassification/src/stress_classification/training.py:85: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.\n"}
+,{"stream_name":"stderr","time":39.249662087,"data":"  with torch.cuda.amp.autocast(enabled=use_amp):\n"}
+,{"stream_name":"stderr","time":39.249667405,"data":"\n"}
+,{"stream_name":"stderr","time":39.249671347,"data":"/tmp/stressclassification/src/stress_classification/training.py:85: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.\n"}
+,{"stream_name":"stderr","time":39.249675087,"data":"  with torch.cuda.amp.autocast(enabled=use_amp):\n"}
+,{"stream_name":"stdout","time":39.261467251,"data":"{\"epoch\": 2, \"learning_rate\": 0.0002999262307746768, \"train_loss\": 1.0169004311697207, \"train_accuracy\": 0.5100193923723335, \"train_f1_macro\": 0.5045714425425772, \"validation_loss\": 1.1971422211154477, \"validation_accuracy\": 0.2847985347985348, \"validation_f1_macro\": 0.23103521337452781}\n"}
+,{"stream_name":"stderr","time":39.333472914,"data":"/tmp/stressclassification/src/stress_classification/training.py:85: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.\n"}
+,{"stream_name":"stderr","time":39.333500452,"data":"  with torch.cuda.amp.autocast(enabled=use_amp):\n"}
+,{"stream_name":"stdout","time":39.465835915,"data":"{\"epoch\": 2, \"learning_rate\": 0.0002999262307746768, \"train_loss\": 1.0169004311697207, \"train_accuracy\": 0.5100193923723335, \"train_f1_macro\": 0.5045714425425772, \"validation_loss\": 1.1971422211154477, \"validation_accuracy\": 0.2847985347985348, \"validation_f1_macro\": 0.23103521337452781}\n"}
+,{"stream_name":"stderr","time":39.536591436,"data":"/tmp/stressclassification/src/stress_classification/training.py:85: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.\n"}
+,{"stream_name":"stderr","time":39.536621537,"data":"  with torch.cuda.amp.autocast(enabled=use_amp):\n"}
+,{"stream_name":"stderr","time":39.536626657,"data":"\n"}
+,{"stream_name":"stderr","time":39.536630602,"data":"/tmp/stressclassification/src/stress_classification/training.py:85: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.\n"}
+,{"stream_name":"stderr","time":39.536635037,"data":"  with torch.cuda.amp.autocast(enabled=use_amp):\n"}
+,{"stream_name":"stderr","time":41.81099074,"data":"/tmp/stressclassification/src/stress_classification/training.py:85: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.\n"}
+,{"stream_name":"stderr","time":41.811251586,"data":"  with torch.cuda.amp.autocast(enabled=use_amp):\n"}
+,{"stream_name":"stderr","time":42.016501267,"data":"/tmp/stressclassification/src/stress_classification/training.py:85: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.\n"}
+,{"stream_name":"stderr","time":42.016561031,"data":"  with torch.cuda.amp.autocast(enabled=use_amp):\n"}
+,{"stream_name":"stderr","time":42.016568101,"data":"\n"}
+,{"stream_name":"stderr","time":42.016572761,"data":"/tmp/stressclassification/src/stress_classification/training.py:85: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.\n"}
+,{"stream_name":"stderr","time":42.016578716,"data":"  with torch.cuda.amp.autocast(enabled=use_amp):\n"}
+,{"stream_name":"stdout","time":42.081261445,"data":"{\"epoch\": 3, \"learning_rate\": 0.00029970499590002654, \"train_loss\": 0.966717524727314, \"train_accuracy\": 0.5534906270200388, \"train_f1_macro\": 0.5478389774934093, \"validation_loss\": 1.263199615827847, \"validation_accuracy\": 0.2683150183150183, \"validation_f1_macro\": 0.2046214814832313}\n"}
+,{"stream_name":"stderr","time":42.153060136,"data":"/tmp/stressclassification/src/stress_classification/training.py:85: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.\n"}
+,{"stream_name":"stderr","time":42.153086421,"data":"  with torch.cuda.amp.autocast(enabled=use_amp):\n"}
+,{"stream_name":"stdout","time":42.286145368,"data":"{\"epoch\": 3, \"learning_rate\": 0.00029970499590002654, \"train_loss\": 0.966717524727314, \"train_accuracy\": 0.5534906270200388, \"train_f1_macro\": 0.5478389774934093, \"validation_loss\": 1.263199615827847, \"validation_accuracy\": 0.2683150183150183, \"validation_f1_macro\": 0.2046214814832313}\n"}
+,{"stream_name":"stderr","time":42.357452829,"data":"/tmp/stressclassification/src/stress_classification/training.py:85: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.\n"}
+,{"stream_name":"stderr","time":42.357484039,"data":"  with torch.cuda.amp.autocast(enabled=use_amp):\n"}
+,{"stream_name":"stderr","time":42.357489471,"data":"\n"}
+,{"stream_name":"stderr","time":42.357493466,"data":"/tmp/stressclassification/src/stress_classification/training.py:85: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.\n"}
+,{"stream_name":"stderr","time":42.357497666,"data":"  with torch.cuda.amp.autocast(enabled=use_amp):\n"}
+,{"stream_name":"stderr","time":44.692499841,"data":"/tmp/stressclassification/src/stress_classification/training.py:85: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.\n"}
+,{"stream_name":"stderr","time":44.692535297,"data":"  with torch.cuda.amp.autocast(enabled=use_amp):\n"}
+,{"stream_name":"stderr","time":44.894945713,"data":"/tmp/stressclassification/src/stress_classification/training.py:85: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.\n"}
+,{"stream_name":"stderr","time":44.894977279,"data":"  with torch.cuda.amp.autocast(enabled=use_amp):\n"}
+,{"stream_name":"stderr","time":44.894982236,"data":"\n"}
+,{"stream_name":"stderr","time":44.894986523,"data":"/tmp/stressclassification/src/stress_classification/training.py:85: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.\n"}
+,{"stream_name":"stderr","time":44.894991306,"data":"  with torch.cuda.amp.autocast(enabled=use_amp):\n"}
+,{"stream_name":"stdout","time":44.932529953,"data":"{\"epoch\": 4, \"learning_rate\": 0.0002993365137081604, \"train_loss\": 0.9359868258603866, \"train_accuracy\": 0.5788623141564319, \"train_f1_macro\": 0.5723357274144202, \"validation_loss\": 1.2401414336739005, \"validation_accuracy\": 0.3324175824175824, \"validation_f1_macro\": 0.30713148467715157}\n"}
+,{"stream_name":"stderr","time":45.009093946,"data":"/tmp/stressclassification/src/stress_classification/training.py:85: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.\n"}
+,{"stream_name":"stderr","time":45.009123876,"data":"  with torch.cuda.amp.autocast(enabled=use_amp):\n"}
+,{"stream_name":"stdout","time":45.137702534,"data":"{\"epoch\": 4, \"learning_rate\": 0.0002993365137081604, \"train_loss\": 0.9359868258603866, \"train_accuracy\": 0.5788623141564319, \"train_f1_macro\": 0.5723357274144202, \"validation_loss\": 1.2401414336739005, \"validation_accuracy\": 0.3324175824175824, \"validation_f1_macro\": 0.30713148467715157}\n"}
+,{"stream_name":"stderr","time":45.212049575,"data":"/tmp/stressclassification/src/stress_classification/training.py:85: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.\n"}
+,{"stream_name":"stderr","time":45.212081206,"data":"  with torch.cuda.amp.autocast(enabled=use_amp):\n"}
+,{"stream_name":"stderr","time":45.212085809,"data":"\n"}
+,{"stream_name":"stderr","time":45.212089687,"data":"/tmp/stressclassification/src/stress_classification/training.py:85: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.\n"}
+,{"stream_name":"stderr","time":45.212094034,"data":"  with torch.cuda.amp.autocast(enabled=use_amp):\n"}
+,{"stream_name":"stderr","time":47.483340743,"data":"/tmp/stressclassification/src/stress_classification/training.py:85: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.\n"}
+,{"stream_name":"stderr","time":47.483379313,"data":"  with torch.cuda.amp.autocast(enabled=use_amp):\n"}
+,{"stream_name":"stderr","time":47.686607216,"data":"/tmp/stressclassification/src/stress_classification/training.py:85: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.\n"}
+,{"stream_name":"stderr","time":47.686640376,"data":"  with torch.cuda.amp.autocast(enabled=use_amp):\n"}
+,{"stream_name":"stderr","time":47.68664632,"data":"\n"}
+,{"stream_name":"stderr","time":47.686870457,"data":"/tmp/stressclassification/src/stress_classification/training.py:85: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.\n"}
+,{"stream_name":"stderr","time":47.68688341,"data":"  with torch.cuda.amp.autocast(enabled=use_amp):\n"}
+,{"stream_name":"stdout","time":47.71589053,"data":"{\"epoch\": 5, \"learning_rate\": 0.0002988211478465144, \"train_loss\": 0.9177184144219199, \"train_accuracy\": 0.6005171299288946, \"train_f1_macro\": 0.5909319348767673, \"validation_loss\": 1.3984778503795245, \"validation_accuracy\": 0.3076923076923077, \"validation_f1_macro\": 0.2507962337520429}\n"}
+,{"stream_name":"stderr","time":47.776408119,"data":"/tmp/stressclassification/src/stress_classification/training.py:85: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.\n"}
+,{"stream_name":"stderr","time":47.776435631,"data":"  with torch.cuda.amp.autocast(enabled=use_amp):\n"}
+,{"stream_name":"stdout","time":47.918597647,"data":"{\"epoch\": 5, \"learning_rate\": 0.0002988211478465144, \"train_loss\": 0.9177184144219199, \"train_accuracy\": 0.6005171299288946, \"train_f1_macro\": 0.5909319348767673, \"validation_loss\": 1.3984778503795245, \"validation_accuracy\": 0.3076923076923077, \"validation_f1_macro\": 0.2507962337520429}\n"}
+,{"stream_name":"stderr","time":47.979627028,"data":"/tmp/stressclassification/src/stress_classification/training.py:85: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.\n"}
+,{"stream_name":"stderr","time":47.979711801,"data":"  with torch.cuda.amp.autocast(enabled=use_amp):\n"}
+,{"stream_name":"stderr","time":47.97972018,"data":"\n"}
+,{"stream_name":"stderr","time":47.97972466,"data":"/tmp/stressclassification/src/stress_classification/training.py:85: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.\n"}
+,{"stream_name":"stderr","time":47.97972981,"data":"  with torch.cuda.amp.autocast(enabled=use_amp):\n"}
+,{"stream_name":"stderr","time":50.274419181,"data":"/tmp/stressclassification/src/stress_classification/training.py:85: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.\n"}
+,{"stream_name":"stderr","time":50.274452632,"data":"  with torch.cuda.amp.autocast(enabled=use_amp):\n"}
+,{"stream_name":"stderr","time":50.476859976,"data":"/tmp/stressclassification/src/stress_classification/training.py:85: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.\n"}
+,{"stream_name":"stderr","time":50.476948077,"data":"  with torch.cuda.amp.autocast(enabled=use_amp):\n"}
+,{"stream_name":"stderr","time":50.476955575,"data":"\n"}
+,{"stream_name":"stderr","time":50.476959458,"data":"/tmp/stressclassification/src/stress_classification/training.py:85: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.\n"}
+,{"stream_name":"stderr","time":50.476963713,"data":"  with torch.cuda.amp.autocast(enabled=use_amp):\n"}
+,{"stream_name":"stdout","time":50.511806042,"data":"{\"epoch\": 6, \"learning_rate\": 0.000298159406918973, \"train_loss\": 0.8945594842617328, \"train_accuracy\": 0.6194246929541047, \"train_f1_macro\": 0.6096955790953186, \"validation_loss\": 1.4214340889410222, \"validation_accuracy\": 0.3360805860805861, \"validation_f1_macro\": 0.2986427586602521}\n"}
+,{"stream_name":"stderr","time":50.58339968,"data":"/tmp/stressclassification/src/stress_classification/training.py:85: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.\n"}
+,{"stream_name":"stderr","time":50.583428326,"data":"  with torch.cuda.amp.autocast(enabled=use_amp):\n"}
+,{"stream_name":"stdout","time":50.715382522,"data":"{\"epoch\": 6, \"learning_rate\": 0.000298159406918973, \"train_loss\": 0.8945594842617328, \"train_accuracy\": 0.6194246929541047, \"train_f1_macro\": 0.6096955790953186, \"validation_loss\": 1.4214340889410222, \"validation_accuracy\": 0.3360805860805861, \"validation_f1_macro\": 0.2986427586602521}\n"}
+,{"stream_name":"stderr","time":50.787255165,"data":"/tmp/stressclassification/src/stress_classification/training.py:85: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.\n"}
+,{"stream_name":"stderr","time":50.78729859,"data":"  with torch.cuda.amp.autocast(enabled=use_amp):\n"}
+,{"stream_name":"stderr","time":50.787304579,"data":"\n"}
+,{"stream_name":"stderr","time":50.787329491,"data":"/tmp/stressclassification/src/stress_classification/training.py:85: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.\n"}
+,{"stream_name":"stderr","time":50.787335248,"data":"  with torch.cuda.amp.autocast(enabled=use_amp):\n"}
+,{"stream_name":"stderr","time":53.120048436,"data":"/tmp/stressclassification/src/stress_classification/training.py:85: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.\n"}
+,{"stream_name":"stderr","time":53.120117626,"data":"  with torch.cuda.amp.autocast(enabled=use_amp):\n"}
+,{"stream_name":"stderr","time":53.322505977,"data":"/tmp/stressclassification/src/stress_classification/training.py:85: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.\n"}
+,{"stream_name":"stderr","time":53.322537207,"data":"  with torch.cuda.amp.autocast(enabled=use_amp):\n"}
+,{"stream_name":"stderr","time":53.322541824,"data":"\n"}
+,{"stream_name":"stderr","time":53.322545216,"data":"/tmp/stressclassification/src/stress_classification/training.py:85: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.\n"}
+,{"stream_name":"stderr","time":53.32254918,"data":"  with torch.cuda.amp.autocast(enabled=use_amp):\n"}
+,{"stream_name":"stdout","time":53.35047706,"data":"{\"epoch\": 7, \"learning_rate\": 0.0002973519439839389, \"train_loss\": 0.8856415977074241, \"train_accuracy\": 0.6354234001292824, \"train_f1_macro\": 0.6255741711708386, \"validation_loss\": 1.7423040369054774, \"validation_accuracy\": 0.2271062271062271, \"validation_f1_macro\": 0.16542221498684243}\n"}
+,{"stream_name":"stderr","time":53.419515427,"data":"/tmp/stressclassification/src/stress_classification/training.py:85: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.\n"}
+,{"stream_name":"stderr","time":53.419542766,"data":"  with torch.cuda.amp.autocast(enabled=use_amp):\n"}
+,{"stream_name":"stdout","time":53.554916109,"data":"{\"epoch\": 7, \"learning_rate\": 0.0002973519439839389, \"train_loss\": 0.8856415977074241, \"train_accuracy\": 0.6354234001292824, \"train_f1_macro\": 0.6255741711708386, \"validation_loss\": 1.7423040369054774, \"validation_accuracy\": 0.2271062271062271, \"validation_f1_macro\": 0.16542221498684243}\n"}
+,{"stream_name":"stderr","time":53.623127921,"data":"/tmp/stressclassification/src/stress_classification/training.py:85: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.\n"}
+,{"stream_name":"stderr","time":53.623188354,"data":"  with torch.cuda.amp.autocast(enabled=use_amp):\n"}
+,{"stream_name":"stderr","time":53.623195494,"data":"\n"}
+,{"stream_name":"stderr","time":53.623200228,"data":"/tmp/stressclassification/src/stress_classification/training.py:85: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.\n"}
+,{"stream_name":"stderr","time":53.623205252,"data":"  with torch.cuda.amp.autocast(enabled=use_amp):\n"}
+,{"stream_name":"stderr","time":55.900874217,"data":"/tmp/stressclassification/src/stress_classification/training.py:85: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.\n"}
+,{"stream_name":"stderr","time":55.900906842,"data":"  with torch.cuda.amp.autocast(enabled=use_amp):\n"}
+,{"stream_name":"stderr","time":56.105202435,"data":"/tmp/stressclassification/src/stress_classification/training.py:85: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.\n"}
+,{"stream_name":"stderr","time":56.105234009,"data":"  with torch.cuda.amp.autocast(enabled=use_amp):\n"}
+,{"stream_name":"stderr","time":56.105238851,"data":"\n"}
+,{"stream_name":"stderr","time":56.105242308,"data":"/tmp/stressclassification/src/stress_classification/training.py:85: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.\n"}
+,{"stream_name":"stderr","time":56.105257714,"data":"  with torch.cuda.amp.autocast(enabled=use_amp):\n"}
+,{"stream_name":"stdout","time":56.140559118,"data":"{\"epoch\": 8, \"learning_rate\": 0.00029639955590984266, \"train_loss\": 0.8657181339257751, \"train_accuracy\": 0.6430187459599225, \"train_f1_macro\": 0.6335295142817418, \"validation_loss\": 1.679788121810326, \"validation_accuracy\": 0.29395604395604397, \"validation_f1_macro\": 0.272290896129281}\n"}
+,{"stream_name":"stderr","time":56.214065493,"data":"/tmp/stressclassification/src/stress_classification/training.py:85: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.\n"}
+,{"stream_name":"stderr","time":56.214091082,"data":"  with torch.cuda.amp.autocast(enabled=use_amp):\n"}
+,{"stream_name":"stdout","time":56.343931312,"data":"{\"epoch\": 8, \"learning_rate\": 0.00029639955590984266, \"train_loss\": 0.8657181339257751, \"train_accuracy\": 0.6430187459599225, \"train_f1_macro\": 0.6335295142817418, \"validation_loss\": 1.679788121810326, \"validation_accuracy\": 0.29395604395604397, \"validation_f1_macro\": 0.272290896129281}\n"}
+,{"stream_name":"stderr","time":56.417505559,"data":"/tmp/stressclassification/src/stress_classification/training.py:85: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.\n"}
+,{"stream_name":"stderr","time":56.417535497,"data":"  with torch.cuda.amp.autocast(enabled=use_amp):\n"}
+,{"stream_name":"stderr","time":56.417540359,"data":"\n"}
+,{"stream_name":"stderr","time":56.41754446,"data":"/tmp/stressclassification/src/stress_classification/training.py:85: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.\n"}
+,{"stream_name":"stderr","time":56.417548543,"data":"  with torch.cuda.amp.autocast(enabled=use_amp):\n"}
+,{"stream_name":"stderr","time":58.701268593,"data":"/tmp/stressclassification/src/stress_classification/training.py:85: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.\n"}
+,{"stream_name":"stderr","time":58.701340586,"data":"  with torch.cuda.amp.autocast(enabled=use_amp):\n"}
+,{"stream_name":"stderr","time":58.90595176,"data":"/tmp/stressclassification/src/stress_classification/training.py:85: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.\n"}
+,{"stream_name":"stderr","time":58.906010256,"data":"  with torch.cuda.amp.autocast(enabled=use_amp):\n"}
+,{"stream_name":"stderr","time":58.906016716,"data":"\n"}
+,{"stream_name":"stderr","time":58.906020568,"data":"/tmp/stressclassification/src/stress_classification/training.py:85: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.\n"}
+,{"stream_name":"stderr","time":58.906025732,"data":"  with torch.cuda.amp.autocast(enabled=use_amp):\n"}
+,{"stream_name":"stdout","time":58.942425748,"data":"{\"epoch\": 9, \"learning_rate\": 0.00029530318258873023, \"train_loss\": 0.8537800876494754, \"train_accuracy\": 0.6467356173238527, \"train_f1_macro\": 0.6377640688123892, \"validation_loss\": 2.1288757289285627, \"validation_accuracy\": 0.21794871794871795, \"validation_f1_macro\": 0.1330042853561795}\n"}
+,{"stream_name":"stderr","time":59.002393318,"data":"/tmp/stressclassification/src/stress_classification/training.py:85: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.\n"}
+,{"stream_name":"stderr","time":59.002440426,"data":"  with torch.cuda.amp.autocast(enabled=use_amp):\n"}
+,{"stream_name":"stdout","time":59.146452416,"data":"{\"epoch\": 9, \"learning_rate\": 0.00029530318258873023, \"train_loss\": 0.8537800876494754, \"train_accuracy\": 0.6467356173238527, \"train_f1_macro\": 0.6377640688123892, \"validation_loss\": 2.1288757289285627, \"validation_accuracy\": 0.21794871794871795, \"validation_f1_macro\": 0.1330042853561795}\n"}
+,{"stream_name":"stderr","time":59.204401945,"data":"/tmp/stressclassification/src/stress_classification/training.py:85: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.\n"}
+,{"stream_name":"stderr","time":59.204458149,"data":"  with torch.cuda.amp.autocast(enabled=use_amp):\n"}
+,{"stream_name":"stderr","time":59.204465248,"data":"\n"}
+,{"stream_name":"stderr","time":59.204596695,"data":"/tmp/stressclassification/src/stress_classification/training.py:85: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.\n"}
+,{"stream_name":"stderr","time":59.204606111,"data":"  with torch.cuda.amp.autocast(enabled=use_amp):\n"}
+,{"stream_name":"stderr","time":61.474357078,"data":"/tmp/stressclassification/src/stress_classification/training.py:85: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.\n"}
+,{"stream_name":"stderr","time":61.474412005,"data":"  with torch.cuda.amp.autocast(enabled=use_amp):\n"}
+,{"stream_name":"stderr","time":61.677469298,"data":"/tmp/stressclassification/src/stress_classification/training.py:85: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.\n"}
+,{"stream_name":"stderr","time":61.677491921,"data":"  with torch.cuda.amp.autocast(enabled=use_amp):\n"}
+,{"stream_name":"stderr","time":61.677496991,"data":"\n"}
+,{"stream_name":"stderr","time":61.677501274,"data":"/tmp/stressclassification/src/stress_classification/training.py:85: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.\n"}
+,{"stream_name":"stderr","time":61.677505537,"data":"  with torch.cuda.amp.autocast(enabled=use_amp):\n"}
+,{"stream_name":"stdout","time":61.714703586,"data":"{\"epoch\": 10, \"learning_rate\": 0.0002940639060087029, \"train_loss\": 0.8497660380066328, \"train_accuracy\": 0.658694246929541, \"train_f1_macro\": 0.6491394381133823, \"validation_loss\": 1.640655408412109, \"validation_accuracy\": 0.28846153846153844, \"validation_f1_macro\": 0.25161544573909705}\n"}
+,{"stream_name":"stderr","time":61.78555869,"data":"/tmp/stressclassification/src/stress_classification/training.py:85: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.\n"}
+,{"stream_name":"stderr","time":61.785583082,"data":"  with torch.cuda.amp.autocast(enabled=use_amp):\n"}
+,{"stream_name":"stdout","time":61.91796307,"data":"{\"epoch\": 10, \"learning_rate\": 0.0002940639060087029, \"train_loss\": 0.8497660380066328, \"train_accuracy\": 0.658694246929541, \"train_f1_macro\": 0.6491394381133823, \"validation_loss\": 1.640655408412109, \"validation_accuracy\": 0.28846153846153844, \"validation_f1_macro\": 0.25161544573909705}\n"}
+,{"stream_name":"stderr","time":61.991639543,"data":"/tmp/stressclassification/src/stress_classification/training.py:85: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.\n"}
+,{"stream_name":"stderr","time":61.991666002,"data":"  with torch.cuda.amp.autocast(enabled=use_amp):\n"}
+,{"stream_name":"stderr","time":61.991670407,"data":"\n"}
+,{"stream_name":"stderr","time":61.991673903,"data":"/tmp/stressclassification/src/stress_classification/training.py:85: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.\n"}
+,{"stream_name":"stderr","time":61.991688685,"data":"  with torch.cuda.amp.autocast(enabled=use_amp):\n"}
+,{"stream_name":"stderr","time":64.351812459,"data":"/tmp/stressclassification/src/stress_classification/training.py:85: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.\n"}
+,{"stream_name":"stderr","time":64.351846978,"data":"  with torch.cuda.amp.autocast(enabled=use_amp):\n"}
+,{"stream_name":"stderr","time":64.554180749,"data":"/tmp/stressclassification/src/stress_classification/training.py:85: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.\n"}
+,{"stream_name":"stderr","time":64.554210625,"data":"  with torch.cuda.amp.autocast(enabled=use_amp):\n"}
+,{"stream_name":"stderr","time":64.554216036,"data":"\n"}
+,{"stream_name":"stderr","time":64.554229253,"data":"/tmp/stressclassification/src/stress_classification/training.py:85: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.\n"}
+,{"stream_name":"stderr","time":64.554233229,"data":"  with torch.cuda.amp.autocast(enabled=use_amp):\n"}
+,{"stream_name":"stdout","time":64.582598814,"data":"{\"epoch\": 11, \"learning_rate\": 0.00029268294918612537, \"train_loss\": 0.8259983643764207, \"train_accuracy\": 0.6774402068519716, \"train_f1_macro\": 0.6677502507193062, \"validation_loss\": 1.7232793661264272, \"validation_accuracy\": 0.3946886446886447, \"validation_f1_macro\": 0.2960333569834757}\n"}
+,{"stream_name":"stderr","time":64.652465154,"data":"/tmp/stressclassification/src/stress_classification/training.py:85: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.\n"}
+,{"stream_name":"stderr","time":64.652504395,"data":"  with torch.cuda.amp.autocast(enabled=use_amp):\n"}
+,{"stream_name":"stdout","time":64.791761006,"data":"{\"epoch\": 11, \"learning_rate\": 0.00029268294918612537, \"train_loss\": 0.8259983643764207, \"train_accuracy\": 0.6774402068519716, \"train_f1_macro\": 0.6677502507193062, \"validation_loss\": 1.7232793661264272, \"validation_accuracy\": 0.3946886446886447, \"validation_f1_macro\": 0.2960333569834757}\n"}
+,{"stream_name":"stderr","time":64.855993954,"data":"/tmp/stressclassification/src/stress_classification/training.py:85: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.\n"}
+,{"stream_name":"stderr","time":64.856037204,"data":"  with torch.cuda.amp.autocast(enabled=use_amp):\n"}
+,{"stream_name":"stderr","time":64.856042803,"data":"\n"}
+,{"stream_name":"stderr","time":64.856046779,"data":"/tmp/stressclassification/src/stress_classification/training.py:85: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.\n"}
+,{"stream_name":"stderr","time":64.856050885,"data":"  with torch.cuda.amp.autocast(enabled=use_amp):\n"}
+,{"stream_name":"stderr","time":67.126679719,"data":"/tmp/stressclassification/src/stress_classification/training.py:85: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.\n"}
+,{"stream_name":"stderr","time":67.126714606,"data":"  with torch.cuda.amp.autocast(enabled=use_amp):\n"}
+,{"stream_name":"stderr","time":67.329454157,"data":"/tmp/stressclassification/src/stress_classification/training.py:85: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.\n"}
+,{"stream_name":"stderr","time":67.32949956,"data":"  with torch.cuda.amp.autocast(enabled=use_amp):\n"}
+,{"stream_name":"stderr","time":67.329506002,"data":"\n"}
+,{"stream_name":"stderr","time":67.329509336,"data":"/tmp/stressclassification/src/stress_classification/training.py:85: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.\n"}
+,{"stream_name":"stderr","time":67.329512845,"data":"  with torch.cuda.amp.autocast(enabled=use_amp):\n"}
+,{"stream_name":"stdout","time":67.356860232,"data":"{\"epoch\": 12, \"learning_rate\": 0.00029116167495865663, \"train_loss\": 0.8176363613348124, \"train_accuracy\": 0.6827731092436975, \"train_f1_macro\": 0.6724075061126361, \"validation_loss\": 1.6951659179869152, \"validation_accuracy\": 0.315018315018315, \"validation_f1_macro\": 0.29811003698659194}\n"}
+,{"stream_name":"stderr","time":67.406541212,"data":"/tmp/stressclassification/src/stress_classification/training.py:85: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.\n"}
+,{"stream_name":"stderr","time":67.406564884,"data":"  with torch.cuda.amp.autocast(enabled=use_amp):\n"}
+,{"stream_name":"stdout","time":67.560148217,"data":"{\"epoch\": 12, \"learning_rate\": 0.00029116167495865663, \"train_loss\": 0.8176363613348124, \"train_accuracy\": 0.6827731092436975, \"train_f1_macro\": 0.6724075061126361, \"validation_loss\": 1.6951659179869152, \"validation_accuracy\": 0.315018315018315, \"validation_f1_macro\": 0.29811003698659194}\n"}
+,{"stream_name":"stderr","time":67.612200706,"data":"/tmp/stressclassification/src/stress_classification/training.py:85: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.\n"}
+,{"stream_name":"stderr","time":67.612239837,"data":"  with torch.cuda.amp.autocast(enabled=use_amp):\n"}
+,{"stream_name":"stderr","time":67.612244972,"data":"\n"}
+,{"stream_name":"stderr","time":67.612248495,"data":"/tmp/stressclassification/src/stress_classification/training.py:85: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.\n"}
+,{"stream_name":"stderr","time":67.612252581,"data":"  with torch.cuda.amp.autocast(enabled=use_amp):\n"}
+,{"stream_name":"stderr","time":69.88005729,"data":"/tmp/stressclassification/src/stress_classification/training.py:85: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.\n"}
+,{"stream_name":"stderr","time":69.880086827,"data":"  with torch.cuda.amp.autocast(enabled=use_amp):\n"}
+,{"stream_name":"stderr","time":70.08656912,"data":"/tmp/stressclassification/src/stress_classification/training.py:85: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.\n"}
+,{"stream_name":"stderr","time":70.086592791,"data":"  with torch.cuda.amp.autocast(enabled=use_amp):\n"}
+,{"stream_name":"stderr","time":70.086597634,"data":"\n"}
+,{"stream_name":"stderr","time":70.086600917,"data":"/tmp/stressclassification/src/stress_classification/training.py:85: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.\n"}
+,{"stream_name":"stderr","time":70.086624661,"data":"  with torch.cuda.amp.autocast(enabled=use_amp):\n"}
+,{"stream_name":"stdout","time":70.118419034,"data":"{\"epoch\": 13, \"learning_rate\": 0.0002895015846402935, \"train_loss\": 0.8112254223672513, \"train_accuracy\": 0.6903684550743374, \"train_f1_macro\": 0.680663482034643, \"validation_loss\": 1.9086136909631581, \"validation_accuracy\": 0.2673992673992674, \"validation_f1_macro\": 0.2210439425278993}\n"}
+,{"stream_name":"stderr","time":70.173898987,"data":"/tmp/stressclassification/src/stress_classification/training.py:85: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.\n"}
+,{"stream_name":"stderr","time":70.173924523,"data":"  with torch.cuda.amp.autocast(enabled=use_amp):\n"}
+,{"stream_name":"stdout","time":70.320543798,"data":"{\"epoch\": 13, \"learning_rate\": 0.0002895015846402935, \"train_loss\": 0.8112254223672513, \"train_accuracy\": 0.6903684550743374, \"train_f1_macro\": 0.680663482034643, \"validation_loss\": 1.9086136909631581, \"validation_accuracy\": 0.2673992673992674, \"validation_f1_macro\": 0.2210439425278993}\n"}
+,{"stream_name":"stderr","time":70.37689062,"data":"/tmp/stressclassification/src/stress_classification/training.py:85: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.\n"}
+,{"stream_name":"stderr","time":70.376937497,"data":"  with torch.cuda.amp.autocast(enabled=use_amp):\n"}
+,{"stream_name":"stderr","time":70.376946875,"data":"\n"}
+,{"stream_name":"stderr","time":70.376950866,"data":"/tmp/stressclassification/src/stress_classification/training.py:85: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.\n"}
+,{"stream_name":"stderr","time":70.376954587,"data":"  with torch.cuda.amp.autocast(enabled=use_amp):\n"}
+,{"stream_name":"stderr","time":72.690851562,"data":"/tmp/stressclassification/src/stress_classification/training.py:85: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.\n"}
+,{"stream_name":"stderr","time":72.690883569,"data":"  with torch.cuda.amp.autocast(enabled=use_amp):\n"}
+,{"stream_name":"stderr","time":72.89364119,"data":"/tmp/stressclassification/src/stress_classification/training.py:85: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.\n"}
+,{"stream_name":"stderr","time":72.893672631,"data":"  with torch.cuda.amp.autocast(enabled=use_amp):\n"}
+,{"stream_name":"stderr","time":72.89369976,"data":"\n"}
+,{"stream_name":"stderr","time":72.893795771,"data":"/tmp/stressclassification/src/stress_classification/training.py:85: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.\n"}
+,{"stream_name":"stderr","time":72.893804412,"data":"  with torch.cuda.amp.autocast(enabled=use_amp):\n"}
+,{"stream_name":"stdout","time":72.926403141,"data":"{\"epoch\": 14, \"learning_rate\": 0.0002877043165397551, \"train_loss\": 0.7985950442537926, \"train_accuracy\": 0.6914996767937944, \"train_f1_macro\": 0.6830662324450684, \"validation_loss\": 1.7382354238531093, \"validation_accuracy\": 0.34615384615384615, \"validation_f1_macro\": 0.31421971052571673}\n"}
+,{"stream_name":"stderr","time":73.004172181,"data":"/tmp/stressclassification/src/stress_classification/training.py:85: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.\n"}
+,{"stream_name":"stderr","time":73.004199328,"data":"  with torch.cuda.amp.autocast(enabled=use_amp):\n"}
+,{"stream_name":"stdout","time":73.13058471,"data":"{\"epoch\": 14, \"learning_rate\": 0.0002877043165397551, \"train_loss\": 0.7985950442537926, \"train_accuracy\": 0.6914996767937944, \"train_f1_macro\": 0.6830662324450684, \"validation_loss\": 1.7382354238531093, \"validation_accuracy\": 0.34615384615384615, \"validation_f1_macro\": 0.31421971052571673}\n"}
+,{"stream_name":"stderr","time":73.209995439,"data":"/tmp/stressclassification/src/stress_classification/training.py:85: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.\n"}
+,{"stream_name":"stderr","time":73.210041008,"data":"  with torch.cuda.amp.autocast(enabled=use_amp):\n"}
+,{"stream_name":"stderr","time":73.210047132,"data":"\n"}
+,{"stream_name":"stderr","time":73.21005143,"data":"/tmp/stressclassification/src/stress_classification/training.py:85: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.\n"}
+,{"stream_name":"stderr","time":73.21005581,"data":"  with torch.cuda.amp.autocast(enabled=use_amp):\n"}
+,{"stream_name":"stderr","time":75.530426727,"data":"/tmp/stressclassification/src/stress_classification/training.py:85: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.\n"}
+,{"stream_name":"stderr","time":75.530467216,"data":"  with torch.cuda.amp.autocast(enabled=use_amp):\n"}
+,{"stream_name":"stderr","time":75.734385681,"data":"/tmp/stressclassification/src/stress_classification/training.py:85: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.\n"}
+,{"stream_name":"stderr","time":75.734420482,"data":"  with torch.cuda.amp.autocast(enabled=use_amp):\n"}
+,{"stream_name":"stderr","time":75.734426294,"data":"\n"}
+,{"stream_name":"stderr","time":75.734430149,"data":"/tmp/stressclassification/src/stress_classification/training.py:85: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.\n"}
+,{"stream_name":"stderr","time":75.734434035,"data":"  with torch.cuda.amp.autocast(enabled=use_amp):\n"}
+,{"stream_name":"stdout","time":75.758858202,"data":"{\"epoch\": 15, \"learning_rate\": 0.0002857716443436699, \"train_loss\": 0.7860693850283016, \"train_accuracy\": 0.7144473173884939, \"train_f1_macro\": 0.7053210386742824, \"validation_loss\": 2.2173705450344436, \"validation_accuracy\": 0.2454212454212454, \"validation_f1_macro\": 0.19335348314157286}\n"}
+,{"stream_name":"stderr","time":75.827395755,"data":"/tmp/stressclassification/src/stress_classification/training.py:85: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.\n"}
+,{"stream_name":"stderr","time":75.827423348,"data":"  with torch.cuda.amp.autocast(enabled=use_amp):\n"}
+,{"stream_name":"stdout","time":75.961783114,"data":"{\"epoch\": 15, \"learning_rate\": 0.0002857716443436699, \"train_loss\": 0.7860693850283016, \"train_accuracy\": 0.7144473173884939, \"train_f1_macro\": 0.7053210386742824, \"validation_loss\": 2.2173705450344436, \"validation_accuracy\": 0.2454212454212454, \"validation_f1_macro\": 0.19335348314157286}\n"}
+,{"stream_name":"stderr","time":76.031587467,"data":"/tmp/stressclassification/src/stress_classification/training.py:85: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.\n"}
+,{"stream_name":"stderr","time":76.031619858,"data":"  with torch.cuda.amp.autocast(enabled=use_amp):\n"}
+,{"stream_name":"stderr","time":76.031625933,"data":"\n"}
+,{"stream_name":"stderr","time":76.031793679,"data":"/tmp/stressclassification/src/stress_classification/training.py:85: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.\n"}
+,{"stream_name":"stderr","time":76.031805214,"data":"  with torch.cuda.amp.autocast(enabled=use_amp):\n"}
+,{"stream_name":"stderr","time":78.326064393,"data":"/tmp/stressclassification/src/stress_classification/training.py:85: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.\n"}
+,{"stream_name":"stderr","time":78.326108236,"data":"  with torch.cuda.amp.autocast(enabled=use_amp):\n"}
+,{"stream_name":"stderr","time":78.528764238,"data":"/tmp/stressclassification/src/stress_classification/training.py:85: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.\n"}
+,{"stream_name":"stderr","time":78.528815014,"data":"  with torch.cuda.amp.autocast(enabled=use_amp):\n"}
+,{"stream_name":"stderr","time":78.528820746,"data":"\n"}
+,{"stream_name":"stderr","time":78.528824168,"data":"/tmp/stressclassification/src/stress_classification/training.py:85: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.\n"}
+,{"stream_name":"stderr","time":78.528827879,"data":"  with torch.cuda.amp.autocast(enabled=use_amp):\n"}
+,{"stream_name":"stdout","time":78.561923292,"data":"{\"epoch\": 16, \"learning_rate\": 0.00028370547536616097, \"train_loss\": 0.77342023938875, \"train_accuracy\": 0.7178409825468649, \"train_f1_macro\": 0.7087823095270531, \"validation_loss\": 2.1646202693492067, \"validation_accuracy\": 0.27289377289377287, \"validation_f1_macro\": 0.2322332577768408}\n"}
+,{"stream_name":"stderr","time":78.619586656,"data":"/tmp/stressclassification/src/stress_classification/training.py:85: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.\n"}
+,{"stream_name":"stderr","time":78.619651039,"data":"  with torch.cuda.amp.autocast(enabled=use_amp):\n"}
+,{"stream_name":"stdout","time":78.76704554,"data":"{\"epoch\": 16, \"learning_rate\": 0.00028370547536616097, \"train_loss\": 0.77342023938875, \"train_accuracy\": 0.7178409825468649, \"train_f1_macro\": 0.7087823095270531, \"validation_loss\": 2.1646202693492067, \"validation_accuracy\": 0.27289377289377287, \"validation_f1_macro\": 0.2322332577768408}\n"}
+,{"stream_name":"stderr","time":78.82247416,"data":"/tmp/stressclassification/src/stress_classification/training.py:85: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.\n"}
+,{"stream_name":"stderr","time":78.82250429,"data":"  with torch.cuda.amp.autocast(enabled=use_amp):\n"}
+,{"stream_name":"stderr","time":78.822509727,"data":"\n"}
+,{"stream_name":"stderr","time":78.822624191,"data":"/tmp/stressclassification/src/stress_classification/training.py:85: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.\n"}
+,{"stream_name":"stderr","time":78.822639725,"data":"  with torch.cuda.amp.autocast(enabled=use_amp):\n"}
+,{"stream_name":"stderr","time":81.129774766,"data":"/tmp/stressclassification/src/stress_classification/training.py:85: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.\n"}
+,{"stream_name":"stderr","time":81.129812563,"data":"  with torch.cuda.amp.autocast(enabled=use_amp):\n"}
+,{"stream_name":"stderr","time":81.332068111,"data":"/tmp/stressclassification/src/stress_classification/training.py:85: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.\n"}
+,{"stream_name":"stderr","time":81.33210159,"data":"  with torch.cuda.amp.autocast(enabled=use_amp):\n"}
+,{"stream_name":"stderr","time":81.33210649,"data":"\n"}
+,{"stream_name":"stderr","time":81.332109829,"data":"/tmp/stressclassification/src/stress_classification/training.py:85: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.\n"}
+,{"stream_name":"stderr","time":81.332113815,"data":"  with torch.cuda.amp.autocast(enabled=use_amp):\n"}
+,{"stream_name":"stdout","time":81.359380389,"data":"{\"epoch\": 17, \"learning_rate\": 0.00028150784866655756, \"train_loss\": 0.7629919215487756, \"train_accuracy\": 0.7254363283775048, \"train_f1_macro\": 0.7171292698343298, \"validation_loss\": 1.8052523747468605, \"validation_accuracy\": 0.3489010989010989, \"validation_f1_macro\": 0.31791795544029416}\n"}
+,{"stream_name":"stderr","time":81.437739441,"data":"/tmp/stressclassification/src/stress_classification/training.py:85: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.\n"}
+,{"stream_name":"stderr","time":81.43777677,"data":"  with torch.cuda.amp.autocast(enabled=use_amp):\n"}
+,{"stream_name":"stdout","time":81.561999486,"data":"{\"epoch\": 17, \"learning_rate\": 0.00028150784866655756, \"train_loss\": 0.7629919215487756, \"train_accuracy\": 0.7254363283775048, \"train_f1_macro\": 0.7171292698343298, \"validation_loss\": 1.8052523747468605, \"validation_accuracy\": 0.3489010989010989, \"validation_f1_macro\": 0.31791795544029416}\n"}
+,{"stream_name":"stderr","time":81.641465528,"data":"/tmp/stressclassification/src/stress_classification/training.py:85: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.\n"}
+,{"stream_name":"stderr","time":81.641496296,"data":"  with torch.cuda.amp.autocast(enabled=use_amp):\n"}
+,{"stream_name":"stderr","time":81.641502058,"data":"\n"}
+,{"stream_name":"stderr","time":81.64150615,"data":"/tmp/stressclassification/src/stress_classification/training.py:85: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.\n"}
+,{"stream_name":"stderr","time":81.641511029,"data":"  with torch.cuda.amp.autocast(enabled=use_amp):\n"}
+,{"stream_name":"stderr","time":84.018708024,"data":"/tmp/stressclassification/src/stress_classification/training.py:85: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.\n"}
+,{"stream_name":"stderr","time":84.018745165,"data":"  with torch.cuda.amp.autocast(enabled=use_amp):\n"}
+,{"stream_name":"stderr","time":84.221406368,"data":"/tmp/stressclassification/src/stress_classification/training.py:85: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.\n"}
+,{"stream_name":"stderr","time":84.221436272,"data":"  with torch.cuda.amp.autocast(enabled=use_amp):\n"}
+,{"stream_name":"stderr","time":84.221441256,"data":"\n"}
+,{"stream_name":"stderr","time":84.221444738,"data":"/tmp/stressclassification/src/stress_classification/training.py:85: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.\n"}
+,{"stream_name":"stderr","time":84.221448662,"data":"  with torch.cuda.amp.autocast(enabled=use_amp):\n"}
+,{"stream_name":"stdout","time":84.240494446,"data":"{\"epoch\": 18, \"learning_rate\": 0.00027918093303708956, \"train_loss\": 0.7503245400858449, \"train_accuracy\": 0.7289915966386554, \"train_f1_macro\": 0.7207558352666069, \"validation_loss\": 2.2801175327091427, \"validation_accuracy\": 0.25457875457875456, \"validation_f1_macro\": 0.19942360268776835}\n"}
+,{"stream_name":"stderr","time":84.315074999,"data":"/tmp/stressclassification/src/stress_classification/training.py:85: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.\n"}
+,{"stream_name":"stderr","time":84.315102845,"data":"  with torch.cuda.amp.autocast(enabled=use_amp):\n"}
+,{"stream_name":"stdout","time":84.445039279,"data":"{\"epoch\": 18, \"learning_rate\": 0.00027918093303708956, \"train_loss\": 0.7503245400858449, \"train_accuracy\": 0.7289915966386554, \"train_f1_macro\": 0.7207558352666069, \"validation_loss\": 2.2801175327091427, \"validation_accuracy\": 0.25457875457875456, \"validation_f1_macro\": 0.19942360268776835}\n"}
+,{"stream_name":"stderr","time":84.518339311,"data":"/tmp/stressclassification/src/stress_classification/training.py:85: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.\n"}
+,{"stream_name":"stderr","time":84.518371438,"data":"  with torch.cuda.amp.autocast(enabled=use_amp):\n"}
+,{"stream_name":"stderr","time":84.518397398,"data":"\n"}
+,{"stream_name":"stderr","time":84.518532377,"data":"/tmp/stressclassification/src/stress_classification/training.py:85: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.\n"}
+,{"stream_name":"stderr","time":84.518541556,"data":"  with torch.cuda.amp.autocast(enabled=use_amp):\n"}
+,{"stream_name":"stderr","time":86.782729886,"data":"/tmp/stressclassification/src/stress_classification/training.py:85: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.\n"}
+,{"stream_name":"stderr","time":86.78276055,"data":"  with torch.cuda.amp.autocast(enabled=use_amp):\n"}
+,{"stream_name":"stderr","time":86.985666884,"data":"/tmp/stressclassification/src/stress_classification/training.py:85: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.\n"}
+,{"stream_name":"stderr","time":86.985697013,"data":"  with torch.cuda.amp.autocast(enabled=use_amp):\n"}
+,{"stream_name":"stderr","time":86.985701743,"data":"\n"}
+,{"stream_name":"stderr","time":86.985705034,"data":"/tmp/stressclassification/src/stress_classification/training.py:85: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.\n"}
+,{"stream_name":"stderr","time":86.985708561,"data":"  with torch.cuda.amp.autocast(enabled=use_amp):\n"}
+,{"stream_name":"stdout","time":87.015261074,"data":"{\"epoch\": 19, \"learning_rate\": 0.00027672702486255125, \"train_loss\": 0.7463163957336909, \"train_accuracy\": 0.7341628959276018, \"train_f1_macro\": 0.7272638620598274, \"validation_loss\": 1.9327111619732755, \"validation_accuracy\": 0.3516483516483517, \"validation_f1_macro\": 0.31009025281755487}\n"}
+,{"stream_name":"stderr","time":87.083562007,"data":"/tmp/stressclassification/src/stress_classification/training.py:85: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.\n"}
+,{"stream_name":"stderr","time":87.083588252,"data":"  with torch.cuda.amp.autocast(enabled=use_amp):\n"}
+,{"stream_name":"stdout","time":87.218797069,"data":"{\"epoch\": 19, \"learning_rate\": 0.00027672702486255125, \"train_loss\": 0.7463163957336909, \"train_accuracy\": 0.7341628959276018, \"train_f1_macro\": 0.7272638620598274, \"validation_loss\": 1.9327111619732755, \"validation_accuracy\": 0.3516483516483517, \"validation_f1_macro\": 0.31009025281755487}\n"}
+,{"stream_name":"stderr","time":87.286556145,"data":"/tmp/stressclassification/src/stress_classification/training.py:85: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.\n"}
+,{"stream_name":"stderr","time":87.286584117,"data":"  with torch.cuda.amp.autocast(enabled=use_amp):\n"}
+,{"stream_name":"stderr","time":87.286589311,"data":"\n"}
+,{"stream_name":"stderr","time":87.286592686,"data":"/tmp/stressclassification/src/stress_classification/training.py:85: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.\n"}
+,{"stream_name":"stderr","time":87.286618829,"data":"  with torch.cuda.amp.autocast(enabled=use_amp):\n"}
+,{"stream_name":"stderr","time":89.588115994,"data":"/tmp/stressclassification/src/stress_classification/training.py:85: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.\n"}
+,{"stream_name":"stderr","time":89.588148353,"data":"  with torch.cuda.amp.autocast(enabled=use_amp):\n"}
+,{"stream_name":"stderr","time":89.791070902,"data":"/tmp/stressclassification/src/stress_classification/training.py:85: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.\n"}
+,{"stream_name":"stderr","time":89.791104233,"data":"  with torch.cuda.amp.autocast(enabled=use_amp):\n"}
+,{"stream_name":"stderr","time":89.791109482,"data":"\n"}
+,{"stream_name":"stderr","time":89.791113668,"data":"/tmp/stressclassification/src/stress_classification/training.py:85: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.\n"}
+,{"stream_name":"stderr","time":89.791117516,"data":"  with torch.cuda.amp.autocast(enabled=use_amp):\n"}
+,{"stream_name":"stdout","time":89.810161523,"data":"{\"epoch\": 20, \"learning_rate\": 0.000274148545854047, \"train_loss\": 0.7343690427334446, \"train_accuracy\": 0.7349709114414997, \"train_f1_macro\": 0.7273746952625855, \"validation_loss\": 2.8184782576648306, \"validation_accuracy\": 0.22435897435897437, \"validation_f1_macro\": 0.14146531908546964}\n"}
+,{"stream_name":"stderr","time":89.877909435,"data":"/tmp/stressclassification/src/stress_classification/training.py:85: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.\n"}
+,{"stream_name":"stderr","time":89.877935687,"data":"  with torch.cuda.amp.autocast(enabled=use_amp):\n"}
+,{"stream_name":"stdout","time":90.015412334,"data":"{\"epoch\": 20, \"learning_rate\": 0.000274148545854047, \"train_loss\": 0.7343690427334446, \"train_accuracy\": 0.7349709114414997, \"train_f1_macro\": 0.7273746952625855, \"validation_loss\": 2.8184782576648306, \"validation_accuracy\": 0.22435897435897437, \"validation_f1_macro\": 0.14146531908546964}\n"}
+,{"stream_name":"stderr","time":90.080822626,"data":"/tmp/stressclassification/src/stress_classification/training.py:85: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.\n"}
+,{"stream_name":"stderr","time":90.080854494,"data":"  with torch.cuda.amp.autocast(enabled=use_amp):\n"}
+,{"stream_name":"stderr","time":90.080859537,"data":"\n"}
+,{"stream_name":"stderr","time":90.080863061,"data":"/tmp/stressclassification/src/stress_classification/training.py:85: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.\n"}
+,{"stream_name":"stderr","time":90.080867371,"data":"  with torch.cuda.amp.autocast(enabled=use_amp):\n"}
+,{"stream_name":"stderr","time":92.399117916,"data":"/tmp/stressclassification/src/stress_classification/training.py:85: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.\n"}
+,{"stream_name":"stderr","time":92.399225024,"data":"  with torch.cuda.amp.autocast(enabled=use_amp):\n"}
+,{"stream_name":"stderr","time":92.600637175,"data":"/tmp/stressclassification/src/stress_classification/training.py:85: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.\n"}
+,{"stream_name":"stderr","time":92.600670151,"data":"  with torch.cuda.amp.autocast(enabled=use_amp):\n"}
+,{"stream_name":"stderr","time":92.600691843,"data":"\n"}
+,{"stream_name":"stderr","time":92.600696094,"data":"/tmp/stressclassification/src/stress_classification/training.py:85: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.\n"}
+,{"stream_name":"stderr","time":92.600700362,"data":"  with torch.cuda.amp.autocast(enabled=use_amp):\n"}
+,{"stream_name":"stdout","time":92.622714057,"data":"{\"epoch\": 21, \"learning_rate\": 0.00027144804065905466, \"train_loss\": 0.7184514695394402, \"train_accuracy\": 0.7574337427278603, \"train_f1_macro\": 0.7507281575532359, \"validation_loss\": 2.2623000799954593, \"validation_accuracy\": 0.29395604395604397, \"validation_f1_macro\": 0.2779345350629913}\n"}
+,{"stream_name":"stderr","time":92.6893442,"data":"/tmp/stressclassification/src/stress_classification/training.py:85: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.\n"}
+,{"stream_name":"stderr","time":92.689375316,"data":"  with torch.cuda.amp.autocast(enabled=use_amp):\n"}
+,{"stream_name":"stdout","time":92.827828308,"data":"{\"epoch\": 21, \"learning_rate\": 0.00027144804065905466, \"train_loss\": 0.7184514695394402, \"train_accuracy\": 0.7574337427278603, \"train_f1_macro\": 0.7507281575532359, \"validation_loss\": 2.2623000799954593, \"validation_accuracy\": 0.29395604395604397, \"validation_f1_macro\": 0.2779345350629913}\n"}
+,{"stream_name":"stderr","time":92.892586695,"data":"/tmp/stressclassification/src/stress_classification/training.py:85: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.\n"}
+,{"stream_name":"stderr","time":92.892640963,"data":"  with torch.cuda.amp.autocast(enabled=use_amp):\n"}
+,{"stream_name":"stderr","time":92.892646437,"data":"\n"}
+,{"stream_name":"stderr","time":92.893499515,"data":"/tmp/stressclassification/src/stress_classification/training.py:85: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.\n"}
+,{"stream_name":"stderr","time":92.893531918,"data":"  with torch.cuda.amp.autocast(enabled=use_amp):\n"}
+,{"stream_name":"stderr","time":95.174438348,"data":"/tmp/stressclassification/src/stress_classification/training.py:85: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.\n"}
+,{"stream_name":"stderr","time":95.17447358,"data":"  with torch.cuda.amp.autocast(enabled=use_amp):\n"}
+,{"stream_name":"stderr","time":95.377005728,"data":"/tmp/stressclassification/src/stress_classification/training.py:85: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.\n"}
+,{"stream_name":"stderr","time":95.377037851,"data":"  with torch.cuda.amp.autocast(enabled=use_amp):\n"}
+,{"stream_name":"stderr","time":95.377042245,"data":"\n"}
+,{"stream_name":"stderr","time":95.377045562,"data":"/tmp/stressclassification/src/stress_classification/training.py:85: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.\n"}
+,{"stream_name":"stderr","time":95.37704946,"data":"  with torch.cuda.amp.autocast(enabled=use_amp):\n"}
+,{"stream_name":"stdout","time":95.422974733,"data":"{\"epoch\": 22, \"learning_rate\": 0.0002686281743501657, \"train_loss\": 0.7167451904139059, \"train_accuracy\": 0.7577569489334195, \"train_f1_macro\": 0.7493802435516179, \"validation_loss\": 2.1363828627617805, \"validation_accuracy\": 0.31959706959706957, \"validation_f1_macro\": 0.31613348061654195}\n"}
+,{"stream_name":"stderr","time":95.482558982,"data":"/tmp/stressclassification/src/stress_classification/training.py:85: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.\n"}
+,{"stream_name":"stderr","time":95.482609465,"data":"  with torch.cuda.amp.autocast(enabled=use_amp):\n"}
+,{"stream_name":"stdout","time":95.627831051,"data":"{\"epoch\": 22, \"learning_rate\": 0.0002686281743501657, \"train_loss\": 0.7167451904139059, \"train_accuracy\": 0.7577569489334195, \"train_f1_macro\": 0.7493802435516179, \"validation_loss\": 2.1363828627617805, \"validation_accuracy\": 0.31959706959706957, \"validation_f1_macro\": 0.31613348061654195}\n"}
+,{"stream_name":"stderr","time":95.688017523,"data":"/tmp/stressclassification/src/stress_classification/training.py:85: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.\n"}
+,{"stream_name":"stderr","time":95.688049773,"data":"  with torch.cuda.amp.autocast(enabled=use_amp):\n"}
+,{"stream_name":"stderr","time":95.68805545,"data":"\n"}
+,{"stream_name":"stderr","time":95.688210332,"data":"/tmp/stressclassification/src/stress_classification/training.py:85: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.\n"}
+,{"stream_name":"stderr","time":95.688224426,"data":"  with torch.cuda.amp.autocast(enabled=use_amp):\n"}
+,{"stream_name":"stderr","time":97.959819844,"data":"/tmp/stressclassification/src/stress_classification/training.py:85: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.\n"}
+,{"stream_name":"stderr","time":97.960067817,"data":"  with torch.cuda.amp.autocast(enabled=use_amp):\n"}
+,{"stream_name":"stderr","time":98.162958965,"data":"/tmp/stressclassification/src/stress_classification/training.py:85: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.\n"}
+,{"stream_name":"stderr","time":98.162994029,"data":"  with torch.cuda.amp.autocast(enabled=use_amp):\n"}
+,{"stream_name":"stderr","time":98.162999983,"data":"\n"}
+,{"stream_name":"stderr","time":98.163004161,"data":"/tmp/stressclassification/src/stress_classification/training.py:85: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.\n"}
+,{"stream_name":"stderr","time":98.163008999,"data":"  with torch.cuda.amp.autocast(enabled=use_amp):\n"}
+,{"stream_name":"stdout","time":98.188718691,"data":"{\"epoch\": 23, \"learning_rate\": 0.0002656917297949805, \"train_loss\": 0.6936166826262348, \"train_accuracy\": 0.7693923723335488, \"train_f1_macro\": 0.7641992146601325, \"validation_loss\": 2.785856939497448, \"validation_accuracy\": 0.23992673992673993, \"validation_f1_macro\": 0.1856649152941434}\n"}
+,{"stream_name":"stderr","time":98.265470264,"data":"/tmp/stressclassification/src/stress_classification/training.py:85: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.\n"}
+,{"stream_name":"stderr","time":98.265500851,"data":"  with torch.cuda.amp.autocast(enabled=use_amp):\n"}
+,{"stream_name":"stdout","time":98.392044382,"data":"{\"epoch\": 23, \"learning_rate\": 0.0002656917297949805, \"train_loss\": 0.6936166826262348, \"train_accuracy\": 0.7693923723335488, \"train_f1_macro\": 0.7641992146601325, \"validation_loss\": 2.785856939497448, \"validation_accuracy\": 0.23992673992673993, \"validation_f1_macro\": 0.1856649152941434}\n"}
+,{"stream_name":"stderr","time":98.468429762,"data":"/tmp/stressclassification/src/stress_classification/training.py:85: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.\n"}
+,{"stream_name":"stderr","time":98.468472841,"data":"  with torch.cuda.amp.autocast(enabled=use_amp):\n"}
+,{"stream_name":"stderr","time":98.468478497,"data":"\n"}
+,{"stream_name":"stderr","time":98.468482346,"data":"/tmp/stressclassification/src/stress_classification/training.py:85: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.\n"}
+,{"stream_name":"stderr","time":98.468485646,"data":"  with torch.cuda.amp.autocast(enabled=use_amp):\n"}
+,{"stream_name":"stderr","time":100.77177948799999,"data":"/tmp/stressclassification/src/stress_classification/training.py:85: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.\n"}
+,{"stream_name":"stderr","time":100.77181113,"data":"  with torch.cuda.amp.autocast(enabled=use_amp):\n"}
+,{"stream_name":"stderr","time":100.979504743,"data":"/tmp/stressclassification/src/stress_classification/training.py:85: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.\n"}
+,{"stream_name":"stderr","time":100.979529961,"data":"  with torch.cuda.amp.autocast(enabled=use_amp):\n"}
+,{"stream_name":"stderr","time":100.979534981,"data":"\n"}
+,{"stream_name":"stderr","time":100.979539359,"data":"/tmp/stressclassification/src/stress_classification/training.py:85: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.\n"}
+,{"stream_name":"stderr","time":100.97954394,"data":"  with torch.cuda.amp.autocast(enabled=use_amp):\n"}
+,{"stream_name":"stdout","time":101.004423604,"data":"{\"epoch\": 24, \"learning_rate\": 0.0002626416049097537, \"train_loss\": 0.6829927584087764, \"train_accuracy\": 0.77650290885585, \"train_f1_macro\": 0.7703811723332317, \"validation_loss\": 1.8648980484777318, \"validation_accuracy\": 0.3727106227106227, \"validation_f1_macro\": 0.32750228444933954}\n"}
+,{"stream_name":"stderr","time":101.067543366,"data":"/tmp/stressclassification/src/stress_classification/training.py:85: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.\n"}
+,{"stream_name":"stderr","time":101.067571203,"data":"  with torch.cuda.amp.autocast(enabled=use_amp):\n"}
+,{"stream_name":"stdout","time":101.207280415,"data":"{\"epoch\": 24, \"learning_rate\": 0.0002626416049097537, \"train_loss\": 0.6829927584087764, \"train_accuracy\": 0.77650290885585, \"train_f1_macro\": 0.7703811723332317, \"validation_loss\": 1.8648980484777318, \"validation_accuracy\": 0.3727106227106227, \"validation_f1_macro\": 0.32750228444933954}\n"}
+,{"stream_name":"stderr","time":101.271989455,"data":"/tmp/stressclassification/src/stress_classification/training.py:85: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.\n"}
+,{"stream_name":"stderr","time":101.272019354,"data":"  with torch.cuda.amp.autocast(enabled=use_amp):\n"}
+,{"stream_name":"stderr","time":101.272028736,"data":"\n"}
+,{"stream_name":"stderr","time":101.272287251,"data":"/tmp/stressclassification/src/stress_classification/training.py:85: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.\n"}
+,{"stream_name":"stderr","time":101.272299923,"data":"  with torch.cuda.amp.autocast(enabled=use_amp):\n"}
+,{"stream_name":"stderr","time":103.601407032,"data":"/tmp/stressclassification/src/stress_classification/training.py:85: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.\n"}
+,{"stream_name":"stderr","time":103.601516726,"data":"  with torch.cuda.amp.autocast(enabled=use_amp):\n"}
+,{"stream_name":"stderr","time":103.804480628,"data":"/tmp/stressclassification/src/stress_classification/training.py:85: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.\n"}
+,{"stream_name":"stderr","time":103.804513718,"data":"  with torch.cuda.amp.autocast(enabled=use_amp):\n"}
+,{"stream_name":"stderr","time":103.804519251,"data":"\n"}
+,{"stream_name":"stderr","time":103.804675909,"data":"/tmp/stressclassification/src/stress_classification/training.py:85: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.\n"}
+,{"stream_name":"stderr","time":103.804685715,"data":"  with torch.cuda.amp.autocast(enabled=use_amp):\n"}
+,{"stream_name":"stdout","time":103.826435274,"data":"{\"epoch\": 25, \"learning_rate\": 0.00025948080979950103, \"train_loss\": 0.6826706942852343, \"train_accuracy\": 0.7763413057530705, \"train_f1_macro\": 0.7702409023089117, \"validation_loss\": 2.1713471919189007, \"validation_accuracy\": 0.3415750915750916, \"validation_f1_macro\": 0.3410758731348848}\n"}
+,{"stream_name":"stderr","time":103.893557937,"data":"/tmp/stressclassification/src/stress_classification/training.py:85: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.\n"}
+,{"stream_name":"stderr","time":103.893589564,"data":"  with torch.cuda.amp.autocast(enabled=use_amp):\n"}
+,{"stream_name":"stdout","time":104.02989155,"data":"{\"epoch\": 25, \"learning_rate\": 0.00025948080979950103, \"train_loss\": 0.6826706942852343, \"train_accuracy\": 0.7763413057530705, \"train_f1_macro\": 0.7702409023089117, \"validation_loss\": 2.1713471919189007, \"validation_accuracy\": 0.3415750915750916, \"validation_f1_macro\": 0.3410758731348848}\n"}
+,{"stream_name":"stderr","time":104.097907835,"data":"/tmp/stressclassification/src/stress_classification/training.py:85: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.\n"}
+,{"stream_name":"stderr","time":104.097936541,"data":"  with torch.cuda.amp.autocast(enabled=use_amp):\n"}
+,{"stream_name":"stderr","time":104.097941602,"data":"\n"}
+,{"stream_name":"stderr","time":104.097945517,"data":"/tmp/stressclassification/src/stress_classification/training.py:85: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.\n"}
+,{"stream_name":"stderr","time":104.09795338,"data":"  with torch.cuda.amp.autocast(enabled=use_amp):\n"}
+,{"stream_name":"stderr","time":106.395427244,"data":"/tmp/stressclassification/src/stress_classification/training.py:85: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.\n"}
+,{"stream_name":"stderr","time":106.39545749,"data":"  with torch.cuda.amp.autocast(enabled=use_amp):\n"}
+,{"stream_name":"stderr","time":106.597722426,"data":"/tmp/stressclassification/src/stress_classification/training.py:85: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.\n"}
+,{"stream_name":"stderr","time":106.597752236,"data":"  with torch.cuda.amp.autocast(enabled=use_amp):\n"}
+,{"stream_name":"stderr","time":106.597757182,"data":"\n"}
+,{"stream_name":"stderr","time":106.597760501,"data":"/tmp/stressclassification/src/stress_classification/training.py:85: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.\n"}
+,{"stream_name":"stderr","time":106.5977643,"data":"  with torch.cuda.amp.autocast(enabled=use_amp):\n"}
+,{"stream_name":"stdout","time":106.622799798,"data":"{\"epoch\": 26, \"learning_rate\": 0.00025621246378738883, \"train_loss\": 0.6576406113085781, \"train_accuracy\": 0.792016806722689, \"train_f1_macro\": 0.7867092793958754, \"validation_loss\": 2.603904890053438, \"validation_accuracy\": 0.23443223443223443, \"validation_f1_macro\": 0.18940001734169695}\n"}
+,{"stream_name":"stderr","time":106.698891422,"data":"/tmp/stressclassification/src/stress_classification/training.py:85: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.\n"}
+,{"stream_name":"stderr","time":106.69891849,"data":"  with torch.cuda.amp.autocast(enabled=use_amp):\n"}
+,{"stream_name":"stdout","time":106.825478132,"data":"{\"epoch\": 26, \"learning_rate\": 0.00025621246378738883, \"train_loss\": 0.6576406113085781, \"train_accuracy\": 0.792016806722689, \"train_f1_macro\": 0.7867092793958754, \"validation_loss\": 2.603904890053438, \"validation_accuracy\": 0.23443223443223443, \"validation_f1_macro\": 0.18940001734169695}\n"}
+,{"stream_name":"stderr","time":106.90285446,"data":"/tmp/stressclassification/src/stress_classification/training.py:85: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.\n"}
+,{"stream_name":"stderr","time":106.902888262,"data":"  with torch.cuda.amp.autocast(enabled=use_amp):\n"}
+,{"stream_name":"stderr","time":106.90289292,"data":"\n"}
+,{"stream_name":"stderr","time":106.902896161,"data":"/tmp/stressclassification/src/stress_classification/training.py:85: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.\n"}
+,{"stream_name":"stderr","time":106.902899654,"data":"  with torch.cuda.amp.autocast(enabled=use_amp):\n"}
+,{"stream_name":"stderr","time":109.172461581,"data":"/tmp/stressclassification/src/stress_classification/training.py:85: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.\n"}
+,{"stream_name":"stderr","time":109.172518361,"data":"  with torch.cuda.amp.autocast(enabled=use_amp):\n"}
+,{"stream_name":"stderr","time":109.375424354,"data":"/tmp/stressclassification/src/stress_classification/training.py:85: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.\n"}
+,{"stream_name":"stderr","time":109.375456895,"data":"  with torch.cuda.amp.autocast(enabled=use_amp):\n"}
+,{"stream_name":"stderr","time":109.375462297,"data":"\n"}
+,{"stream_name":"stderr","time":109.375466341,"data":"/tmp/stressclassification/src/stress_classification/training.py:85: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.\n"}
+,{"stream_name":"stderr","time":109.375470862,"data":"  with torch.cuda.amp.autocast(enabled=use_amp):\n"}
+,{"stream_name":"stdout","time":109.411881605,"data":"{\"epoch\": 27, \"learning_rate\": 0.00025283979233633894, \"train_loss\": 0.6512913957825768, \"train_accuracy\": 0.7986425339366516, \"train_f1_macro\": 0.7929092524505076, \"validation_loss\": 2.269851204239842, \"validation_accuracy\": 0.41117216117216115, \"validation_f1_macro\": 0.30367971133493254}\n"}
+,{"stream_name":"stderr","time":109.485785137,"data":"/tmp/stressclassification/src/stress_classification/training.py:85: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.\n"}
+,{"stream_name":"stderr","time":109.485812834,"data":"  with torch.cuda.amp.autocast(enabled=use_amp):\n"}
+,{"stream_name":"stdout","time":109.616336386,"data":"{\"epoch\": 27, \"learning_rate\": 0.00025283979233633894, \"train_loss\": 0.6512913957825768, \"train_accuracy\": 0.7986425339366516, \"train_f1_macro\": 0.7929092524505076, \"validation_loss\": 2.269851204239842, \"validation_accuracy\": 0.41117216117216115, \"validation_f1_macro\": 0.30367971133493254}\n"}
+,{"stream_name":"stderr","time":109.690265347,"data":"/tmp/stressclassification/src/stress_classification/training.py:85: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.\n"}
+,{"stream_name":"stderr","time":109.690295792,"data":"  with torch.cuda.amp.autocast(enabled=use_amp):\n"}
+,{"stream_name":"stderr","time":109.690300948,"data":"\n"}
+,{"stream_name":"stderr","time":109.690320967,"data":"/tmp/stressclassification/src/stress_classification/training.py:85: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.\n"}
+,{"stream_name":"stderr","time":109.690328099,"data":"  with torch.cuda.amp.autocast(enabled=use_amp):\n"}
+,{"stream_name":"stderr","time":111.966024656,"data":"/tmp/stressclassification/src/stress_classification/training.py:85: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.\n"}
+,{"stream_name":"stderr","time":111.966057074,"data":"  with torch.cuda.amp.autocast(enabled=use_amp):\n"}
+,{"stream_name":"stderr","time":112.168621496,"data":"/tmp/stressclassification/src/stress_classification/training.py:85: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.\n"}
+,{"stream_name":"stderr","time":112.168655176,"data":"  with torch.cuda.amp.autocast(enabled=use_amp):\n"}
+,{"stream_name":"stderr","time":112.168660148,"data":"\n"}
+,{"stream_name":"stderr","time":112.168663586,"data":"/tmp/stressclassification/src/stress_classification/training.py:85: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.\n"}
+,{"stream_name":"stderr","time":112.168667571,"data":"  with torch.cuda.amp.autocast(enabled=use_amp):\n"}
+,{"stream_name":"stdout","time":112.205447432,"data":"{\"epoch\": 28, \"learning_rate\": 0.0002493661238658859, \"train_loss\": 0.6431223346713903, \"train_accuracy\": 0.8057530704589528, \"train_f1_macro\": 0.8005451929331725, \"validation_loss\": 2.4824640995416885, \"validation_accuracy\": 0.2518315018315018, \"validation_f1_macro\": 0.2175306257711603}\n"}
+,{"stream_name":"stderr","time":112.275321398,"data":"/tmp/stressclassification/src/stress_classification/training.py:85: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.\n"}
+,{"stream_name":"stderr","time":112.275347574,"data":"  with torch.cuda.amp.autocast(enabled=use_amp):\n"}
+,{"stream_name":"stdout","time":112.408299874,"data":"{\"epoch\": 28, \"learning_rate\": 0.0002493661238658859, \"train_loss\": 0.6431223346713903, \"train_accuracy\": 0.8057530704589528, \"train_f1_macro\": 0.8005451929331725, \"validation_loss\": 2.4824640995416885, \"validation_accuracy\": 0.2518315018315018, \"validation_f1_macro\": 0.2175306257711603}\n"}
+,{"stream_name":"stderr","time":112.479071675,"data":"/tmp/stressclassification/src/stress_classification/training.py:85: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.\n"}
+,{"stream_name":"stderr","time":112.479103085,"data":"  with torch.cuda.amp.autocast(enabled=use_amp):\n"}
+,{"stream_name":"stderr","time":112.47910791,"data":"\n"}
+,{"stream_name":"stderr","time":112.479111502,"data":"/tmp/stressclassification/src/stress_classification/training.py:85: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.\n"}
+,{"stream_name":"stderr","time":112.479115797,"data":"  with torch.cuda.amp.autocast(enabled=use_amp):\n"}
+,{"stream_name":"stderr","time":114.798280059,"data":"/tmp/stressclassification/src/stress_classification/training.py:85: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.\n"}
+,{"stream_name":"stderr","time":114.798332057,"data":"  with torch.cuda.amp.autocast(enabled=use_amp):\n"}
+,{"stream_name":"stderr","time":115.001681296,"data":"/tmp/stressclassification/src/stress_classification/training.py:85: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.\n"}
+,{"stream_name":"stderr","time":115.001715513,"data":"  with torch.cuda.amp.autocast(enabled=use_amp):\n"}
+,{"stream_name":"stderr","time":115.001721506,"data":"\n"}
+,{"stream_name":"stderr","time":115.001725606,"data":"/tmp/stressclassification/src/stress_classification/training.py:85: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.\n"}
+,{"stream_name":"stderr","time":115.00173098,"data":"  with torch.cuda.amp.autocast(enabled=use_amp):\n"}
+,{"stream_name":"stdout","time":115.026559191,"data":"{\"epoch\": 29, \"learning_rate\": 0.0002457948864674291, \"train_loss\": 0.6405468844720141, \"train_accuracy\": 0.8047834518422754, \"train_f1_macro\": 0.800715597399865, \"validation_loss\": 2.85713221127297, \"validation_accuracy\": 0.2326007326007326, \"validation_f1_macro\": 0.15527435989906266}\n"}
+,{"stream_name":"stderr","time":115.098407597,"data":"/tmp/stressclassification/src/stress_classification/training.py:85: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.\n"}
+,{"stream_name":"stderr","time":115.098434176,"data":"  with torch.cuda.amp.autocast(enabled=use_amp):\n"}
+,{"stream_name":"stdout","time":115.23024185,"data":"{\"epoch\": 29, \"learning_rate\": 0.0002457948864674291, \"train_loss\": 0.6405468844720141, \"train_accuracy\": 0.8047834518422754, \"train_f1_macro\": 0.800715597399865, \"validation_loss\": 2.85713221127297, \"validation_accuracy\": 0.2326007326007326, \"validation_f1_macro\": 0.15527435989906266}\n"}
+,{"stream_name":"stderr","time":115.302660209,"data":"/tmp/stressclassification/src/stress_classification/training.py:85: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.\n"}
+,{"stream_name":"stderr","time":115.302690405,"data":"  with torch.cuda.amp.autocast(enabled=use_amp):\n"}
+,{"stream_name":"stderr","time":115.302694979,"data":"\n"}
+,{"stream_name":"stderr","time":115.302698717,"data":"/tmp/stressclassification/src/stress_classification/training.py:85: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.\n"}
+,{"stream_name":"stderr","time":115.302703885,"data":"  with torch.cuda.amp.autocast(enabled=use_amp):\n"}
+,{"stream_name":"stderr","time":117.602976836,"data":"/tmp/stressclassification/src/stress_classification/training.py:85: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.\n"}
+,{"stream_name":"stderr","time":117.603038884,"data":"  with torch.cuda.amp.autocast(enabled=use_amp):\n"}
+,{"stream_name":"stderr","time":117.805729804,"data":"/tmp/stressclassification/src/stress_classification/training.py:85: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.\n"}
+,{"stream_name":"stderr","time":117.805759833,"data":"  with torch.cuda.amp.autocast(enabled=use_amp):\n"}
+,{"stream_name":"stderr","time":117.805764999,"data":"\n"}
+,{"stream_name":"stderr","time":117.805768779,"data":"/tmp/stressclassification/src/stress_classification/training.py:85: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.\n"}
+,{"stream_name":"stderr","time":117.805783874,"data":"  with torch.cuda.amp.autocast(enabled=use_amp):\n"}
+,{"stream_name":"stdout","time":117.84270984,"data":"{\"epoch\": 30, \"learning_rate\": 0.00024212960452111996, \"train_loss\": 0.6151943455300334, \"train_accuracy\": 0.8277310924369747, \"train_f1_macro\": 0.823868863391092, \"validation_loss\": 2.204142533815824, \"validation_accuracy\": 0.4633699633699634, \"validation_f1_macro\": 0.31798601148567585}\n"}
+,{"stream_name":"stderr","time":117.920766195,"data":"/tmp/stressclassification/src/stress_classification/training.py:85: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.\n"}
+,{"stream_name":"stderr","time":117.920801891,"data":"  with torch.cuda.amp.autocast(enabled=use_amp):\n"}
+,{"stream_name":"stdout","time":118.045911851,"data":"{\"epoch\": 30, \"learning_rate\": 0.00024212960452111996, \"train_loss\": 0.6151943455300334, \"train_accuracy\": 0.8277310924369747, \"train_f1_macro\": 0.823868863391092, \"validation_loss\": 2.204142533815824, \"validation_accuracy\": 0.4633699633699634, \"validation_f1_macro\": 0.31798601148567585}\n"}
+,{"stream_name":"stderr","time":118.124164693,"data":"/tmp/stressclassification/src/stress_classification/training.py:85: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.\n"}
+,{"stream_name":"stderr","time":118.124223306,"data":"  with torch.cuda.amp.autocast(enabled=use_amp):\n"}
+,{"stream_name":"stderr","time":118.124229222,"data":"\n"}
+,{"stream_name":"stderr","time":118.12423274,"data":"/tmp/stressclassification/src/stress_classification/training.py:85: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.\n"}
+,{"stream_name":"stderr","time":118.124236762,"data":"  with torch.cuda.amp.autocast(enabled=use_amp):\n"}
+,{"stream_name":"stderr","time":120.428383155,"data":"/tmp/stressclassification/src/stress_classification/training.py:85: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.\n"}
+,{"stream_name":"stderr","time":120.428416972,"data":"  with torch.cuda.amp.autocast(enabled=use_amp):\n"}
+,{"stream_name":"stderr","time":120.630504517,"data":"/tmp/stressclassification/src/stress_classification/training.py:85: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.\n"}
+,{"stream_name":"stderr","time":120.630538251,"data":"  with torch.cuda.amp.autocast(enabled=use_amp):\n"}
+,{"stream_name":"stderr","time":120.630543042,"data":"\n"}
+,{"stream_name":"stderr","time":120.630546414,"data":"/tmp/stressclassification/src/stress_classification/training.py:85: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.\n"}
+,{"stream_name":"stderr","time":120.630562433,"data":"  with torch.cuda.amp.autocast(enabled=use_amp):\n"}
+,{"stream_name":"stdout","time":120.658297704,"data":"{\"epoch\": 31, \"learning_rate\": 0.00023837389521772471, \"train_loss\": 0.6119588542231145, \"train_accuracy\": 0.8230446024563671, \"train_f1_macro\": 0.8181115690900386, \"validation_loss\": 3.9551650298820746, \"validation_accuracy\": 0.22527472527472528, \"validation_f1_macro\": 0.1342602495543672}\n"}
+,{"stream_name":"stderr","time":120.73167613,"data":"/tmp/stressclassification/src/stress_classification/training.py:85: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.\n"}
+,{"stream_name":"stderr","time":120.73172664,"data":"  with torch.cuda.amp.autocast(enabled=use_amp):\n"}
+,{"stream_name":"stdout","time":120.861299933,"data":"{\"epoch\": 31, \"learning_rate\": 0.00023837389521772471, \"train_loss\": 0.6119588542231145, \"train_accuracy\": 0.8230446024563671, \"train_f1_macro\": 0.8181115690900386, \"validation_loss\": 3.9551650298820746, \"validation_accuracy\": 0.22527472527472528, \"validation_f1_macro\": 0.1342602495543672}\n"}
+,{"stream_name":"stderr","time":120.936536529,"data":"/tmp/stressclassification/src/stress_classification/training.py:85: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.\n"}
+,{"stream_name":"stderr","time":120.936602298,"data":"  with torch.cuda.amp.autocast(enabled=use_amp):\n"}
+,{"stream_name":"stderr","time":120.936609153,"data":"\n"}
+,{"stream_name":"stderr","time":120.936612831,"data":"/tmp/stressclassification/src/stress_classification/training.py:85: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.\n"}
+,{"stream_name":"stderr","time":120.936617253,"data":"  with torch.cuda.amp.autocast(enabled=use_amp):\n"}
+,{"stream_name":"stderr","time":123.332261758,"data":"/tmp/stressclassification/src/stress_classification/training.py:85: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.\n"}
+,{"stream_name":"stderr","time":123.332331229,"data":"  with torch.cuda.amp.autocast(enabled=use_amp):\n"}
+,{"stream_name":"stderr","time":123.534955993,"data":"/tmp/stressclassification/src/stress_classification/training.py:85: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.\n"}
+,{"stream_name":"stderr","time":123.534987797,"data":"  with torch.cuda.amp.autocast(enabled=use_amp):\n"}
+,{"stream_name":"stderr","time":123.534993218,"data":"\n"}
+,{"stream_name":"stderr","time":123.534997217,"data":"/tmp/stressclassification/src/stress_classification/training.py:85: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.\n"}
+,{"stream_name":"stderr","time":123.535001685,"data":"  with torch.cuda.amp.autocast(enabled=use_amp):\n"}
+,{"stream_name":"stdout","time":123.545969647,"data":"{\"epoch\": 32, \"learning_rate\": 0.0002345314649888935, \"train_loss\": 0.597869803655818, \"train_accuracy\": 0.834841628959276, \"train_f1_macro\": 0.8319341332028953, \"validation_loss\": 2.8194339393259407, \"validation_accuracy\": 0.26556776556776557, \"validation_f1_macro\": 0.23162709888108546}\n"}
+,{"stream_name":"stderr","time":123.608146167,"data":"/tmp/stressclassification/src/stress_classification/training.py:85: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.\n"}
+,{"stream_name":"stderr","time":123.608173781,"data":"  with torch.cuda.amp.autocast(enabled=use_amp):\n"}
+,{"stream_name":"stdout","time":123.749378177,"data":"{\"epoch\": 32, \"learning_rate\": 0.0002345314649888935, \"train_loss\": 0.597869803655818, \"train_accuracy\": 0.834841628959276, \"train_f1_macro\": 0.8319341332028953, \"validation_loss\": 2.8194339393259407, \"validation_accuracy\": 0.26556776556776557, \"validation_f1_macro\": 0.23162709888108546}\n"}
+,{"stream_name":"stderr","time":123.810874426,"data":"/tmp/stressclassification/src/stress_classification/training.py:85: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.\n"}
+,{"stream_name":"stderr","time":123.810906375,"data":"  with torch.cuda.amp.autocast(enabled=use_amp):\n"}
+,{"stream_name":"stderr","time":123.810923499,"data":"\n"}
+,{"stream_name":"stderr","time":123.811256207,"data":"/tmp/stressclassification/src/stress_classification/training.py:85: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.\n"}
+,{"stream_name":"stderr","time":123.811269724,"data":"  with torch.cuda.amp.autocast(enabled=use_amp):\n"}
+,{"stream_name":"stderr","time":126.062179232,"data":"/tmp/stressclassification/src/stress_classification/training.py:85: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.\n"}
+,{"stream_name":"stderr","time":126.062247647,"data":"  with torch.cuda.amp.autocast(enabled=use_amp):\n"}
+,{"stream_name":"stderr","time":126.265180131,"data":"/tmp/stressclassification/src/stress_classification/training.py:85: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.\n"}
+,{"stream_name":"stderr","time":126.265235614,"data":"  with torch.cuda.amp.autocast(enabled=use_amp):\n"}
+,{"stream_name":"stderr","time":126.26524273,"data":"\n"}
+,{"stream_name":"stderr","time":126.265246426,"data":"/tmp/stressclassification/src/stress_classification/training.py:85: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.\n"}
+,{"stream_name":"stderr","time":126.265250603,"data":"  with torch.cuda.amp.autocast(enabled=use_amp):\n"}
+,{"stream_name":"stdout","time":126.295365923,"data":"{\"epoch\": 33, \"learning_rate\": 0.00023060610584935994, \"train_loss\": 0.5955921399184944, \"train_accuracy\": 0.8395281189398837, \"train_f1_macro\": 0.8356309841948155, \"validation_loss\": 3.47640976975689, \"validation_accuracy\": 0.22344322344322345, \"validation_f1_macro\": 0.13650526508845498}\n"}
+,{"stream_name":"stderr","time":126.361614513,"data":"/tmp/stressclassification/src/stress_classification/training.py:85: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.\n"}
+,{"stream_name":"stderr","time":126.36164498,"data":"  with torch.cuda.amp.autocast(enabled=use_amp):\n"}
+,{"stream_name":"stdout","time":126.499499922,"data":"{\"epoch\": 33, \"learning_rate\": 0.00023060610584935994, \"train_loss\": 0.5955921399184944, \"train_accuracy\": 0.8395281189398837, \"train_f1_macro\": 0.8356309841948155, \"validation_loss\": 3.47640976975689, \"validation_accuracy\": 0.22344322344322345, \"validation_f1_macro\": 0.13650526508845498}\n"}
+,{"stream_name":"stderr","time":126.565011179,"data":"/tmp/stressclassification/src/stress_classification/training.py:85: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.\n"}
+,{"stream_name":"stderr","time":126.565054439,"data":"  with torch.cuda.amp.autocast(enabled=use_amp):\n"}
+,{"stream_name":"stderr","time":126.565059614,"data":"\n"}
+,{"stream_name":"stderr","time":126.565284475,"data":"/tmp/stressclassification/src/stress_classification/training.py:85: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.\n"}
+,{"stream_name":"stderr","time":126.565296711,"data":"  with torch.cuda.amp.autocast(enabled=use_amp):\n"}
+,{"stream_name":"stderr","time":128.892741118,"data":"/tmp/stressclassification/src/stress_classification/training.py:85: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.\n"}
+,{"stream_name":"stderr","time":128.892771757,"data":"  with torch.cuda.amp.autocast(enabled=use_amp):\n"}
+,{"stream_name":"stderr","time":129.09516408,"data":"/tmp/stressclassification/src/stress_classification/training.py:85: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.\n"}
+,{"stream_name":"stderr","time":129.095213174,"data":"  with torch.cuda.amp.autocast(enabled=use_amp):\n"}
+,{"stream_name":"stderr","time":129.095219193,"data":"\n"}
+,{"stream_name":"stderr","time":129.095391634,"data":"/tmp/stressclassification/src/stress_classification/training.py:85: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.\n"}
+,{"stream_name":"stderr","time":129.095405983,"data":"  with torch.cuda.amp.autocast(enabled=use_amp):\n"}
+,{"stream_name":"stdout","time":129.114504176,"data":"{\"epoch\": 34, \"learning_rate\": 0.00022660169165468046, \"train_loss\": 0.6002562819331712, \"train_accuracy\": 0.8353264382676148, \"train_f1_macro\": 0.8316210258804388, \"validation_loss\": 2.798343430508624, \"validation_accuracy\": 0.23534798534798534, \"validation_f1_macro\": 0.18622989249050195}\n"}
+,{"stream_name":"stderr","time":129.190221992,"data":"/tmp/stressclassification/src/stress_classification/training.py:85: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.\n"}
+,{"stream_name":"stderr","time":129.190260849,"data":"  with torch.cuda.amp.autocast(enabled=use_amp):\n"}
+,{"stream_name":"stdout","time":129.317667817,"data":"{\"epoch\": 34, \"learning_rate\": 0.00022660169165468046, \"train_loss\": 0.6002562819331712, \"train_accuracy\": 0.8353264382676148, \"train_f1_macro\": 0.8316210258804388, \"validation_loss\": 2.798343430508624, \"validation_accuracy\": 0.23534798534798534, \"validation_f1_macro\": 0.18622989249050195}\n"}
+,{"stream_name":"stderr","time":129.395378501,"data":"/tmp/stressclassification/src/stress_classification/training.py:85: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.\n"}
+,{"stream_name":"stderr","time":129.395409595,"data":"  with torch.cuda.amp.autocast(enabled=use_amp):\n"}
+,{"stream_name":"stderr","time":129.395415032,"data":"\n"}
+,{"stream_name":"stderr","time":129.395419027,"data":"/tmp/stressclassification/src/stress_classification/training.py:85: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.\n"}
+,{"stream_name":"stderr","time":129.395423624,"data":"  with torch.cuda.amp.autocast(enabled=use_amp):\n"}
+,{"stream_name":"stderr","time":131.680278785,"data":"/tmp/stressclassification/src/stress_classification/training.py:85: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.\n"}
+,{"stream_name":"stderr","time":131.680478646,"data":"  with torch.cuda.amp.autocast(enabled=use_amp):\n"}
+,{"stream_name":"stderr","time":131.891916526,"data":"/tmp/stressclassification/src/stress_classification/training.py:85: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.\n"}
+,{"stream_name":"stderr","time":131.891941348,"data":"  with torch.cuda.amp.autocast(enabled=use_amp):\n"}
+,{"stream_name":"stderr","time":131.891946742,"data":"\n"}
+,{"stream_name":"stderr","time":131.891951436,"data":"/tmp/stressclassification/src/stress_classification/training.py:85: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.\n"}
+,{"stream_name":"stderr","time":131.89195658,"data":"  with torch.cuda.amp.autocast(enabled=use_amp):\n"}
+,{"stream_name":"stdout","time":131.921739462,"data":"{\"epoch\": 35, \"learning_rate\": 0.00022252217427820638, \"train_loss\": 0.5793922009125939, \"train_accuracy\": 0.8484162895927602, \"train_f1_macro\": 0.845039853279563, \"validation_loss\": 3.5137833588289253, \"validation_accuracy\": 0.2261904761904762, \"validation_f1_macro\": 0.15586918528094998}\n"}
+,{"stream_name":"stderr","time":131.97415758,"data":"/tmp/stressclassification/src/stress_classification/training.py:85: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.\n"}
+,{"stream_name":"stderr","time":131.974186013,"data":"  with torch.cuda.amp.autocast(enabled=use_amp):\n"}
+,{"stream_name":"stdout","time":132.124781463,"data":"{\"epoch\": 35, \"learning_rate\": 0.00022252217427820638, \"train_loss\": 0.5793922009125939, \"train_accuracy\": 0.8484162895927602, \"train_f1_macro\": 0.845039853279563, \"validation_loss\": 3.5137833588289253, \"validation_accuracy\": 0.2261904761904762, \"validation_f1_macro\": 0.15586918528094998}\n"}
+,{"stream_name":"stderr","time":132.178525103,"data":"/tmp/stressclassification/src/stress_classification/training.py:85: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.\n"}
+,{"stream_name":"stderr","time":132.178556409,"data":"  with torch.cuda.amp.autocast(enabled=use_amp):\n"}
+,{"stream_name":"stderr","time":132.178562228,"data":"\n"}
+,{"stream_name":"stderr","time":132.178571014,"data":"/tmp/stressclassification/src/stress_classification/training.py:85: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.\n"}
+,{"stream_name":"stderr","time":132.17857514,"data":"  with torch.cuda.amp.autocast(enabled=use_amp):\n"}
+,{"stream_name":"stderr","time":134.537105656,"data":"/tmp/stressclassification/src/stress_classification/training.py:85: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.\n"}
+,{"stream_name":"stderr","time":134.537137868,"data":"  with torch.cuda.amp.autocast(enabled=use_amp):\n"}
+,{"stream_name":"stderr","time":134.739693056,"data":"/tmp/stressclassification/src/stress_classification/training.py:85: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.\n"}
+,{"stream_name":"stderr","time":134.739738692,"data":"  with torch.cuda.amp.autocast(enabled=use_amp):\n"}
+,{"stream_name":"stderr","time":134.739745375,"data":"\n"}
+,{"stream_name":"stderr","time":134.739749557,"data":"/tmp/stressclassification/src/stress_classification/training.py:85: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.\n"}
+,{"stream_name":"stderr","time":134.739754348,"data":"  with torch.cuda.amp.autocast(enabled=use_amp):\n"}
+,{"stream_name":"stdout","time":134.771194491,"data":"{\"epoch\": 36, \"learning_rate\": 0.0002183715797110622, \"train_loss\": 0.5636895167573314, \"train_accuracy\": 0.8585972850678733, \"train_f1_macro\": 0.8560836313463964, \"validation_loss\": 2.433478579853044, \"validation_accuracy\": 0.3031135531135531, \"validation_f1_macro\": 0.29703467422765667}\n"}
+,{"stream_name":"stderr","time":134.82574861,"data":"/tmp/stressclassification/src/stress_classification/training.py:85: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.\n"}
+,{"stream_name":"stderr","time":134.825776723,"data":"  with torch.cuda.amp.autocast(enabled=use_amp):\n"}
+,{"stream_name":"stdout","time":134.975163547,"data":"{\"epoch\": 36, \"learning_rate\": 0.0002183715797110622, \"train_loss\": 0.5636895167573314, \"train_accuracy\": 0.8585972850678733, \"train_f1_macro\": 0.8560836313463964, \"validation_loss\": 2.433478579853044, \"validation_accuracy\": 0.3031135531135531, \"validation_f1_macro\": 0.29703467422765667}\n"}
+,{"stream_name":"stderr","time":135.030562888,"data":"/tmp/stressclassification/src/stress_classification/training.py:85: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.\n"}
+,{"stream_name":"stderr","time":135.030594302,"data":"  with torch.cuda.amp.autocast(enabled=use_amp):\n"}
+,{"stream_name":"stderr","time":135.030599891,"data":"\n"}
+,{"stream_name":"stderr","time":135.030603097,"data":"/tmp/stressclassification/src/stress_classification/training.py:85: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.\n"}
+,{"stream_name":"stderr","time":135.030606659,"data":"  with torch.cuda.amp.autocast(enabled=use_amp):\n"}
+,{"stream_name":"stderr","time":137.347858027,"data":"/tmp/stressclassification/src/stress_classification/training.py:85: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.\n"}
+,{"stream_name":"stderr","time":137.347944672,"data":"  with torch.cuda.amp.autocast(enabled=use_amp):\n"}
+,{"stream_name":"stderr","time":137.550567999,"data":"/tmp/stressclassification/src/stress_classification/training.py:85: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.\n"}
+,{"stream_name":"stderr","time":137.550616447,"data":"  with torch.cuda.amp.autocast(enabled=use_amp):\n"}
+,{"stream_name":"stderr","time":137.550621897,"data":"\n"}
+,{"stream_name":"stderr","time":137.550625347,"data":"/tmp/stressclassification/src/stress_classification/training.py:85: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.\n"}
+,{"stream_name":"stderr","time":137.55062932,"data":"  with torch.cuda.amp.autocast(enabled=use_amp):\n"}
+,{"stream_name":"stdout","time":137.578327173,"data":"{\"epoch\": 37, \"learning_rate\": 0.00021415400408897832, \"train_loss\": 0.5593640117700746, \"train_accuracy\": 0.861021331609567, \"train_f1_macro\": 0.859143191666952, \"validation_loss\": 3.9926505446870686, \"validation_accuracy\": 0.2271062271062271, \"validation_f1_macro\": 0.13938654312319101}\n"}
+,{"stream_name":"stdout","time":137.780414862,"data":"{\"epoch\": 37, \"learning_rate\": 0.00021415400408897832, \"train_loss\": 0.5593640117700746, \"train_accuracy\": 0.861021331609567, \"train_f1_macro\": 0.859143191666952, \"validation_loss\": 3.9926505446870686, \"validation_accuracy\": 0.2271062271062271, \"validation_f1_macro\": 0.13938654312319101}\n"}
+,{"stream_name":"stderr","time":138.383701073,"data":"/tmp/stressclassification/src/stress_classification/training.py:111: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.\n"}
+,{"stream_name":"stderr","time":138.383729676,"data":"  with torch.cuda.amp.autocast(enabled=use_amp):\n"}
+,{"stream_name":"stderr","time":138.588216826,"data":"/tmp/stressclassification/src/stress_classification/training.py:111: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.\n"}
+,{"stream_name":"stderr","time":138.588271526,"data":"  with torch.cuda.amp.autocast(enabled=use_amp):\n"}
+,{"stream_name":"stderr","time":138.588278335,"data":"\n"}
+,{"stream_name":"stderr","time":138.588281938,"data":"/tmp/stressclassification/src/stress_classification/training.py:111: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.\n"}
+,{"stream_name":"stderr","time":138.588285836,"data":"  with torch.cuda.amp.autocast(enabled=use_amp):\n"}
+,{"stream_name":"stdout","time":139.261214259,"data":"{\n"}
+,{"stream_name":"stdout","time":139.261259475,"data":"  \"model\": \"base_cnn\",\n"}
+,{"stream_name":"stdout","time":139.261265026,"data":"  \"parameter_counts\": {\n"}
+,{"stream_name":"stdout","time":139.261269439,"data":"    \"total\": 215843,\n"}
+,{"stream_name":"stdout","time":139.261272538,"data":"    \"trainable\": 215843\n"}
+,{"stream_name":"stdout","time":139.261275956,"data":"  },\n"}
+,{"stream_name":"stdout","time":139.261279906,"data":"  \"best_epoch\": 25,\n"}
+,{"stream_name":"stdout","time":139.261283968,"data":"  \"best_validation_f1_macro\": 0.3410758731348848,\n"}
+,{"stream_name":"stdout","time":139.261288119,"data":"  \"runtime_seconds\": 113.38604593099998,\n"}
+,{"stream_name":"stdout","time":139.261292846,"data":"  \"execution_environment\": \"kaggle_gpu\",\n"}
+,{"stream_name":"stdout","time":139.261297221,"data":"  \"python\": \"3.13.15 (main, Aug  6 2026, 11:06:22) [GCC 13.3.0]\",\n"}
+,{"stream_name":"stdout","time":139.261301536,"data":"  \"platform\": \"Linux-6.18.48+-x86_64-with-glibc2.39\",\n"}
+,{"stream_name":"stdout","time":139.261320071,"data":"  \"torch\": \"2.11.0+cu128\",\n"}
+,{"stream_name":"stdout","time":139.261326545,"data":"  \"device\": \"cuda\",\n"}
+,{"stream_name":"stdout","time":139.26133166,"data":"  \"gpu_name\": \"Tesla T4\",\n"}
+,{"stream_name":"stdout","time":139.261335934,"data":"  \"cuda_version\": \"12.8\",\n"}
+,{"stream_name":"stdout","time":139.261340256,"data":"  \"cudnn_version\": 91900,\n"}
+,{"stream_name":"stdout","time":139.261344808,"data":"  \"mixed_precision\": true,\n"}
+,{"stream_name":"stdout","time":139.261348987,"data":"  \"train_class_counts\": [\n"}
+,{"stream_name":"stdout","time":139.261353008,"data":"    1441,\n"}
+,{"stream_name":"stdout","time":139.261357222,"data":"    1778,\n"}
+,{"stream_name":"stdout","time":139.261361451,"data":"    2969\n"}
+,{"stream_name":"stdout","time":139.261366265,"data":"  ],\n"}
+,{"stream_name":"stdout","time":139.261370292,"data":"  \"class_weights\": [\n"}
+,{"stream_name":"stdout","time":139.261374221,"data":"    1.431413370344668,\n"}
+,{"stream_name":"stdout","time":139.26137874,"data":"    1.1601049868766404,\n"}
+,{"stream_name":"stdout","time":139.261382894,"data":"    0.6947344785000561\n"}
+,{"stream_name":"stdout","time":139.261386864,"data":"  ]\n"}
+,{"stream_name":"stdout","time":139.261390396,"data":"}\n"}
+,{"stream_name":"stdout","time":139.463323552,"data":"{\n"}
+,{"stream_name":"stdout","time":139.463353599,"data":"  \"model\": \"base_cnn\",\n"}
+,{"stream_name":"stdout","time":139.463359561,"data":"  \"parameter_counts\": {\n"}
+,{"stream_name":"stdout","time":139.463363788,"data":"    \"total\": 215843,\n"}
+,{"stream_name":"stdout","time":139.463367394,"data":"    \"trainable\": 215843\n"}
+,{"stream_name":"stdout","time":139.463371007,"data":"  },\n"}
+,{"stream_name":"stdout","time":139.463374463,"data":"  \"best_epoch\": 25,\n"}
+,{"stream_name":"stdout","time":139.463378123,"data":"  \"best_validation_f1_macro\": 0.3410758731348848,\n"}
+,{"stream_name":"stdout","time":139.463381799,"data":"  \"runtime_seconds\": 113.38604593099998,\n"}
+,{"stream_name":"stdout","time":139.463385949,"data":"  \"execution_environment\": \"kaggle_gpu\",\n"}
+,{"stream_name":"stdout","time":139.463389586,"data":"  \"python\": \"3.13.15 (main, Aug  6 2026, 11:06:22) [GCC 13.3.0]\",\n"}
+,{"stream_name":"stdout","time":139.463393392,"data":"  \"platform\": \"Linux-6.18.48+-x86_64-with-glibc2.39\",\n"}
+,{"stream_name":"stdout","time":139.463397204,"data":"  \"torch\": \"2.11.0+cu128\",\n"}
+,{"stream_name":"stdout","time":139.463400682,"data":"  \"device\": \"cuda\",\n"}
+,{"stream_name":"stdout","time":139.463416285,"data":"  \"gpu_name\": \"Tesla T4\",\n"}
+,{"stream_name":"stdout","time":139.463419883,"data":"  \"cuda_version\": \"12.8\",\n"}
+,{"stream_name":"stdout","time":139.463423362,"data":"  \"cudnn_version\": 91900,\n"}
+,{"stream_name":"stdout","time":139.463426624,"data":"  \"mixed_precision\": true,\n"}
+,{"stream_name":"stdout","time":139.463430206,"data":"  \"train_class_counts\": [\n"}
+,{"stream_name":"stdout","time":139.463433618,"data":"    1441,\n"}
+,{"stream_name":"stdout","time":139.463437108,"data":"    1778,\n"}
+,{"stream_name":"stdout","time":139.46344064,"data":"    2969\n"}
+,{"stream_name":"stdout","time":139.463443982,"data":"  ],\n"}
+,{"stream_name":"stdout","time":139.463447164,"data":"  \"class_weights\": [\n"}
+,{"stream_name":"stdout","time":139.463450617,"data":"    1.431413370344668,\n"}
+,{"stream_name":"stdout","time":139.46345409,"data":"    1.1601049868766404,\n"}
+,{"stream_name":"stdout","time":139.463457599,"data":"    0.6947344785000561\n"}
+,{"stream_name":"stdout","time":139.463460951,"data":"  ]\n"}
+,{"stream_name":"stdout","time":139.463464304,"data":"}\n"}
+,{"stream_name":"stderr","time":146.250609758,"data":"/usr/local/lib/python3.13/dist-packages/mistune.py:435: SyntaxWarning: invalid escape sequence '\\|'\n"}
+,{"stream_name":"stderr","time":146.250638763,"data":"  cells[i][c] = re.sub('\\\\\\\\\\|', '|', cell)\n"}
+,{"stream_name":"stderr","time":146.39937936,"data":"/usr/local/lib/python3.13/dist-packages/nbconvert/filters/filter_links.py:36: SyntaxWarning: invalid escape sequence '\\_'\n"}
+,{"stream_name":"stderr","time":146.399402559,"data":"  text = re.sub(r'_', '\\_', text) # Escape underscores in display text\n"}
+,{"stream_name":"stderr","time":147.140412735,"data":"[NbConvertApp] Converting notebook __notebook__.ipynb to notebook\n"}
+,{"stream_name":"stderr","time":147.237523727,"data":"[NbConvertApp] Writing 79727 bytes to __notebook__.ipynb\n"}
+,{"stream_name":"stderr","time":149.603972931,"data":"[NbConvertApp] Converting notebook __notebook__.ipynb to html\n"}
+,{"stream_name":"stderr","time":150.111356768,"data":"[NbConvertApp] Writing 359418 bytes to __results__.html\n"}
+]

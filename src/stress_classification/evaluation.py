@@ -45,6 +45,8 @@ def normalize_probabilities(probabilities: np.ndarray) -> np.ndarray:
     row_sums = probability.sum(axis=1, keepdims=True)
     if np.any(row_sums <= 0):
         raise ValueError("probability rows must have a positive sum")
+    if np.all(np.abs(row_sums - 1.0) <= 1e-12):
+        return probability
     return probability / row_sums
 
 
@@ -184,9 +186,31 @@ def save_evaluation(
     destination.mkdir(parents=True, exist_ok=True)
     probability = normalize_probabilities(probabilities)
     predicted = probability.argmax(axis=1)
-    window_metrics = classification_metrics(y_true, predicted, probability, class_names=class_names)
+    predictions = metadata.reset_index(drop=True).copy()
+    predictions["y_true"] = np.asarray(y_true, dtype=np.int64)
+    predictions["y_pred"] = predicted
+    for index, name in enumerate(class_names):
+        predictions[f"prob_{name}"] = probability[:, index]
+    prediction_path = destination / "predictions.csv"
+    predictions.to_csv(prediction_path, index=False)
+
+    # Treat the portable CSV as the canonical prediction artifact. Re-reading
+    # it before scoring guarantees that every reported metric can be replayed
+    # exactly from the saved file, including rank metrics when scores are tied.
+    persisted = pd.read_csv(prediction_path)
+    probability_columns = [f"prob_{name}" for name in class_names]
+    probability = persisted[probability_columns].to_numpy(dtype=np.float64)
+    persisted_true = persisted["y_true"].to_numpy(dtype=np.int64)
+    persisted_predicted = persisted["y_pred"].to_numpy(dtype=np.int64)
+    window_metrics = classification_metrics(
+        persisted_true,
+        persisted_predicted,
+        probability,
+        class_names=class_names,
+    )
+    persisted_metadata = persisted[metadata.columns]
     aggregate, trial_true, trial_pred, trial_prob = aggregate_probabilities(
-        metadata, y_true, probability, level="trial"
+        persisted_metadata, persisted_true, probability, level="trial"
     )
     trial_metrics = classification_metrics(
         trial_true, trial_pred, trial_prob, class_names=class_names
@@ -195,12 +219,6 @@ def save_evaluation(
     (destination / "metrics.json").write_text(
         json.dumps(metrics, indent=2, ensure_ascii=False) + "\n", encoding="utf-8"
     )
-    predictions = metadata.reset_index(drop=True).copy()
-    predictions["y_true"] = np.asarray(y_true, dtype=np.int64)
-    predictions["y_pred"] = predicted
-    for index, name in enumerate(class_names):
-        predictions[f"prob_{name}"] = probability[:, index]
-    predictions.to_csv(destination / "predictions.csv", index=False)
     aggregate["y_pred"] = trial_pred
     aggregate.to_csv(destination / "trial_predictions.csv", index=False)
     matrix = np.asarray(window_metrics["confusion_matrix"])

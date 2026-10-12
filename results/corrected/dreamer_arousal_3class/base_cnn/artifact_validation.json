@@ -1,6 +1,7 @@
 {
   "source_directory": "F:\\Projects\\Vision\\StressClassification\\.temp\\kaggle_base_output\\results\\base_cnn",
   "model": "base_cnn",
+  "embedded_source_sha256": "e9a21752c2361a0e18f504d7f47062d274db74ef476e208c6a836365af530398",
   "test_samples": 1092,
   "test_sample_order_matches_fixed_index": true,
   "saved_predictions_match_probability_argmax": true,
@@ -8,7 +9,7 @@
   "postprocessing": "float64 row normalization before metrics and serialization",
   "remote_metrics_sha256": "57d825707d6b554e5a5a208e7ad4ae28b53337c1e39da9e0b7ce49e11ebbf4d8",
   "remote_predictions_sha256": "f217f69bd35eb357511f8b5994d3ba6d95b840117f72a2ff44f042dedf1d6381",
-  "normalized_metrics_sha256": "d06cfeaaefe659369ce93ca71ca7779be71d57135a8ba9eadb7d36cce4077e58",
+  "normalized_metrics_sha256": "a3dd588936c0d94b7c82e8d7aac6ff275ca4d2e2d0f3c8e4d54790e86fcb1c2f",
   "normalized_predictions_sha256": "73999046b4ffcacaf8876d3243cebac49cfab2fba32f6581ac140bab0b8980a7",
   "window_metrics": {
     "accuracy": 0.32967032967032966,
@@ -88,7 +89,7 @@
         "support": 1092.0
       }
     },
-    "roc_auc_ovr_macro": 0.4842816021300327,
-    "average_precision_macro": 0.3500697552328704
+    "roc_auc_ovr_macro": 0.4842843208215808,
+    "average_precision_macro": 0.3500703010874548
   }
 }

@@ -77,8 +77,8 @@
         "support": 1092.0
       }
     },
-    "roc_auc_ovr_macro": 0.4842816021300327,
-    "average_precision_macro": 0.3500697552328704
+    "roc_auc_ovr_macro": 0.4842843208215808,
+    "average_precision_macro": 0.3500703010874548
   },
   "trial_level": {
     "accuracy": 0.3148148148148148,
