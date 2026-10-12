@@ -25,13 +25,13 @@ For example, random forest reaches 0.456 accuracy but recalls only 0.012 of the
 low class and 0.830 of the high class. Macro-F1 and balanced accuracy are the
 primary summary measures.
 
-## Three-class paper-method adaptation
+## Three-class stacking comparator
 
-The leakage-corrected 2023-paper stacking adaptation achieved accuracy 0.470,
+The leakage-corrected stacking ensemble achieved accuracy 0.470,
 balanced accuracy 0.393, macro-F1 0.376, and macro one-vs-rest AUROC 0.510. Its
 per-class F1 values were 0.089 (low), 0.443 (medium), and 0.595 (high). This is
-the strongest corrected classical macro-F1, but it remains an arousal-task
-adaptation rather than reproduction of the paper's stress experiment.
+the strongest corrected classical macro-F1. It is retained as an independent
+comparator and is not a reproduction of the 2026 attention paper.
 
 ## Modality ablation (random forest)
 
@@ -57,7 +57,7 @@ validation macro-F1 only.
 
 | Model | Family | Validation macro-F1 | Accuracy | Balanced accuracy | Macro-F1 | Macro AUROC |
 |---|---|---:|---:|---:|---:|---:|
-| 2023 adapted stacking | Classical ensemble | 0.342 | **0.470** | **0.393** | **0.376** | 0.510 |
+| Adapted stacking | Classical ensemble | 0.342 | **0.470** | **0.393** | **0.376** | 0.510 |
 | Paper-inspired attention | Deep learning | 0.307 | 0.403 | 0.373 | 0.355 | **0.512** |
 | kNN | Classical | **0.359** | 0.390 | 0.316 | 0.302 | 0.458 |
 | Random forest | Classical | 0.311 | 0.456 | 0.345 | 0.293 | 0.437 |

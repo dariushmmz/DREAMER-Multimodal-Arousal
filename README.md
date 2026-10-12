@@ -15,7 +15,7 @@ All methods use the same target mapping, sample IDs, and fixed test participants
 
 | Method | Accuracy | Balanced accuracy | Macro-F1 | Macro-AUROC |
 |---|---:|---:|---:|---:|
-| Adapted 2023 stacking | **0.4698** | **0.3930** | **0.3755** | 0.5097 |
+| Adapted stacking | **0.4698** | **0.3930** | **0.3755** | 0.5097 |
 | Paper-inspired attention | 0.4029 | 0.3732 | 0.3554 | **0.5117** |
 | kNN | 0.3901 | 0.3160 | 0.3020 | 0.4578 |
 | Random forest | 0.4560 | 0.3449 | 0.2933 | 0.4367 |
@@ -23,7 +23,8 @@ All methods use the same target mapping, sample IDs, and fixed test participants
 | RBF SVM | 0.4524 | 0.3275 | 0.2533 | 0.3945 |
 | Base CNN | 0.3297 | 0.3584 | 0.2394 | 0.4843 |
 
-The adapted stack is an algorithmic adaptation of the 2023 PLOS ONE method.
+The adapted stack is retained as an independent classical comparator; it is not
+a reproduction or baseline from the client-requested 2026 paper.
 The attention model uses multi-scale temporal CNNs, raw ECG+HRV fusion, and
 learned modality attention; it does not implement the 2026 paper's CWT and
 VGG16/EfficientNetB0/ResNeXt50 image system.
@@ -128,6 +129,8 @@ to regenerate reports.
   excluded from Git; their sizes and SHA-256 hashes are in
   `.docs/artifact_manifest.json` and the delivery inventory.
 - Final client report: `.docs/09_final_experimental_report.md`.
+- Persian final report: `.docs/09_final_experimental_report_fa.md` and the
+  B Nazanin RTL DOCX edition beside it.
 - Persian reviewer responses: `.docs/07_responses_to_reviewers_fa.md` and DOCX.
 - Reference-paper comparison:
   `.docs/05_reference_paper_reproduction_and_differences.md`.

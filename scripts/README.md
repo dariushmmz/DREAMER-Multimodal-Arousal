@@ -12,7 +12,7 @@ root, so commands may be launched from any working directory.
 ## Experiments
 
 - `experiments/train_classical_models.py`: train/select the four classical models.
-- `experiments/train_adapted_stacking.py`: run the adapted 2023 stacking baseline.
+- `experiments/train_adapted_stacking.py`: run the independent stacking comparator.
 - `experiments/evaluate_modality_ablation.py`: evaluate handcrafted feature blocks.
 - `experiments/train_deep_model.py`: train one configured deep model.
 
@@ -25,5 +25,7 @@ root, so commands may be launched from any working directory.
 ## Reporting
 
 - `reporting/build_artifact_manifest.py`: hash curated and local artifacts.
-- `reporting/generate_reviewer_docx.py`: export the Persian reviewer responses.
+- `reporting/persian_docx.py`: shared B Nazanin and RTL Word-formatting helpers.
+- `reporting/generate_reviewer_docx.py`: export and validate the Persian reviewer responses.
+- `reporting/generate_final_report_docx.py`: export and validate the Persian scientific report.
 - `reporting/build_delivery_package.py`: assemble the client delivery snapshot.

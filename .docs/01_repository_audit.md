@@ -28,25 +28,19 @@ The ML notebook recorded 91.84% SVM, 95.36% random forest, and 88.50% kNN
 accuracy on arousal. These numbers use different targets/splits and substantial
 within-trial and within-subject leakage, so they are not valid comparisons.
 
-## Reference-file provenance
+## Reference-paper provenance
 
-The path specified as the “2026 reference paper,”
-`.paper/ECG and EEG based detection and multilevel.pdf`, is actually the 2023
-PLOS ONE article *ECG and EEG based detection and multilevel classification of
-stress using machine learning for specified genders: A preliminary study* by
-Hemakom, Atiwiwat, and Israsena. It uses a private 40-subject mental-arithmetic
-dataset and classical feature selection/classification; its mixed-gender
-three-level stacking accuracy is 64.08%.
-
-A separate local file, `.paper/An attention-based multimodal.pdf`, is the 2026
-Scientific Reports article named in the request. It reports VGG16,
+The client-requested reference is the 2026 *Scientific Reports* article
+*An attention-based multimodal deep learning framework integrating EEG and ECG
+for enhanced stress detection*, stored locally as
+`.paper/An attention-based multimodal.pdf`. It reports VGG16,
 EfficientNetB0, and ResNeXt50 feature extractors, attention fusion, nonoverlap
 10-second epochs, subject-independent 80/10/10 partitioning, and 95.7%
 three-class accuracy. However, it states that WESAD and CASE contain EEG. Their
-primary dataset documentation shows that neither dataset contains EEG. The
-paper's exact EEG–ECG experiment therefore cannot be reproduced from those
-datasets as described. This limitation must remain explicit in all comparison
-reports.
+primary dataset documentation does not describe the EEG configurations
+attributed to them by the paper. The exact reported EEG–ECG experiment therefore
+cannot be reconstructed from the documented public releases alone. This
+evidence boundary remains explicit in all comparison reports.
 
 ## Restructuring
 

@@ -14,7 +14,7 @@
 ## 1. Executive summary
 
 Seven methods were evaluated under one fixed, subject-disjoint protocol. The
-adapted 2023 classical stacking method obtained the best test macro-F1 (0.3755)
+adapted classical stacking ensemble obtained the best test macro-F1 (0.3755)
 and balanced accuracy (0.3930). The paper-inspired attention network was the
 strongest deep model, with macro-F1 0.3554 and the highest macro-AUROC (0.5117).
 It improved macro-F1 by 0.1160 over Base CNN, but it did not outperform adapted
@@ -87,14 +87,14 @@ raw-ECG descriptors, and 25 HRV descriptors.
 | Random forest | 500 trees; minimum leaf size 5; `sqrt` feature sampling |
 | kNN | k=5; distance weighting; scaled features |
 
-### 4.2 Adapted 2023 stacking baseline
+### 4.2 Adapted stacking comparator
 
-The adaptation uses ANOVA ranking with 64 selected features; Gaussian Naive
+The ensemble uses ANOVA ranking with 64 selected features; Gaussian Naive
 Bayes, logistic regression, AdaBoost, kNN, random forest, linear SVM, and RBF
 SVM base learners; subject-grouped five-fold out-of-fold predictions; and a
-logistic-regression meta-learner with C=10. It preserves central algorithmic
-ideas from the 2023 paper but is not a reproduction of its proprietary
-EO/AC1/AC2 stress experiment.
+logistic-regression meta-learner with C=10. It is a separate classical
+comparator and is not presented as a baseline or reproduction from the
+client-requested 2026 attention paper.
 
 ### 4.3 Base CNN
 
@@ -132,7 +132,7 @@ is distinct from the in-process runtimes above.
 
 | Model | Family | Accuracy | Balanced accuracy | Macro-F1 | Macro-AUROC |
 |---|---|---:|---:|---:|---:|
-| Adapted 2023 stacking | Classical ensemble | **0.4698** | **0.3930** | **0.3755** | 0.5097 |
+| Adapted stacking | Classical ensemble | **0.4698** | **0.3930** | **0.3755** | 0.5097 |
 | Paper-inspired attention | Deep learning | 0.4029 | 0.3732 | 0.3554 | **0.5117** |
 | kNN | Classical ML | 0.3901 | 0.3160 | 0.3020 | 0.4578 |
 | Random forest | Classical ML | 0.4560 | 0.3449 | 0.2933 | 0.4367 |
@@ -219,7 +219,9 @@ physiological importance.
 
 ## 10. Relationship to the 2026 paper
 
-The 2026 paper reports CWT image representations, modified VGG16,
+The client-requested 2026 paper, *An attention-based multimodal deep learning
+framework integrating EEG and ECG for enhanced stress detection*, reports CWT
+image representations, modified VGG16,
 EfficientNetB0, and ResNeXt50 backbones, hierarchical attention, approximately
 42.7 million parameters, WESAD+CASE data, rest/stress/amusement labels, and
 95.7% accuracy. The implemented 1.846-million-parameter model uses raw temporal
