@@ -16,9 +16,9 @@ OWNER = "amirmz"
 PAYLOAD_PATHS = [
     ROOT / "configs" / "dreamer_arousal_3class.yaml",
     ROOT / "kaggle" / "entrypoint.py",
-    ROOT / "scripts" / "audit_dreamer.py",
-    ROOT / "scripts" / "prepare_deep_cache.py",
-    ROOT / "scripts" / "run_deep.py",
+    ROOT / "scripts" / "data" / "audit_dataset.py",
+    ROOT / "scripts" / "data" / "build_deep_cache.py",
+    ROOT / "scripts" / "experiments" / "train_deep_model.py",
     *sorted((ROOT / "src" / "stress_classification").glob("*.py")),
 ]
 

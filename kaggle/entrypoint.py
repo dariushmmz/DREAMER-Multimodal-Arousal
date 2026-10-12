@@ -95,7 +95,7 @@ def preprocess() -> None:
     config = PROJECT_ROOT / "configs" / "dreamer_arousal_3class.yaml"
     run(
         sys.executable,
-        str(PROJECT_ROOT / "scripts" / "audit_dreamer.py"),
+        str(PROJECT_ROOT / "scripts" / "data" / "audit_dataset.py"),
         "--mat",
         str(raw),
         "--target",
@@ -109,7 +109,7 @@ def preprocess() -> None:
     )
     run(
         sys.executable,
-        str(PROJECT_ROOT / "scripts" / "prepare_deep_cache.py"),
+        str(PROJECT_ROOT / "scripts" / "data" / "build_deep_cache.py"),
         "--config",
         str(config),
         "--mat",
@@ -181,7 +181,7 @@ def train(model: str) -> None:
     os.environ["EXECUTION_ENVIRONMENT"] = "kaggle_gpu"
     command = [
         sys.executable,
-        str(PROJECT_ROOT / "scripts" / "run_deep.py"),
+        str(PROJECT_ROOT / "scripts" / "experiments" / "train_deep_model.py"),
         "--model",
         model,
         "--config",

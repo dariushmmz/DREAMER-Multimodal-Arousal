@@ -41,6 +41,10 @@ logs/
 *.pt
 *.joblib
 
+# Deterministic client archive is generated from the tracked delivery tree.
+# It is intentionally kept local; its SHA-256 is tracked in delivery metadata.
+delivery/*.zip
+
 # Secrets and local environment overrides
 .env
 .env.*

@@ -8,7 +8,7 @@ import subprocess
 from datetime import datetime, timezone
 from pathlib import Path
 
-PROJECT_ROOT = Path(__file__).resolve().parents[1]
+PROJECT_ROOT = Path(__file__).resolve().parents[2]
 OUTPUT = PROJECT_ROOT / ".docs" / "artifact_manifest.json"
 
 
@@ -39,6 +39,7 @@ def main() -> None:
         "tests",
         "data/processed",
         "results/corrected",
+        "delivery",
         ".paper",
         ".docs",
     ):
@@ -51,7 +52,13 @@ def main() -> None:
     if dreamer.is_file():
         candidates.add(dreamer)
     candidates.discard(OUTPUT)
-    candidates = {path for path in candidates if ".temp" not in path.parts and "__pycache__" not in path.parts}
+    candidates = {
+        path
+        for path in candidates
+        if ".temp" not in path.parts
+        and "__pycache__" not in path.parts
+        and path != PROJECT_ROOT / "delivery" / "StressClassification_Final.zip"
+    }
     entries = []
     for path in sorted(candidates, key=lambda value: value.as_posix().lower()):
         relative = path.relative_to(PROJECT_ROOT).as_posix()

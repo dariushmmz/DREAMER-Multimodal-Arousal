@@ -7,8 +7,8 @@ the canonical repository source:
    `phhasian0710/dreamer` raw file and creates the corrected non-overlapping
    cache on CPU.
 2. `amirmz/stressclassification-base-cnn` trains and evaluates Base CNN on GPU.
-3. `amirmz/stressclassification-paper-inspired-attention` independently trains and evaluates
-   `paper_inspired_attention` on GPU.
+3. `amirmz/stressclassification-paper-inspired-attention` independently trains
+   and evaluates `paper_inspired_attention` on GPU.
 
 Both GPU notebooks consume the versioned output of the cache notebook, attach
 the raw Kaggle dataset for an independent SHA-256 check, and write checkpoints,
@@ -30,12 +30,12 @@ After a completed run, download its output to a temporary directory and ingest
 it with validation and normalized probability metrics:
 
 ```powershell
-python scripts/ingest_kaggle_results.py `
+python scripts/results/ingest_kaggle_outputs.py `
   --source .temp/kaggle_attention_output/results/paper_inspired_attention `
   --kernel-log .temp/kaggle_attention_output/stressclassification-paper-inspired-attention.log `
   --model paper_inspired_attention
-python scripts/build_comparison.py
-python scripts/verify_corrected_results.py
+python scripts/results/build_model_comparison.py
+python scripts/results/verify_experiment_artifacts.py
 ```
 
 The local proxy and Kaggle OAuth profile are runtime-only account settings and

@@ -1,11 +1,11 @@
 {
-  "embedded_zip_sha256": "5067121cd47ceb943a4d891b78f3ee293a2cd42b25acb4d45d7cf3710976a29e",
+  "embedded_zip_sha256": "d41e51d3ffa819acc395068aca5009cd050322403da65c78e7430bbf9f33de38",
   "source_files": [
     "configs/dreamer_arousal_3class.yaml",
     "kaggle/entrypoint.py",
-    "scripts/audit_dreamer.py",
-    "scripts/prepare_deep_cache.py",
-    "scripts/run_deep.py",
+    "scripts/data/audit_dataset.py",
+    "scripts/data/build_deep_cache.py",
+    "scripts/experiments/train_deep_model.py",
     "src/stress_classification/__init__.py",
     "src/stress_classification/config.py",
     "src/stress_classification/data.py",

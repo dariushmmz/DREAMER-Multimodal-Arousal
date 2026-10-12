@@ -1,4 +1,9 @@
-# Modal GPU execution
+# Archived Modal GPU execution
+
+This implementation is retained only for provenance. Modal rejected the planned
+GPU allocation because the workspace required a payment method, so no Modal GPU
+training was performed. The validated runs used the Kaggle workflow documented
+in `kaggle/README.md`. Do not use the commands below to regenerate final reports.
 
 The Modal account is authenticated, but no GPU job is launched automatically.
 The job is bounded to one NVIDIA L4, two physical CPU cores, 8 GiB RAM, a 90-minute hard
@@ -20,7 +25,7 @@ showed no GPU usage, but the CLI does not establish the remaining included
 credit or payment-method state. Explicit approval is required before upload and
 execution.
 
-## Staged commands (run only after approval)
+## Historical staged commands (not used for final results)
 
 ```powershell
 modal volume create stress-classification-dreamer-v1
