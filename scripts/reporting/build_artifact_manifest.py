@@ -39,7 +39,6 @@ def main() -> None:
         "tests",
         "data/processed",
         "results/corrected",
-        "delivery",
         ".paper",
         ".docs",
     ):
@@ -57,7 +56,6 @@ def main() -> None:
         for path in candidates
         if ".temp" not in path.parts
         and "__pycache__" not in path.parts
-        and path != PROJECT_ROOT / "delivery" / "StressClassification_Final.zip"
     }
     entries = []
     for path in sorted(candidates, key=lambda value: value.as_posix().lower()):

@@ -1,6 +1,6 @@
 {
-  "generated_at_utc": "2026-10-12T12:53:28.146861+00:00",
-  "git_head": "40e4db2dd5172deb3d5bc3e0c5cc4c882cba5c07",
+  "generated_at_utc": "2026-10-12T14:29:48.342225+00:00",
+  "git_head": "fdaefb50b5ee0d3d12d2570d4437cb6c23da5ec0",
   "baseline_commit": "2c7b2fd",
   "restructure_commit": "afc21a8",
   "pipeline_commit": "43ba248",
@@ -12,8 +12,8 @@
   "entries": [
     {
       "path": ".docs/01_repository_audit.md",
-      "size_bytes": 3339,
-      "sha256": "ad4369254ffe66455ed4e97134f233a8fc8954ab8823d1f2e45c1cc7bff0f97a",
+      "size_bytes": 3413,
+      "sha256": "b414cf35fd662dddb3a64bf4ac470dbc026e50bed1fc0769e8ce93b81eaf69f4",
       "git_tracked": true
     },
     {
@@ -36,26 +36,38 @@
     },
     {
       "path": ".docs/05_reference_paper_reproduction_and_differences.md",
-      "size_bytes": 5007,
-      "sha256": "185f516c5500edbd52904735fd483e81e3d0b8b0496ac7186f6ad01bceb10617",
+      "size_bytes": 6113,
+      "sha256": "6e61136f7cf3297c06036aa6630672373d99a0568daf92a3faea679e71b0cfa7",
       "git_tracked": true
     },
     {
       "path": ".docs/06_modal_environment.md",
-      "size_bytes": 4254,
-      "sha256": "8911cc0366633299af52f3180c590583856870539e8bbe29cbc4eec5a984e756",
+      "size_bytes": 4265,
+      "sha256": "6f45c5651cc6facc2b274054658549f719bf86a7f63d9058b4a96bf568e48ff3",
+      "git_tracked": true
+    },
+    {
+      "path": ".docs/07_responses_to_reviewers_fa.docx",
+      "size_bytes": 42386,
+      "sha256": "43b9cedb8c0f6905ad384433e6250fe109712166107d30d5b1dc0b226f102a61",
       "git_tracked": true
     },
     {
       "path": ".docs/07_responses_to_reviewers_fa.md",
-      "size_bytes": 13725,
-      "sha256": "31da764ca899303bd9f00a2ca18cc9153b5673e9164560100998bbfefb4e62db",
+      "size_bytes": 15155,
+      "sha256": "ff7db1e8e1de1bb811a7fadcdaa3aa3630c843d6cb6525a4d8727162c18e4481",
       "git_tracked": true
     },
     {
       "path": ".docs/08_artifact_inventory.md",
-      "size_bytes": 3240,
-      "sha256": "b67af173576558e8bf7153d2b833ec3ef4035c81eab1e624836b848b8926d4ba",
+      "size_bytes": 4482,
+      "sha256": "0e0144baf4bc360e49a3a71f80ff7a3b9e295dcb7c348fb0b128b87ad4017ea6",
+      "git_tracked": true
+    },
+    {
+      "path": ".docs/09_final_experimental_report.md",
+      "size_bytes": 13063,
+      "sha256": "b8860a7e98f2b85d207d4ec916fcdeba8c85d8f39e67a208a57fdc25702fe15a",
       "git_tracked": true
     },
     {
@@ -138,14 +150,14 @@
     },
     {
       "path": "kaggle/build_kernels.py",
-      "size_bytes": 5095,
-      "sha256": "342bd9928a290fef6ba71c15487eaed29cbbf527f2fb3349caa0fd74b3b2f90e",
+      "size_bytes": 5135,
+      "sha256": "b5b8af8ed952dba7f869af41af2e9817680554dc84928898058d5edd7a9665e4",
       "git_tracked": true
     },
     {
       "path": "kaggle/entrypoint.py",
-      "size_bytes": 8434,
-      "sha256": "b420c35f8229172fb44efaf4f7f5ba62f08bfa268f684fd23ff23dc887a7fe7e",
+      "size_bytes": 8474,
+      "sha256": "5634fb01a1c9eca7ed43a3a1c436807ec6fb1950af43223b4d620432d3aa7824",
       "git_tracked": true
     },
     {
@@ -156,14 +168,14 @@
     },
     {
       "path": "kaggle/kernels/stressclassification-attention/notebook.ipynb",
-      "size_bytes": 38987,
-      "sha256": "ca78fa154eb77252b23a799e2322912ba42787ed8970c60bf9210748f42f164e",
+      "size_bytes": 39079,
+      "sha256": "914fe41f9dae5abff7746b417ea85eb7258b80c1eb7f57fcef653915b9f2d548",
       "git_tracked": true
     },
     {
       "path": "kaggle/kernels/stressclassification-attention/source_manifest.json",
-      "size_bytes": 799,
-      "sha256": "074617c97608ba8228f08888e23f30e574c4be7aa1f1129c79cdde573fd09d21",
+      "size_bytes": 827,
+      "sha256": "1ef302bfe8e3123350c14fdb87c51f6cf0dcd3516b51d654b86f561077552d81",
       "git_tracked": true
     },
     {
@@ -174,14 +186,14 @@
     },
     {
       "path": "kaggle/kernels/stressclassification-base-cnn/notebook.ipynb",
-      "size_bytes": 38971,
-      "sha256": "3337a8f37bcc9003be795ab91bcc07fcc2d138b5aae3b00fd385a7081da51aba",
+      "size_bytes": 39063,
+      "sha256": "d4c5766412577948203a331660f3cdedaf7887f5fe32ac34c44b87019bad4b6d",
       "git_tracked": true
     },
     {
       "path": "kaggle/kernels/stressclassification-base-cnn/source_manifest.json",
-      "size_bytes": 799,
-      "sha256": "074617c97608ba8228f08888e23f30e574c4be7aa1f1129c79cdde573fd09d21",
+      "size_bytes": 827,
+      "sha256": "1ef302bfe8e3123350c14fdb87c51f6cf0dcd3516b51d654b86f561077552d81",
       "git_tracked": true
     },
     {
@@ -192,26 +204,26 @@
     },
     {
       "path": "kaggle/kernels/stressclassification-dreamer-cache/notebook.ipynb",
-      "size_bytes": 38953,
-      "sha256": "1d1d8f4ee27091947197eae36c8cacf91e95c5b1fd140faa1a1ca67f733937b3",
+      "size_bytes": 39045,
+      "sha256": "5376aa25ce963fe9f410f157b446dbb5964190f95b24f1408c49ed893780b03a",
       "git_tracked": true
     },
     {
       "path": "kaggle/kernels/stressclassification-dreamer-cache/source_manifest.json",
-      "size_bytes": 799,
-      "sha256": "074617c97608ba8228f08888e23f30e574c4be7aa1f1129c79cdde573fd09d21",
+      "size_bytes": 827,
+      "sha256": "1ef302bfe8e3123350c14fdb87c51f6cf0dcd3516b51d654b86f561077552d81",
       "git_tracked": true
     },
     {
       "path": "kaggle/README.md",
-      "size_bytes": 1832,
-      "sha256": "37ebe8162e1ccf3849a50c196264d62c855d968f285eb9257da8f6277bd95f60",
+      "size_bytes": 1865,
+      "sha256": "a1f119aa8b04cfadb306058fef718a8e5e73a2ce02e02a125078ccf726bff680",
       "git_tracked": true
     },
     {
       "path": "modal/README.md",
-      "size_bytes": 1958,
-      "sha256": "5c1b4f3ea45d0d5e30348ef6cae2b42cf234f208c5933a69cc2d2098d1d4180b",
+      "size_bytes": 2303,
+      "sha256": "349a2596c648ea128d599f7de86c497aa76d8f928e2a137999e161ac4d4b625b",
       "git_tracked": true
     },
     {
@@ -221,63 +233,63 @@
       "git_tracked": true
     },
     {
-      "path": "notebooks/01_dataset_and_leakage_audit.ipynb",
-      "size_bytes": 1880,
-      "sha256": "f83da0815450c24424139c18fb471b7539ff384b63e6e7e7c3ba23262695c9ba",
-      "git_tracked": true
-    },
-    {
-      "path": "notebooks/02_classical_evaluation.ipynb",
-      "size_bytes": 1309,
-      "sha256": "7cd24339b3c2842066f8603692e3ae98e76b070b450552af20d6c102c742deee",
-      "git_tracked": true
-    },
-    {
-      "path": "notebooks/03_deep_models.ipynb",
-      "size_bytes": 1808,
-      "sha256": "eaec45c36ff8a0f2bc48f4bd68b9017c3aedbe7ecdac5847290bb273aee7b219",
-      "git_tracked": true
-    },
-    {
-      "path": "notebooks/attention_multimodal.ipynb",
-      "size_bytes": 283313,
-      "sha256": "5fcd04c91db3d74b042db9e02e1cee4201ce7be9098f203899942a563610c702",
-      "git_tracked": true
-    },
-    {
-      "path": "notebooks/base_multimodal.ipynb",
-      "size_bytes": 463871,
-      "sha256": "1b4dbfa24ac740c0ccbcbac6ef41608d5419cb2a47dbbacceb0c43bc63706b94",
-      "git_tracked": true
-    },
-    {
-      "path": "notebooks/dreamer_csv_overview.ipynb",
+      "path": "notebooks/exploratory/dreamer_csv_overview.ipynb",
       "size_bytes": 10897,
       "sha256": "7b8618b193f691f369eaa17b7570fa3d8c24feddb64d9029ab1d629fc7ba88cd",
       "git_tracked": true
     },
     {
-      "path": "notebooks/ml_models.ipynb",
-      "size_bytes": 220836,
-      "sha256": "2709011a8e5f26e87aa7b11e74209f2be30f5953db43776aa0f2d6ea494d54df",
+      "path": "notebooks/legacy/legacy_attention_multimodal_cnn.ipynb",
+      "size_bytes": 283327,
+      "sha256": "56aa2433fb8774b7be5409c2b4f6c14d7fe9b492b4c2e3aeb06d5d7792d825f5",
+      "git_tracked": true
+    },
+    {
+      "path": "notebooks/legacy/legacy_base_multimodal_cnn.ipynb",
+      "size_bytes": 463892,
+      "sha256": "d62729bba17d273f8ca82f9ad68ca193e5de44ee2ff559d9e056eaddfb246c8b",
+      "git_tracked": true
+    },
+    {
+      "path": "notebooks/legacy/legacy_classical_ml.ipynb",
+      "size_bytes": 220843,
+      "sha256": "ff1f2006b2b8fd917b6ad38e3bf0adc5754210c235b07757c4e68d6cb4565e70",
       "git_tracked": true
     },
     {
       "path": "notebooks/README.md",
-      "size_bytes": 595,
-      "sha256": "85b774d7c1157b1768b21da3c9ffb127af78c100569e010e22fcfca52e582f94",
+      "size_bytes": 1014,
+      "sha256": "6f30a6cb60e8fb34f2122fe146b20f6622e8c0f7242cf0681debf1aa2002835a",
+      "git_tracked": true
+    },
+    {
+      "path": "notebooks/workflows/01_dataset_protocol_audit.ipynb",
+      "size_bytes": 2023,
+      "sha256": "41dc857f3d3357bd0bb3bdd1eb1d725b28e09cbaf46366ee4d3f7e9ab3a72734",
+      "git_tracked": true
+    },
+    {
+      "path": "notebooks/workflows/02_classical_ml_evaluation.ipynb",
+      "size_bytes": 1481,
+      "sha256": "9ad8a52fd53eca93499beb9dd7d0bad302a254257a8023a110ac43973a9fbcdb",
+      "git_tracked": true
+    },
+    {
+      "path": "notebooks/workflows/03_deep_learning_evaluation.ipynb",
+      "size_bytes": 2014,
+      "sha256": "16cddd6e93a680fd2f8eb94e3a7b3c62034dc374f6a944a8ca1b21a646f63bdc",
       "git_tracked": true
     },
     {
       "path": "pyproject.toml",
-      "size_bytes": 769,
-      "sha256": "3274c2b97a4f5dc00fcdc8da18cffcf0b6b5b433f7aa2b41dcfe5a4e18fe96dc",
+      "size_bytes": 888,
+      "sha256": "c32ff785853aceb5674a9b5855f417a18d0a20eb2f9e318527f24556fdc7906b",
       "git_tracked": true
     },
     {
       "path": "README.md",
-      "size_bytes": 2155,
-      "sha256": "e41abade5ca9d7948812907b55858b4e8956bcd2627180a73cfe2a7c9f596b4f",
+      "size_bytes": 6519,
+      "sha256": "24443e4e0f71bc9c61768721cd6ee92658c6b0c1d8356fe83ac4f928457d44eb",
       "git_tracked": true
     },
     {
@@ -1032,74 +1044,92 @@
     },
     {
       "path": "results/corrected/dreamer_arousal_3class/verification_summary.json",
-      "size_bytes": 1808,
-      "sha256": "d2b0a575a1cd3fe533f4ec3856c89574097334d012482a58d42ed9c577d16e5f",
+      "size_bytes": 2117,
+      "sha256": "9c192d141a3418a5fcb9cd6830622c0d7e074b8488d0a09d32ddc07fb2753872",
       "git_tracked": true
     },
     {
-      "path": "scripts/audit_dreamer.py",
-      "size_bytes": 6127,
-      "sha256": "71239acf03c55567b9035d953b44a481e73bf24ccb094fc074a90fccbc8bb632",
+      "path": "scripts/data/audit_dataset.py",
+      "size_bytes": 6126,
+      "sha256": "4fba4330aa10637a493ba0fde291a5ee7de7741866efc8061b9815b6cb1bc052",
       "git_tracked": true
     },
     {
-      "path": "scripts/build_artifact_manifest.py",
-      "size_bytes": 2811,
-      "sha256": "bc2ac11204b7f6245392b91f1371c355cf4e38d857db951441b767109c048343",
+      "path": "scripts/data/build_deep_cache.py",
+      "size_bytes": 1595,
+      "sha256": "53abd514b5d8c9a9c523474238d905735e1d5d98ff116b2cc98be4ad12466630",
       "git_tracked": true
     },
     {
-      "path": "scripts/build_comparison.py",
-      "size_bytes": 7882,
-      "sha256": "62f7c25da1d28a24de437505ae12c6c96882138290167e438a958c7f812ff340",
-      "git_tracked": true
-    },
-    {
-      "path": "scripts/convert_dreamer_csv.py",
+      "path": "scripts/data/export_dreamer_csv.py",
       "size_bytes": 6173,
       "sha256": "d625f33db117f36f8befb0343159ecd5582eb40d211c35cccceb5c5907a7a734",
       "git_tracked": true
     },
     {
-      "path": "scripts/ingest_kaggle_results.py",
-      "size_bytes": 4951,
-      "sha256": "8dc47afbd2d3e8e28f3f4f84f7969939bfcc4e9716e3ed533ba0c06854946081",
-      "git_tracked": true
-    },
-    {
-      "path": "scripts/prepare_deep_cache.py",
-      "size_bytes": 1595,
-      "sha256": "670de556690020643c665d1f3905966c50336367fb198d3e75f799abd280f4de",
-      "git_tracked": true
-    },
-    {
-      "path": "scripts/run_classical.py",
-      "size_bytes": 8682,
-      "sha256": "d3563c8bde5f6778948f1129fcc35665b9b905f997660e89247971879bbfc7d2",
-      "git_tracked": true
-    },
-    {
-      "path": "scripts/run_deep.py",
-      "size_bytes": 1701,
-      "sha256": "8ff66737d97f19e06c27ccf9e6388912e384876639735451ab3742f1220a8c4a",
-      "git_tracked": true
-    },
-    {
-      "path": "scripts/run_modality_ablation.py",
+      "path": "scripts/experiments/evaluate_modality_ablation.py",
       "size_bytes": 6111,
-      "sha256": "e60be36c3ef877a7460f9ec572683abaaf24c363e280658333f06031fe42174a",
+      "sha256": "3ec962f869d8e442313c9ed9e405d870d80070c35f3519913357b216925afcb3",
       "git_tracked": true
     },
     {
-      "path": "scripts/run_paper_adapted_stacking.py",
-      "size_bytes": 9283,
-      "sha256": "9dcd476dd5e8dca8292c02bba888768c7723a0e188f9e5f98b78351c7e3c856f",
+      "path": "scripts/experiments/train_adapted_stacking.py",
+      "size_bytes": 9282,
+      "sha256": "4f60c8c8ee605522eea1fe1a6322af3206b2635233ca34613f034f5b84954898",
       "git_tracked": true
     },
     {
-      "path": "scripts/verify_corrected_results.py",
-      "size_bytes": 4358,
-      "sha256": "f846997f56345d414ca5e218451bd6c842bd0321634ec18b274025b152b0b8bd",
+      "path": "scripts/experiments/train_classical_models.py",
+      "size_bytes": 8682,
+      "sha256": "19cf76bf8c61032b7102170a28163cf3e6438a53eaafdd0219652055d2809975",
+      "git_tracked": true
+    },
+    {
+      "path": "scripts/experiments/train_deep_model.py",
+      "size_bytes": 1701,
+      "sha256": "ec61b0515814bcfdce088a323542a13117376624e92b26037b4f9715ce384db5",
+      "git_tracked": true
+    },
+    {
+      "path": "scripts/README.md",
+      "size_bytes": 1267,
+      "sha256": "168f661bc929febdc6f20fed0b7020bb727677bc38ceb83f07257f42a808d22f",
+      "git_tracked": true
+    },
+    {
+      "path": "scripts/reporting/build_artifact_manifest.py",
+      "size_bytes": 2849,
+      "sha256": "a0a3169dede641cbd9db3ec15416023c4882081bd028e2e55ab58d4c4b577c31",
+      "git_tracked": true
+    },
+    {
+      "path": "scripts/reporting/build_delivery_package.py",
+      "size_bytes": 10852,
+      "sha256": "3aa4fd8184492cc051389ed8e098a5e4ffe23690cab30a8cad75dd8fca6b6751",
+      "git_tracked": true
+    },
+    {
+      "path": "scripts/reporting/generate_reviewer_docx.py",
+      "size_bytes": 5885,
+      "sha256": "7445184f771d4887d033f27a884b8a0bd645a19d057555f6710ae0c434d7b228",
+      "git_tracked": true
+    },
+    {
+      "path": "scripts/results/build_model_comparison.py",
+      "size_bytes": 7882,
+      "sha256": "5fa969f45e6121e3ca3a12b66012409074cfe5f36740631e26a891984513df88",
+      "git_tracked": true
+    },
+    {
+      "path": "scripts/results/ingest_kaggle_outputs.py",
+      "size_bytes": 4951,
+      "sha256": "f04135752be5ce3f51b3fc21045438804e53319fa0cf830412ddd4804f5cca65",
+      "git_tracked": true
+    },
+    {
+      "path": "scripts/results/verify_experiment_artifacts.py",
+      "size_bytes": 7781,
+      "sha256": "cca445d99ea3d1047ae89bff47e591304b1bc205412746ef0765c587e6bae573",
       "git_tracked": true
     },
     {
@@ -1154,6 +1184,12 @@
       "path": "src/stress_classification/preprocessing.py",
       "size_bytes": 6941,
       "sha256": "168de56123d434abbaeb0f69b7c55fe2b41e823045482fbdee41a5bed8eba5c7",
+      "git_tracked": true
+    },
+    {
+      "path": "src/stress_classification/README.md",
+      "size_bytes": 955,
+      "sha256": "8dfb3b050ef1498a60e530e1caef10dfe1c4fb6a08095c914fd71937675ff770",
       "git_tracked": true
     },
     {
