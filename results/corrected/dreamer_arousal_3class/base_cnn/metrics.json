@@ -1,0 +1,164 @@
+{
+  "window_level": {
+    "accuracy": 0.32967032967032966,
+    "balanced_accuracy": 0.35842099946226996,
+    "precision_macro": 0.4998473526365838,
+    "recall_macro": 0.35842099946226996,
+    "f1_macro": 0.23942270510897964,
+    "f1_weighted": 0.2388806370774158,
+    "matthews_correlation_coefficient": 0.07308626554370608,
+    "confusion_matrix": [
+      [
+        11,
+        227,
+        15
+      ],
+      [
+        5,
+        291,
+        20
+      ],
+      [
+        3,
+        462,
+        58
+      ]
+    ],
+    "per_class": {
+      "low": {
+        "precision": 0.5789473684210527,
+        "recall": 0.043478260869565216,
+        "f1": 0.08088235294117647,
+        "support": 253
+      },
+      "medium": {
+        "precision": 0.2969387755102041,
+        "recall": 0.9208860759493671,
+        "f1": 0.44907407407407407,
+        "support": 316
+      },
+      "high": {
+        "precision": 0.6236559139784946,
+        "recall": 0.11089866156787763,
+        "f1": 0.18831168831168832,
+        "support": 523
+      }
+    },
+    "classification_report": {
+      "low": {
+        "precision": 0.5789473684210527,
+        "recall": 0.043478260869565216,
+        "f1-score": 0.08088235294117647,
+        "support": 253.0
+      },
+      "medium": {
+        "precision": 0.2969387755102041,
+        "recall": 0.9208860759493671,
+        "f1-score": 0.44907407407407407,
+        "support": 316.0
+      },
+      "high": {
+        "precision": 0.6236559139784946,
+        "recall": 0.11089866156787763,
+        "f1-score": 0.18831168831168832,
+        "support": 523.0
+      },
+      "accuracy": 0.32967032967032966,
+      "macro avg": {
+        "precision": 0.4998473526365838,
+        "recall": 0.35842099946226996,
+        "f1-score": 0.23942270510897964,
+        "support": 1092.0
+      },
+      "weighted avg": {
+        "precision": 0.518753095496798,
+        "recall": 0.32967032967032966,
+        "f1-score": 0.2388806370774158,
+        "support": 1092.0
+      }
+    },
+    "roc_auc_ovr_macro": 0.4842816021300327,
+    "average_precision_macro": 0.3500697552328704
+  },
+  "trial_level": {
+    "accuracy": 0.3148148148148148,
+    "balanced_accuracy": 0.3314913844325609,
+    "precision_macro": 0.3798185941043084,
+    "recall_macro": 0.3314913844325609,
+    "f1_macro": 0.21739750445632797,
+    "f1_weighted": 0.2083699742523272,
+    "matthews_correlation_coefficient": -0.011210281678653648,
+    "confusion_matrix": [
+      [
+        1,
+        13,
+        1
+      ],
+      [
+        1,
+        15,
+        1
+      ],
+      [
+        0,
+        21,
+        1
+      ]
+    ],
+    "per_class": {
+      "low": {
+        "precision": 0.5,
+        "recall": 0.06666666666666667,
+        "f1": 0.11764705882352941,
+        "support": 15
+      },
+      "medium": {
+        "precision": 0.30612244897959184,
+        "recall": 0.8823529411764706,
+        "f1": 0.45454545454545453,
+        "support": 17
+      },
+      "high": {
+        "precision": 0.3333333333333333,
+        "recall": 0.045454545454545456,
+        "f1": 0.08,
+        "support": 22
+      }
+    },
+    "classification_report": {
+      "low": {
+        "precision": 0.5,
+        "recall": 0.06666666666666667,
+        "f1-score": 0.11764705882352941,
+        "support": 15.0
+      },
+      "medium": {
+        "precision": 0.30612244897959184,
+        "recall": 0.8823529411764706,
+        "f1-score": 0.45454545454545453,
+        "support": 17.0
+      },
+      "high": {
+        "precision": 0.3333333333333333,
+        "recall": 0.045454545454545456,
+        "f1-score": 0.08,
+        "support": 22.0
+      },
+      "accuracy": 0.3148148148148148,
+      "macro avg": {
+        "precision": 0.3798185941043084,
+        "recall": 0.3314913844325609,
+        "f1-score": 0.21739750445632797,
+        "support": 54.0
+      },
+      "weighted avg": {
+        "precision": 0.3710632401108591,
+        "recall": 0.3148148148148148,
+        "f1-score": 0.2083699742523272,
+        "support": 54.0
+      }
+    },
+    "roc_auc_ovr_macro": 0.5261089272118684,
+    "average_precision_macro": 0.4128901086509585
+  }
+}

@@ -1,0 +1,123 @@
+{
+  "n_subjects": 23,
+  "n_trials": 414,
+  "n_windows": 8372,
+  "target": "arousal",
+  "window_seconds": 10.0,
+  "overlap_ratio": 0.0,
+  "label_definition": {
+    "0": "rating 1-2",
+    "1": "rating 3",
+    "2": "rating 4-5"
+  },
+  "split": {
+    "name": "subject_independent_holdout_v1",
+    "train": [
+      2,
+      3,
+      4,
+      7,
+      8,
+      9,
+      10,
+      12,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23
+    ],
+    "validation": [
+      1,
+      6,
+      11
+    ],
+    "test": [
+      5,
+      13,
+      14
+    ]
+  },
+  "partitions": {
+    "train": {
+      "subjects": [
+        2,
+        3,
+        4,
+        7,
+        8,
+        9,
+        10,
+        12,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23
+      ],
+      "n_subjects": 17,
+      "n_windows": 6188,
+      "class_counts": {
+        "0": 1441,
+        "1": 1778,
+        "2": 2969
+      },
+      "class_proportions": {
+        "0": 0.23287,
+        "1": 0.28733,
+        "2": 0.4798
+      }
+    },
+    "validation": {
+      "subjects": [
+        1,
+        6,
+        11
+      ],
+      "n_subjects": 3,
+      "n_windows": 1092,
+      "class_counts": {
+        "0": 247,
+        "1": 322,
+        "2": 523
+      },
+      "class_proportions": {
+        "0": 0.22619,
+        "1": 0.294872,
+        "2": 0.478938
+      }
+    },
+    "test": {
+      "subjects": [
+        5,
+        13,
+        14
+      ],
+      "n_subjects": 3,
+      "n_windows": 1092,
+      "class_counts": {
+        "0": 253,
+        "1": 316,
+        "2": 523
+      },
+      "class_proportions": {
+        "0": 0.231685,
+        "1": 0.289377,
+        "2": 0.478938
+      }
+    }
+  },
+  "split_search": {
+    "seed": 20261011,
+    "iterations": 100000,
+    "objective": 0.01667556654768934
+  }
+}
