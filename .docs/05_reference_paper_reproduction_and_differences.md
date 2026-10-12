@@ -71,3 +71,19 @@ and tasks were equivalent.
 | Parameters | 42.7 M reported | 1.846 M attention adaptation |
 | Claim | Stress-state detection | Arousal classification only |
 
+## Empirical outcome of the transparent adaptation
+
+Under the corrected DREAMER protocol, `paper_inspired_attention` selected epoch
+12 by validation macro-F1 and achieved test accuracy 0.4029, balanced accuracy
+0.3732, macro-F1 0.3554, and macro AUROC 0.5117. The Base CNN achieved 0.3297,
+0.3584, 0.2394, and 0.4843 respectively. Thus the attention adaptation improves
+macro-F1 over Base by 0.1160, but it does not exceed the adapted 2023 stacking
+baseline (macro-F1 0.3755).
+
+These measurements neither reproduce nor refute the paper's reported 95.7%:
+the datasets, labels, sensor claims, representations, parameter count, and
+evaluation populations are not equivalent. The defensible conclusion is only
+that the implemented attention concepts help relative to this repository's Base
+CNN while cross-subject DREAMER arousal performance remains modest. Raw Kaggle
+metrics, normalized replay metrics, predictions, checkpoints, and source hashes
+are retained in the two corrected deep result directories.

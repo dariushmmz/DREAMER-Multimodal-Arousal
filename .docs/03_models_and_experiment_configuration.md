@@ -68,6 +68,20 @@ VGG16/EfficientNetB0/ResNeXt50 CWT image system and is always named
 - Train-only augmentation: amplitude scaling 0.9–1.1 and Gaussian noise 0.02.
 - Test set is evaluated once after restoring the best validation checkpoint.
 
-GPU training is pending the explicit Modal cost approval recorded in
-`.docs/06_modal_environment.md`; no deep score is reported before that run.
+## Executed GPU protocol and artifacts
 
+Both models consume the same versioned Kaggle preprocessing output and are run
+as independent private notebooks on a Tesla T4. Every result directory contains
+the resolved configuration, model text, parameter count, epoch history, JSONL
+log, best and last checkpoints, predictions, metrics, confusion matrices,
+training curves, environment versions, raw-data/cache hashes, GPU model, and
+runtime. The checkpoint is selected solely by validation macro-F1; test
+predictions are produced once after restoring that checkpoint.
+
+Base CNN selected epoch 25 (validation macro-F1 0.3411), stopped after epoch 37,
+and took 113.39 seconds. The attention model selected epoch 12 (validation
+macro-F1 0.3070), stopped after epoch 24, and took 136.58 seconds. Both histories
+show pronounced subject-level overfitting: final train/validation macro-F1 was
+0.8591/0.1394 for Base and 0.9551/0.2948 for Attention. This is reported as
+evidence rather than hidden or followed by test-driven tuning. Exact histories
+and selected checkpoints are stored in the two deep result directories.

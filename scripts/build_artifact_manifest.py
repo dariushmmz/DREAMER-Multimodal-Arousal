@@ -34,6 +34,7 @@ def main() -> None:
         "notebooks",
         "src/stress_classification",
         "scripts",
+        "kaggle",
         "modal",
         "tests",
         "data/processed",
@@ -71,13 +72,12 @@ def main() -> None:
         "restructure_commit": "afc21a8",
         "pipeline_commit": "43ba248",
         "corrected_results_commit": "8aa7772",
+        "kaggle_workflow_commit": "0509a1e",
+        "probability_normalization_fix_commit": "60b84e8",
+        "base_cnn_results_commit": "7055739",
+        "attention_results_commit": "e035199",
         "entries": entries,
-        "pending_after_approval": [
-            "results/corrected/dreamer_arousal_3class/base_cnn/*",
-            "results/corrected/dreamer_arousal_3class/paper_inspired_attention/*",
-            "Modal runtime and billed-resource measurements",
-            "final ML-versus-deep comparison",
-        ],
+        "pending_after_approval": [],
     }
     OUTPUT.write_text(json.dumps(manifest, indent=2) + "\n", encoding="utf-8")
     print(f"wrote {len(entries)} entries to {OUTPUT}")

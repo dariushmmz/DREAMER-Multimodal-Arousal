@@ -55,6 +55,5 @@ reports.
 - Existing results moved to
   `results/legacy/window_level_random_split/` and labeled as historical.
 - The CSV conversion utility moved to `scripts/convert_dreamer_csv.py`.
-- Reusable code, configurations, tests, Modal execution, and corrected results
+- Reusable code, configurations, tests, Kaggle execution, and corrected results
   are separated into dedicated directories.
-

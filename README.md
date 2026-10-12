@@ -15,7 +15,8 @@ subject-independent classification using the DREAMER EEG and ECG dataset.
 - `src/`: reusable preprocessing, models, training, and evaluation code.
 - `configs/`: versioned experiment configurations and fixed split definitions.
 - `scripts/`: command-line entry points for dataset audit and experiments.
-- `modal/`: bounded Modal GPU execution entry points.
+- `kaggle/`: generated private-notebook workflow used for GPU experiments.
+- `modal/`: preserved, bounded Modal implementation (not used after migration).
 - `tests/`: leakage, splitting, preprocessing, and model tests.
 - `data/`: local datasets and tracked metadata only; large signal files are
   intentionally ignored by Git.
@@ -37,8 +38,10 @@ python scripts/run_classical.py
 python scripts/run_modality_ablation.py
 python scripts/run_paper_adapted_stacking.py
 python scripts/build_comparison.py
+python scripts/verify_corrected_results.py
 ```
 
-The corrected classical results and their limitations are summarized in
-`.docs/04_performance_and_comparison.md`. Modal commands, execution limits, and
-the approval gate are documented in `modal/README.md`.
+The corrected classical and deep-learning results and their limitations are
+summarized in `.docs/04_performance_and_comparison.md`. The executed Kaggle
+workflow and the reason for migrating away from Modal are documented in
+`.docs/06_modal_environment.md` and `kaggle/README.md`.

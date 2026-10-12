@@ -6,9 +6,9 @@
 
 **پاسخ:** بررسی فراداده و متن PDF نشان داد فایل معرفی‌شده به‌عنوان مقاله ۲۰۲۶ در واقع مقاله PLOS ONE سال ۲۰۲۳ است. این مقاله سه کلاس «بدون استرس/استرس کم/استرس زیاد» را روی داده اختصاصی ۴۰ آزمودنی و تکلیف محاسبات ذهنی تعریف می‌کند. داده DREAMER چنین برچسبی ندارد. فایل جداگانه مقاله ۲۰۲۶ نیز بر استفاده هم‌زمان EEG و ECG از WESAD و CASE تکیه دارد، در حالی که مستندات اصلی هر دو مجموعه نشان می‌دهد EEG ندارند. بنابراین بازتولید وفادار هیچ‌یک از دو آزمایش با داده موجود قابل ادعا نیست.
 
-**اصلاح انجام شده:** یک نسخه «اقتباسی و نه بازتولید وفادار» از روش stacking مقاله ۲۰۲۳ پیاده‌سازی شد: رتبه‌بندی ANOVA، هفت طبقه‌بند پایه، پیش‌بینی خارج‌از‌فولد با جداسازی آزمودنی و رگرسیون لجستیک در سطح دوم. نتیجه آزمون مستقل: دقت ۰٫۴۷۰، balanced accuracy برابر ۰٫۳۹۳ و macro-F1 برابر ۰٫۳۷۶. مدل توجهی سازگار با DREAMER نیز با نام صریح `paper_inspired_attention` آماده شده و نتیجه آن تا اجرای تأییدشده Modal گزارش نمی‌شود.
+**اصلاح انجام شده:** یک نسخه «اقتباسی و نه بازتولید وفادار» از روش stacking مقاله ۲۰۲۳ پیاده‌سازی شد: رتبه‌بندی ANOVA، هفت طبقه‌بند پایه، پیش‌بینی خارج‌از‌فولد با جداسازی آزمودنی و رگرسیون لجستیک در سطح دوم. نتیجه آزمون مستقل آن دقت ۰٫۴۷۰، balanced accuracy برابر ۰٫۳۹۳ و macro-F1 برابر ۰٫۳۷۶ است. مدل `paper_inspired_attention` نیز به‌عنوان اقتباس مفاهیم چندمقیاسی و attention مقاله ۲۰۲۶، نه بازتولید آن، روی Kaggle اجرا شد و به‌ترتیب ۰٫۴۰۳، ۰٫۳۷۳ و ۰٫۳۵۵ به دست آورد.
 
-**محل اصلاح:** `scripts/run_paper_adapted_stacking.py`، `results/corrected/dreamer_arousal_3class/paper_2023_adapted_stacking/`، `.docs/05_reference_paper_reproduction_and_differences.md`، `src/stress_classification/models.py`.
+**محل اصلاح:** `scripts/run_paper_adapted_stacking.py`، `results/corrected/dreamer_arousal_3class/paper_2023_adapted_stacking/`، `results/corrected/dreamer_arousal_3class/paper_inspired_attention/`، `.docs/05_reference_paper_reproduction_and_differences.md` و `src/stress_classification/models.py`.
 
 ## نظر شماره ۱۶ — حذف هم‌پوشانی
 
@@ -34,11 +34,11 @@
 
 **ابهام:** مقایسه مدل‌های کلاسیک و شبکه‌های عمیق تحت شرایط ارزیابی معادل تکرار شود.
 
-**پاسخ:** بخش کلاسیک تحت پروتکل مشترک اجرا شده است. بهترین macro-F1 مدل کلاسیک منفرد ۰٫۳۰۲ (kNN) و روش stacking اقتباسی ۰٫۳۷۶ بود. جایگزین‌کردن نتایج قدیمی شبکه عمیق با نتیجه جدید مجاز نیست، زیرا نتایج قدیمی نشت داده دارند.
+**پاسخ:** همه روش‌ها روی شناسه‌های نمونه و آزمودنی‌های یکسان ارزیابی شدند. بهترین macro-F1 مدل کلاسیک منفرد ۰٫۳۰۲ (kNN)، روش stacking اقتباسی ۰٫۳۷۶، Base CNN برابر ۰٫۲۳۹ و مدل attention برابر ۰٫۳۵۵ است. بنابراین attention از Base و مدل کلاسیک منفرد بهتر است، ولی از stacking اقتباسی ۰٫۰۲۰ پایین‌تر است. نتایج قدیمی شبکه عمیق به‌علت نشت داده وارد این مقایسه نشده‌اند.
 
-**اصلاح انجام شده:** داده، هدف، split و معیارهای مشترک برای هر دو خانواده کدنویسی شده‌اند. کش ورودی و دو مدل عمیق آماده‌اند، اما اجرای GPU به دلیل الزام هزینه تا اخذ تأیید صریح انجام نشده است؛ بنابراین این مورد هنوز از نظر نتیجه تجربی نهایی بسته نشده است.
+**اصلاح انجام شده:** دو شبکه روی GPU نوع Tesla T4 در Kaggle با seed، داده، هدف، split، معیار، early stopping و قاعده انتخاب checkpoint مشترک اجرا شدند. آزمون فقط پس از انتخاب بهترین epoch با اعتبارسنجی انجام شد. جدول مقایسه، F1 هر کلاس، تغییرپذیری بین سه آزمودنی آزمون و شکل‌های یکپارچه تولید و از روی predictionهای ذخیره‌شده بازبینی شدند.
 
-**محل اصلاح:** `scripts/run_classical.py`، `scripts/run_deep.py`، `src/stress_classification/training.py`، `modal/train_app.py`، `results/corrected/dreamer_arousal_3class/classical/` و `.docs/04_performance_and_comparison.md`.
+**محل اصلاح:** `scripts/run_classical.py`، `scripts/run_deep.py`، `src/stress_classification/training.py`، `kaggle/`، `results/corrected/dreamer_arousal_3class/comparison_all.csv`، `results/corrected/dreamer_arousal_3class/comparison_all.png` و `.docs/04_performance_and_comparison.md`.
 
 ## نظر شماره ۲۱ — مستندسازی کامل مدل‌ها
 
@@ -46,9 +46,9 @@
 
 **پاسخ:** معماری و تنظیمات هر دو شبکه و همه مدل‌های کلاسیک به‌صورت نسخه‌پذیر ثبت شده‌اند. مدل پایه ۲۱۵٬۸۴۳ و مدل توجهی اقتباسی ۱٬۸۴۶٬۰۸۵ پارامتر قابل‌آموزش دارند. برای مدل‌های کلاسیک، تنظیم منتخب و تمام نتایج اعتبارسنجی، پیش‌بینی آزمون، معیارهای کلاسی و ماتریس اغتشاش ذخیره شده است.
 
-**اصلاح انجام شده:** گزارش معماری، فایل پیکربندی، متادیتای اجرا، نمودار مقایسه و ماتریس‌های اغتشاش کلاسیک تولید شد. کد آموزش عمیق تاریخچه هر epoch، بهترین checkpoint و منحنی loss/accuracy/macro-F1 را تولید می‌کند؛ خود منحنی‌های عمیق تا اجرای Modal موجود نیست و ادعای تولید آن‌ها نشده است.
+**اصلاح انجام شده:** برای هر دو شبکه فایل معماری، تعداد پارامتر، تنظیمات نهایی، نسخه محیط، GPU، زمان اجرا، تاریخچه هر epoch، log، بهترین و آخرین checkpoint، منحنی آموزش/اعتبارسنجی، prediction، معیارهای کلی و کلاسی و دو ماتریس اغتشاش ذخیره شد. دقت/balanced accuracy/macro-F1/macro-AUROC برای Base برابر ۰٫۳۳۰/۰٫۳۵۸/۰٫۲۳۹/۰٫۴۸۴ و برای attention برابر ۰٫۴۰۳/۰٫۳۷۳/۰٫۳۵۵/۰٫۵۱۲ است. Base در epoch ۲۵ انتخاب و پس از ۳۷ epoch متوقف شد؛ attention در epoch ۱۲ انتخاب و پس از ۲۴ epoch متوقف شد. زمان درون‌برنامه‌ای آن‌ها ۱۱۳٫۳۹ و ۱۳۶٫۵۸ ثانیه بود.
 
-**محل اصلاح:** `.docs/03_models_and_experiment_configuration.md`، `configs/dreamer_arousal_3class.yaml`، `results/corrected/dreamer_arousal_3class/classical/`، `src/stress_classification/models.py` و `src/stress_classification/training.py`.
+**محل اصلاح:** `.docs/03_models_and_experiment_configuration.md`، `configs/dreamer_arousal_3class.yaml`، `results/corrected/dreamer_arousal_3class/base_cnn/`، `results/corrected/dreamer_arousal_3class/paper_inspired_attention/`، `src/stress_classification/models.py` و `src/stress_classification/training.py`.
 
 ## نظر شماره ۲۲ — تفاوت با مقاله ۲۰۲۶
 
@@ -56,7 +56,7 @@
 
 **پاسخ:** مقاله ۲۰۲۶ ادعای WESAD+CASE، سه backbone تصویری، CWT، ۴۲٫۷ میلیون پارامتر و دقت ۹۵٫۷٪ دارد. WESAD و CASE طبق منابع اصلی EEG ندارند و تعداد آزمودنی/حسگرهای ذکرشده در مقاله با داده واقعی سازگار نیست. پروژه حاضر DREAMER با ۲۳ آزمودنی، EEG چهارده‌کاناله، ECG و برچسب arousal دارد؛ بنابراین مقایسه مستقیم درصدها معتبر نیست.
 
-**اصلاح انجام شده:** جدول تفاوت خط‌به‌خط، بررسی هویت هر دو PDF و محدودیت بازتولید نوشته شد. مدل اقتباسی به‌صراحت از نام «بازتولید وفادار» اجتناب می‌کند.
+**اصلاح انجام شده:** جدول تفاوت خط‌به‌خط، بررسی هویت هر دو PDF و محدودیت بازتولید نوشته شد. مدل اقتباسی به‌صراحت از نام «بازتولید وفادار» اجتناب می‌کند و نتیجه واقعی آن (macro-F1=۰٫۳۵۵) فقط نسبت به Base همین پروژه تحلیل شده است؛ این مقدار با دقت ۹۵٫۷٪ مقاله به‌عنوان دو آزمایش هم‌ارز مقایسه نشده است.
 
 **محل اصلاح:** `.docs/05_reference_paper_reproduction_and_differences.md`، `.docs/01_repository_audit.md` و `.paper/`.
 
@@ -76,11 +76,10 @@
 
 **پاسخ:** نشت اصلی نسخه قدیمی ناشی از تقسیم تصادفی پنجره‌های هم‌پوشان و حضور همه آزمودنی‌ها در همه بخش‌ها بود. HRV مستقیماً از ECG استخراج می‌شود؛ پس وابستگی آن طبیعی و مورد انتظار است، نه اثبات نشت. نشت زمانی رخ می‌دهد که داده آزمون یا برچسب آن در برازش تبدیل‌ها/مدل وارد شود.
 
-**اصلاح انجام شده:** split آزمودنی‌محور پیش از پردازش، نرمال‌سازی پنجره‌ای، scaler آموزش‌محور، انتخاب ویژگی داخل fold، اعتبارسنجی جدا و آزمون دست‌نخورده پیاده شد. در آموزش، بیشینه قدر مطلق Spearman میان بلوک ECG خام و HRV برابر ۰٫۴۳۹ بود. ablation مستقل نیز تولید شد. سه ویژگی طیفی HRV که در ۱۰ ثانیه قابل برآورد معتبر نیستند ثابت/تقریباً صفر تشخیص داده شدند و تفسیر بالینی نمی‌شوند.
+**اصلاح انجام شده:** split آزمودنی‌محور پیش از پردازش، نرمال‌سازی پنجره‌ای، scaler آموزش‌محور، انتخاب ویژگی داخل fold، اعتبارسنجی جدا و آزمون دست‌نخورده پیاده شد. در آموزش، بیشینه قدر مطلق Spearman میان بلوک ECG خام و HRV برابر ۰٫۴۳۹ بود. ablation مستقل نیز تولید شد. سه ویژگی طیفی HRV که در ۱۰ ثانیه قابل برآورد معتبر نیستند ثابت/تقریباً صفر تشخیص داده شدند و تفسیر بالینی نمی‌شوند. در بازبینی نهایی، ترتیب ۱٬۰۹۲ شناسه آزمون، برچسب‌ها، predictionها، ماتریس‌ها و معیارهای هر هفت مدل مستقیماً از artefactهای ذخیره‌شده تطبیق داده شد.
 
-**محل اصلاح:** `src/stress_classification/deep_data.py`، `src/stress_classification/preprocessing.py`، `scripts/run_modality_ablation.py`، `results/corrected/dreamer_arousal_3class/modality_ablation/` و `tests/`.
+**محل اصلاح:** `src/stress_classification/deep_data.py`، `src/stress_classification/preprocessing.py`، `scripts/run_modality_ablation.py`، `scripts/verify_corrected_results.py`، `results/corrected/dreamer_arousal_3class/modality_ablation/`، `results/corrected/dreamer_arousal_3class/verification_summary.json` و `tests/`.
 
-## وضعیت باقی‌مانده
+## وضعیت نهایی
 
-تنها بخش نیازمند تصمیم بیرونی، اجرای دو مدل عمیق روی Modal و دریافت artefactهای GPU است. برآورد هزینه و سقف اجرا در `.docs/06_modal_environment.md` ثبت شده است. تا پیش از تأیید هزینه، هیچ نتیجه عمیق جدید، منحنی آموزش GPU یا مقایسه نهایی ML/DL ادعا نمی‌شود.
-
+هر دو اجرای عمیق تکمیل و artefactهای آن‌ها بازیابی و اعتبارسنجی شده‌اند. هیچ نتیجه قدیمیِ دارای نشت در جدول نهایی استفاده نشده و هیچ بازآموزی بر مبنای مشاهده آزمون انجام نشده است. محدودیت علمی باقی‌مانده، کوچک‌بودن مجموعه DREAMER و وجود فقط سه آزمودنی در آزمون است؛ بنابراین اختلاف‌های کوچک نباید به‌عنوان برتری قطعی یا تعمیم به تشخیص بالینی استرس تفسیر شوند.

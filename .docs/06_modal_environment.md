@@ -1,34 +1,74 @@
-# Modal execution environment and cost controls
+# Kaggle GPU environment and migration from Modal
 
-## Verified local state
+## Why execution moved
 
-- Modal client: 1.5.2.
-- Authentication is active for the configured workspace; no credential value
-  is recorded in the repository.
-- Current-month billing through 2026-10-12 showed USD 0.0016348 of CPU and
-  memory usage and no GPU usage. This does **not** prove that free credits remain.
-- Existing volumes and one idle deployed application were observed; no task was
-  running. They were not modified.
+Modal authentication and workspace access were valid, but an L4 allocation was
+rejected before startup because the workspace required a payment method even
+though promotional credit was visible. No Modal GPU was allocated and no Modal
+GPU charge was incurred. The existing Modal code and audit history are retained
+for traceability, but no further Modal jobs were launched.
 
-## Planned environment
+The remaining experiments were migrated to private Kaggle notebooks generated
+from the canonical repository source by `kaggle/build_kernels.py`. Authentication
+uses the local Kaggle profile for account `amirmz`; no OAuth credential or token
+is stored in the repository. Network calls used the user-provided local SOCKS
+proxy. Billing settings were not changed.
 
-`modal/train_app.py` defines a reproducible Python 3.11 image with pinned NumPy,
-SciPy, pandas, scikit-learn, Matplotlib, Seaborn, PyYAML, and PyTorch versions.
-It requests one NVIDIA L4, two physical CPU cores, 8 GiB RAM, one container maximum,
-zero retries, and a 90-minute hard timeout. The input volume is mounted read-only
-and the result volume is committed after training. There is no deployed or
-scheduled service, so the job terminates after the call.
+## Dataset and preprocessing verification
 
-## Estimate and approval gate
+The Kaggle source is `phhasian0710/dreamer`. Both copies of `DREAMER.mat` in
+that dataset are 452,847,973 bytes and have SHA-256
+`35eed939e6f206a0938b13ba063178e2795ef1739b9cac8e5704a968393f3463`,
+exactly matching the local raw file. The CPU preprocessing notebook produced
+8,372 non-overlapping windows and the expected 6,188/1,092/1,092
+train/validation/test counts. Its sample-ID digest is
+`91cb51e83cb5fa130d6bd9095b93047d9b383f01b213eb0ed334437adee742be`.
 
-The official Modal price page listed the L4 at USD 0.000222/s, CPU at USD
-0.0000131/core/s, and memory at USD 0.00000222/GiB/s on the audit date.
-Based on 6,188 training windows and model sizes of 215,843 and 1,846,085
-parameters, the expected duration is conservatively 20–45 minutes per capped
-100-epoch run. The requested resources total USD 0.00026596/s, so estimated
-compute is approximately USD 0.32–0.72 per model; the 90-minute timeout bounds
-the worst case near USD 1.44 per model (USD 2.88 for both). Actual charges depend on startup, epoch
-time, early stopping, and account credits.
+ECG, HRV, and label arrays are byte-identical to the local cache. The EEG array
+has the same shape, dtype, indices, and source data but a different byte digest
+after filtering (`3d2769...` on Kaggle versus `e8c5cb...` locally), consistent
+with the recorded NumPy/SciPy environment difference. The remote cache is treated
+as its own versioned preprocessing artifact; its manifest is used by both deep
+models, so their comparison remains internally identical. No local array was
+silently substituted.
 
-No paid GPU execution or persistent-volume upload is authorized until the user
-approves this cost envelope.
+## Reproducible notebooks
+
+| Notebook | Purpose | Accelerator |
+|---|---|---|
+| `amirmz/stressclassification-dreamer-corrected-cache` | Raw hash check and corrected cache | CPU |
+| `amirmz/stressclassification-base-cnn` | Base CNN training and test evaluation | Tesla T4 |
+| `amirmz/stressclassification-paper-inspired-attention` | Attention adaptation training and test evaluation | Tesla T4 |
+
+The notebooks run without internet, embed a deterministic ZIP of tracked source
+and configuration, attach the private output of the cache notebook, save a
+last-epoch resume checkpoint after every epoch, and terminate when the batch
+notebook exits. Kaggle's managed accelerator allocation incurred no direct
+project charge. After both completed runs, the authenticated quota endpoint
+reported 0.10 of 30.00 GPU-hours used and 29.90 hours remaining, with refresh at
+2026-10-17T00:00:00. Runs were nevertheless bounded by 100 epochs and validation
+patience 12. Kaggle reports quota consumption rather than a monetary invoice;
+the direct monetary cost for these managed runs was USD 0.
+
+## Recorded execution
+
+The preprocessing run took 85.92 seconds. Base CNN used a Tesla T4 with PyTorch
+2.11.0+cu128, CUDA 12.8, mixed precision, and stopped after 37 epochs; its
+measured training/evaluation runtime was 113.39 seconds. Attention used the same
+environment, stopped after 24 epochs, and measured 136.58 seconds. Per-run
+environment, GPU, runtime, embedded-source/data hashes, and resume state are
+stored with each result. The quota figure includes Kaggle allocation overhead
+and is therefore not interchangeable with the in-process model runtime.
+
+## Probability-metric compatibility correction
+
+Base inference correctly saved class predictions, but float16 softmax rows could
+differ from a unit sum by up to 0.00047. scikit-learn 1.6.1 therefore rejected
+multiclass AUROC. Commit `60b84e8` normalizes finite non-negative score rows in
+float64 before metrics and serialization. Base metrics were deterministically
+regenerated from the saved test probabilities—without retraining or changing
+any prediction—and the raw Kaggle files and their SHA-256 hashes were retained.
+Attention was submitted with the normalization correction already embedded.
+Final postprocessing treats the persisted CSV as canonical so rank metrics
+replay exactly even for tied scores; `scripts/verify_corrected_results.py`
+confirms consistency for all seven models.
