@@ -1,7 +1,0 @@
-{
-  "interpretation": "HRV features are deterministic transformations of ECG; association is expected physiological and mathematical dependence, not evidence that test labels entered training.",
-  "fit_partition": "train only",
-  "max_absolute_spearman": 0.43934409606606023,
-  "median_absolute_spearman": 0.12807558096033433,
-  "strong_pair_count_abs_ge_0_8": 0
-}

@@ -1,145 +1,239 @@
-# StressClassification
+# Subject-Independent Multimodal Arousal Classification on DREAMER
 
-Leakage-audited multimodal classification of three levels of **self-reported
-arousal** using DREAMER EEG, raw ECG, and ECG-derived HRV. The final evaluation
-is subject-independent and uses non-overlapping 10-second windows.
+A leakage-audited research pipeline for three-class **self-reported arousal**
+classification from DREAMER EEG, raw ECG, and ECG-derived HRV. The repository
+compares four classical classifiers, a stacking ensemble, Base CNN, and a
+paper-inspired attention network under one fixed subject-independent protocol.
 
-> DREAMER does not provide clinical stress labels. Results in this repository
-> must be described as low/medium/high arousal classification, not stress
-> diagnosis. The attention network is a documented DREAMER adaptation of ideas
-> from the 2026 reference paper, not a faithful reproduction of that paper.
+> [!IMPORTANT]
+> DREAMER provides arousal ratings, not clinical stress labels. The results in
+> this repository support low/medium/high arousal classification only. The
+> attention model adapts concepts from a 2026 stress-detection paper; it is not
+> a faithful reproduction of that paper.
 
-## Implemented methods and final results
+## Project at a glance
 
-All methods use the same target mapping, sample IDs, and fixed test participants.
+| Item | Value |
+|---|---|
+| Dataset | DREAMER: 23 participants × 18 film trials |
+| Modalities | 14-channel EEG, raw ECG, 25 ECG-derived HRV features |
+| Target | Low (ratings 1–2), medium (3), high (4–5) arousal |
+| Segmentation | Non-overlapping 10-second windows |
+| Split | 17 train / 3 validation / 3 test participants |
+| Samples | 6,188 train / 1,092 validation / 1,092 test windows |
+| Primary metric | Test macro-F1 |
+| Deep-learning runtime | Kaggle Tesla T4 |
+| Reproducibility seed | 20261011 |
 
-| Method | Accuracy | Balanced accuracy | Macro-F1 | Macro-AUROC |
+## Results
+
+All seven methods use the same target definition, subject partitions, test
+sample order, and evaluation code. Model and checkpoint selection use validation
+macro-F1; the test partition remains isolated until final evaluation.
+
+| Method | Family | Accuracy | Balanced accuracy | Macro-F1 | Macro-AUROC |
+|---|---|---:|---:|---:|---:|
+| Adapted stacking | Classical ensemble | **0.4698** | **0.3930** | **0.3755** | 0.5097 |
+| Paper-inspired attention | Deep learning | 0.4029 | 0.3732 | 0.3554 | **0.5117** |
+| kNN | Classical ML | 0.3901 | 0.3160 | 0.3020 | 0.4578 |
+| Random forest | Classical ML | 0.4560 | 0.3449 | 0.2933 | 0.4367 |
+| Logistic regression | Classical ML | 0.3361 | 0.2884 | 0.2791 | 0.4236 |
+| RBF SVM | Classical ML | 0.4524 | 0.3275 | 0.2533 | 0.3945 |
+| Base CNN | Deep learning | 0.3297 | 0.3584 | 0.2394 | 0.4843 |
+
+![Seven-model comparison](results/corrected/dreamer_arousal_3class/comparison_all.png)
+
+The stacking ensemble leads macro-F1 and balanced accuracy. The attention model
+improves macro-F1 by 0.1160 over Base CNN and has the highest macro-AUROC, but
+its 0.0019 AUROC advantage over stacking is too small to establish superiority
+with only three held-out participants.
+
+| Per-class behavior | Held-out-participant variability |
+|---|---|
+| ![Per-class F1](results/corrected/dreamer_arousal_3class/per_class_f1_comparison.png) | ![Subject-level macro-F1](results/corrected/dreamer_arousal_3class/subject_f1_comparison.png) |
+
+Detailed window-, trial-, class-, and participant-level results are available
+in the [experimental results report](docs/experimental-results.md).
+
+## Methods
+
+| Method | Input representation | Main configuration |
+|---|---|---|
+| Logistic regression | 276 handcrafted EEG/ECG/HRV features | C=10, balanced classes |
+| RBF SVM | 276 handcrafted features | C=1, gamma=`scale`, balanced classes |
+| Random forest | 276 handcrafted features | 500 trees, minimum leaf size 5 |
+| kNN | Scaled handcrafted features | k=5, distance weighting |
+| Adapted stacking | 64 ANOVA-selected features | 7 grouped-fold base learners + logistic meta-learner |
+| Base CNN | Raw EEG, raw ECG, HRV | Separate temporal branches and late concatenation |
+| Paper-inspired attention | Raw EEG, raw ECG, HRV | Multi-scale EEG, ECG/HRV fusion, learned modality attention |
+
+### Deep architectures
+
+| Model | Trainable parameters | Selected epoch | Epochs run | Test macro-F1 |
 |---|---:|---:|---:|---:|
-| Adapted stacking | **0.4698** | **0.3930** | **0.3755** | 0.5097 |
-| Paper-inspired attention | 0.4029 | 0.3732 | 0.3554 | **0.5117** |
-| kNN | 0.3901 | 0.3160 | 0.3020 | 0.4578 |
-| Random forest | 0.4560 | 0.3449 | 0.2933 | 0.4367 |
-| Logistic regression | 0.3361 | 0.2884 | 0.2791 | 0.4236 |
-| RBF SVM | 0.4524 | 0.3275 | 0.2533 | 0.3945 |
-| Base CNN | 0.3297 | 0.3584 | 0.2394 | 0.4843 |
+| Base CNN | 215,843 | 25 | 37 | 0.2394 |
+| Paper-inspired attention | 1,846,085 | 12 | 24 | 0.3554 |
 
-The adapted stack is retained as an independent classical comparator; it is not
-a reproduction or baseline from the client-requested 2026 paper.
-The attention model uses multi-scale temporal CNNs, raw ECG+HRV fusion, and
-learned modality attention; it does not implement the 2026 paper's CWT and
-VGG16/EfficientNetB0/ResNeXt50 image system.
+Both networks use AdamW, learning rate 3×10⁻⁴, weight decay 10⁻⁴, cosine
+scheduling, batch size 32, weighted cross-entropy, label smoothing 0.1, mixed
+precision, train-only augmentation, and early stopping with patience 12.
 
-## Repository structure
+| Base CNN training | Attention training |
+|---|---|
+| ![Base CNN curves](results/corrected/dreamer_arousal_3class/base_cnn/training_curves.png) | ![Attention curves](results/corrected/dreamer_arousal_3class/paper_inspired_attention/training_curves.png) |
+
+Both models overfit their training participants. See
+[methodology and reproducibility](docs/methodology-and-reproducibility.md) for
+the leakage controls, architecture details, and 2026-paper comparison.
+
+## Evaluation workflow
+
+```mermaid
+flowchart LR
+    A[DREAMER.mat] --> B[10-second windows<br/>zero overlap]
+    B --> C[Subject split<br/>17 train / 3 val / 3 test]
+    C --> D[Train-only preprocessing]
+    D --> E[Classical features]
+    D --> F[Raw EEG + ECG + HRV tensors]
+    E --> G[Classical ML and stacking]
+    F --> H[Base CNN]
+    F --> I[Attention CNN]
+    G --> J[Validation selection]
+    H --> J
+    I --> J
+    J --> K[One final test evaluation]
+    K --> L[Replay-verified metrics and figures]
+```
+
+Leakage controls include subject-disjoint partitions, zero temporal overlap,
+train-only scaler fitting, fold-local feature selection, validation-only model
+selection, and exact replay of saved predictions.
+
+## Repository layout
 
 ```text
-configs/                         fixed experiment configuration
-data/                            local raw data and tracked processed metadata
+configs/                         fixed experimental protocol
+data/                            dataset instructions and processed metadata
+docs/                            public scientific reports
+kaggle/                          reproducible Kaggle CPU/GPU notebooks
+modal/                           archived pre-migration execution prototype
 notebooks/
-  workflows/                     corrected, module-driven notebooks
-  exploratory/                   optional raw-data inspection
-  legacy/                        preserved pre-correction notebooks
-src/stress_classification/       reusable scientific pipeline
-src/legacy/                      helpers only for archived notebooks
+  workflows/                     corrected analysis notebooks
+  exploratory/                   optional dataset inspection
+  legacy/                        archived pre-correction notebooks
+results/
+  corrected/                     validated metrics, predictions, and figures
+  legacy/                        isolated leakage-affected historical outputs
 scripts/
-  data/                          audit, cache construction, optional CSV export
+  data/                          dataset audit and cache construction
   experiments/                   classical, stacking, ablation, and deep runs
   results/                       ingestion, comparison, and replay verification
-  reporting/                     DOCX, manifest, and delivery builders
-kaggle/                          reproducible private CPU/GPU notebook workflow
-modal/                           preserved, unused post-migration implementation
-results/
-  corrected/                     validated subject-independent measurements
-  legacy/                        isolated leakage-affected historical outputs
-.docs/                           technical reports and reviewer responses
-delivery/                        client-ready delivery snapshot and inventory
+  reporting/                     optional local document and package utilities
+src/stress_classification/       reusable preprocessing, modeling, and evaluation
+tests/                           automated protocol and implementation tests
 ```
 
-The package modules have narrow responsibilities: `data.py` constructs the
-window index; `preprocessing.py` filters signals and extracts HRV; `features.py`
-builds handcrafted features; `deep_data.py` serves cached tensors; `models.py`
-defines both CNNs; `training.py` handles seeded training/checkpoints; and
-`evaluation.py` produces replayable metrics and confusion matrices.
+Important entry points are summarized in [scripts/README.md](scripts/README.md),
+and notebook roles are documented in [notebooks/README.md](notebooks/README.md).
 
-The corrected notebooks are:
+## Dataset setup
 
-- `01_dataset_protocol_audit.ipynb`: target, split, non-overlap, and leakage checks.
-- `02_classical_ml_evaluation.ipynb`: corrected classical results.
-- `03_deep_learning_evaluation.ipynb`: architectures and validated GPU outputs.
+Download DREAMER from the
+[Kaggle dataset page](https://www.kaggle.com/datasets/phhasian0710/dreamer) and
+place `DREAMER.mat` at `data/DREAMER.mat`.
 
-## Dataset and protocol
+| Integrity property | Expected value |
+|---|---|
+| File size | 452,847,973 bytes |
+| SHA-256 | `35eed939e6f206a0938b13ba063178e2795ef1739b9cac8e5704a968393f3463` |
+| Generated windows | 8,372 |
+| Window duration / stride | 10 s / 10 s |
 
-Place `DREAMER.mat` at `data/DREAMER.mat`. The verified Kaggle source is
-`phhasian0710/dreamer`; its raw file SHA-256 is
-`35eed939e6f206a0938b13ba063178e2795ef1739b9cac8e5704a968393f3463`.
+The authoritative protocol is
+[`configs/dreamer_arousal_3class.yaml`](configs/dreamer_arousal_3class.yaml).
+The raw dataset and generated tensor cache are intentionally excluded from Git.
 
-- Target mapping: ratings 1–2 = low, 3 = medium, 4–5 = high.
-- Windows: 10 seconds, zero overlap.
-- Train/validation/test participants: 17/3/3.
-- Train/validation/test windows: 6,188/1,092/1,092.
-- Model selection: validation macro-F1 only.
-- Test set: evaluated after checkpoint/hyperparameter selection.
+## Installation
 
-The authoritative protocol is `configs/dreamer_arousal_3class.yaml`; tracked
-sample and split provenance is under `data/processed/`.
-
-## Environment
-
-Python 3.10 or newer is supported. Install the package and relevant extras:
+Python 3.10 or newer is supported.
 
 ```powershell
-python -m pip install -e ".[test,notebooks,reporting,kaggle]"
+python -m venv .venv
+.\.venv\Scripts\Activate.ps1
+python -m pip install --upgrade pip
+python -m pip install -e ".[test,notebooks,kaggle]"
 ```
 
-PyTorch GPU builds should match the execution platform. Exact Kaggle package,
-CUDA, and GPU versions are stored with each deep result.
+Install the PyTorch build appropriate for the local CUDA environment when GPU
+execution is required.
 
-## Reproduce and validate locally
+## Reproduce and verify
 
-From the repository root:
+### Validate the repository and saved experiments
 
 ```powershell
 $env:PYTEST_DISABLE_PLUGIN_AUTOLOAD = "1"
 python -m pytest
+python scripts/results/verify_experiment_artifacts.py
+```
 
+The verifier recomputes metrics from saved probabilities and checks the fixed
+sample order, labels, confusion matrices, comparison table, trial aggregation,
+per-class table, and participant-level table for all seven methods.
+
+### Rebuild preprocessing and classical experiments
+
+```powershell
 python scripts/data/audit_dataset.py --output-dir data/processed
 python scripts/data/build_deep_cache.py
 python scripts/experiments/train_classical_models.py
 python scripts/experiments/train_adapted_stacking.py
 python scripts/experiments/evaluate_modality_ablation.py
-
 python scripts/results/build_model_comparison.py
-python scripts/results/verify_experiment_artifacts.py
-python scripts/reporting/generate_reviewer_docx.py
-python scripts/reporting/build_artifact_manifest.py
 ```
 
-Classical runs can be reproduced locally. The completed deep experiments were
-executed on private Kaggle Tesla T4 notebooks. Regenerate their self-contained
-sources with `python kaggle/build_kernels.py`; submission, resumable checkpoint,
-download, and ingestion details are in `kaggle/README.md`. Do not retrain merely
-to regenerate reports.
+### Reproduce deep experiments on Kaggle
 
-## Results, checkpoints, and reports
+```powershell
+python kaggle/build_kernels.py
+```
 
-- Unified metrics and figures:
-  `results/corrected/dreamer_arousal_3class/`.
-- Deep histories, predictions, logs, confusion matrices, and metadata:
-  `base_cnn/` and `paper_inspired_attention/` below that directory.
-- Best/last PyTorch checkpoints remain local because `*.pt` is intentionally
-  excluded from Git; their sizes and SHA-256 hashes are in
-  `.docs/artifact_manifest.json` and the delivery inventory.
-- Final client report: `.docs/09_final_experimental_report.md`.
-- Persian final report: `.docs/09_final_experimental_report_fa.md` and the
-  B Nazanin RTL DOCX edition beside it.
-- Persian reviewer responses: `.docs/07_responses_to_reviewers_fa.md` and DOCX.
-- Reference-paper comparison:
-  `.docs/05_reference_paper_reproduction_and_differences.md`.
+The generated notebooks preserve the same configuration, sample IDs, seed,
+checkpoint logic, and artifact layout used by the completed Tesla T4 runs.
+Submission and artifact-ingestion instructions are in
+[`kaggle/README.md`](kaggle/README.md).
+
+## Result artifacts
+
+| Artifact | Location |
+|---|---|
+| Unified metrics | `results/corrected/dreamer_arousal_3class/comparison_all.csv` |
+| Per-class metrics | `results/corrected/dreamer_arousal_3class/per_class_metrics.csv` |
+| Participant metrics | `results/corrected/dreamer_arousal_3class/subject_metrics.csv` |
+| Base CNN run | `results/corrected/dreamer_arousal_3class/base_cnn/` |
+| Attention run | `results/corrected/dreamer_arousal_3class/paper_inspired_attention/` |
+| Stacking run | `results/corrected/dreamer_arousal_3class/paper_2023_adapted_stacking/` |
+| Replay verification | `results/corrected/dreamer_arousal_3class/verification_summary.json` |
+
+Large fitted models (`*.pt`, `*.joblib`) remain local and are excluded from Git.
+The tracked predictions, metrics, configurations, logs, and figures are
+sufficient to audit every reported measurement.
 
 ## Scientific limitations
 
-Only three participants are held out for testing, cross-participant variation
-is substantial, low-arousal recall remains weak, and both CNNs overfit their
-training participants. Historical random-window results are not comparable with
-the corrected measurements. The reported 95.7% accuracy from the 2026 paper is
-also not directly comparable because its stated datasets, labels, sensor setup,
-architecture, and evaluation population differ materially from this project.
+| Limitation | Consequence |
+|---|---|
+| Arousal is not equivalent to stress | Results cannot support clinical stress-detection claims |
+| Only three held-out participants | Small differences should not be treated as population-level superiority |
+| High-arousal class is largest | Accuracy can obscure weak minority-class recall |
+| Strong train/validation gaps | Both CNNs show cross-participant overfitting |
+| Ten-second HRV windows | Low-frequency HRV interpretation is limited |
+| Different task from the 2026 paper | Its reported 95.7% accuracy is not directly comparable |
+
+Historical random-window results remain under `results/legacy/` for provenance
+only and must not be compared with the corrected subject-independent results.
+
+## Documentation
+
+- [Experimental results](docs/experimental-results.md)
+- [Methodology, leakage controls, and reference-paper comparison](docs/methodology-and-reproducibility.md)

@@ -22,7 +22,11 @@ root, so commands may be launched from any working directory.
 - `results/build_model_comparison.py`: build unified tables and publication figures.
 - `results/verify_experiment_artifacts.py`: replay metrics from saved predictions.
 
-## Reporting
+## Optional local reporting
+
+These utilities support private/local handoff material under the Git-ignored
+`.docs/` and `delivery/` directories. They are not required to reproduce the
+public experiments or the reports under `docs/`.
 
 - `reporting/build_artifact_manifest.py`: hash curated and local artifacts.
 - `reporting/persian_docx.py`: shared B Nazanin and RTL Word-formatting helpers.
