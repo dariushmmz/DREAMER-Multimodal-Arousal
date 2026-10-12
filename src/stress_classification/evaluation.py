@@ -27,6 +27,27 @@ from sklearn.preprocessing import label_binarize
 from .labels import CLASS_NAMES
 
 
+def normalize_probabilities(probabilities: np.ndarray) -> np.ndarray:
+    """Return finite class scores normalized onto the probability simplex.
+
+    Mixed-precision inference can make float16 softmax rows differ slightly
+    from one.  Recent scikit-learn releases reject those otherwise valid rows
+    for multiclass ROC-AUC, so normalize once before every metric, aggregate,
+    and serialized prediction.
+    """
+    probability = np.asarray(probabilities, dtype=np.float64)
+    if probability.ndim != 2 or probability.shape[1] < 2:
+        raise ValueError("probabilities must have shape (samples, classes)")
+    if not np.isfinite(probability).all():
+        raise ValueError("probabilities contain non-finite values")
+    if np.any(probability < 0):
+        raise ValueError("probabilities contain negative values")
+    row_sums = probability.sum(axis=1, keepdims=True)
+    if np.any(row_sums <= 0):
+        raise ValueError("probability rows must have a positive sum")
+    return probability / row_sums
+
+
 def classification_metrics(
     y_true: np.ndarray,
     y_pred: np.ndarray,
@@ -69,7 +90,7 @@ def classification_metrics(
         ),
     }
     if probabilities is not None:
-        probability = np.asarray(probabilities, dtype=np.float64)
+        probability = normalize_probabilities(probabilities)
         binary = label_binarize(true, classes=labels)
         try:
             result["roc_auc_ovr_macro"] = float(
@@ -161,10 +182,11 @@ def save_evaluation(
 ) -> dict[str, object]:
     destination = Path(output_dir)
     destination.mkdir(parents=True, exist_ok=True)
-    predicted = np.asarray(probabilities).argmax(axis=1)
-    window_metrics = classification_metrics(y_true, predicted, probabilities, class_names=class_names)
+    probability = normalize_probabilities(probabilities)
+    predicted = probability.argmax(axis=1)
+    window_metrics = classification_metrics(y_true, predicted, probability, class_names=class_names)
     aggregate, trial_true, trial_pred, trial_prob = aggregate_probabilities(
-        metadata, y_true, probabilities, level="trial"
+        metadata, y_true, probability, level="trial"
     )
     trial_metrics = classification_metrics(
         trial_true, trial_pred, trial_prob, class_names=class_names
@@ -177,7 +199,7 @@ def save_evaluation(
     predictions["y_true"] = np.asarray(y_true, dtype=np.int64)
     predictions["y_pred"] = predicted
     for index, name in enumerate(class_names):
-        predictions[f"prob_{name}"] = probabilities[:, index]
+        predictions[f"prob_{name}"] = probability[:, index]
     predictions.to_csv(destination / "predictions.csv", index=False)
     aggregate["y_pred"] = trial_pred
     aggregate.to_csv(destination / "trial_predictions.csv", index=False)
