@@ -1,5 +1,5 @@
 {
-  "id": "amirmz/stressclassification-attention",
+  "id": "amirmz/stressclassification-paper-inspired-attention",
   "title": "StressClassification Paper-Inspired Attention",
   "code_file": "notebook.ipynb",
   "language": "python",
@@ -12,6 +12,6 @@
   ],
   "competition_sources": [],
   "kernel_sources": [
-    "amirmz/stressclassification-dreamer-cache"
+    "amirmz/stressclassification-dreamer-corrected-cache"
   ]
 }

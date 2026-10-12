@@ -27,7 +27,10 @@ def payload() -> tuple[str, str]:
     stream = io.BytesIO()
     with zipfile.ZipFile(stream, "w", compression=zipfile.ZIP_DEFLATED) as archive:
         for path in PAYLOAD_PATHS:
-            archive.writestr(path.relative_to(ROOT).as_posix(), path.read_bytes())
+            info = zipfile.ZipInfo(path.relative_to(ROOT).as_posix(), date_time=(2026, 1, 1, 0, 0, 0))
+            info.compress_type = zipfile.ZIP_DEFLATED
+            info.external_attr = 0o644 << 16
+            archive.writestr(info, path.read_bytes())
     data = stream.getvalue()
     return base64.b64encode(data).decode("ascii"), hashlib.sha256(data).hexdigest()
 
@@ -52,7 +55,16 @@ subprocess.run(command, check=True, cwd=project)
 '''
 
 
-def build(name: str, title: str, *, mode: str, model: str | None, gpu: bool, kernel_sources: list[str]) -> None:
+def build(
+    name: str,
+    title: str,
+    *,
+    mode: str,
+    model: str | None,
+    gpu: bool,
+    kernel_sources: list[str],
+    id_slug: str | None = None,
+) -> None:
     encoded, digest = payload()
     destination = OUTPUT / name
     destination.mkdir(parents=True, exist_ok=True)
@@ -83,7 +95,7 @@ def build(name: str, title: str, *, mode: str, model: str | None, gpu: bool, ker
     }
     (destination / "notebook.ipynb").write_text(json.dumps(notebook, indent=1) + "\n", encoding="utf-8")
     metadata = {
-        "id": f"{OWNER}/{name}",
+        "id": f"{OWNER}/{id_slug or name}",
         "title": title,
         "code_file": "notebook.ipynb",
         "language": "python",
@@ -112,7 +124,7 @@ def build(name: str, title: str, *, mode: str, model: str | None, gpu: bool, ker
 
 
 def main() -> None:
-    cache_kernel = f"{OWNER}/stressclassification-dreamer-cache"
+    cache_kernel = f"{OWNER}/stressclassification-dreamer-corrected-cache"
     build(
         "stressclassification-dreamer-cache",
         "StressClassification DREAMER Corrected Cache",
@@ -120,6 +132,7 @@ def main() -> None:
         model=None,
         gpu=False,
         kernel_sources=[],
+        id_slug="stressclassification-dreamer-corrected-cache",
     )
     build(
         "stressclassification-base-cnn",
@@ -136,6 +149,7 @@ def main() -> None:
         model="paper_inspired_attention",
         gpu=True,
         kernel_sources=[cache_kernel],
+        id_slug="stressclassification-paper-inspired-attention",
     )
 
 
