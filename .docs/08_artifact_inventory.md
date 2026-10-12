@@ -13,6 +13,7 @@
 | `7055739` | Validated Kaggle Base CNN artifacts and preprocessing evidence |
 | `e035199` | Validated Attention artifacts, exact replay check, and final comparison figures |
 | `fa2814a` | Delivery-oriented source, notebook, and validation-tool organization |
+| `30fd97f` | B Nazanin Persian report and corrected 2026-paper reviewer framing |
 
 The machine-readable inventory `.docs/artifact_manifest.json` records byte size,
 SHA-256, and Git tracking state for every curated artifact and local large file.

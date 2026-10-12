@@ -1,6 +1,6 @@
 {
-  "generated_at_utc": "2026-10-12T14:29:48.342225+00:00",
-  "git_head": "fdaefb50b5ee0d3d12d2570d4437cb6c23da5ec0",
+  "generated_at_utc": "2026-10-12T15:45:23.702720+00:00",
+  "git_head": "30fd97fb75fed27b5779b7cbcc3194d142c40aa7",
   "baseline_commit": "2c7b2fd",
   "restructure_commit": "afc21a8",
   "pipeline_commit": "43ba248",
@@ -12,8 +12,8 @@
   "entries": [
     {
       "path": ".docs/01_repository_audit.md",
-      "size_bytes": 3413,
-      "sha256": "b414cf35fd662dddb3a64bf4ac470dbc026e50bed1fc0769e8ce93b81eaf69f4",
+      "size_bytes": 3097,
+      "sha256": "20a49e3d424610d71b0f73e5dbb00ec2f06230a19c7a7b68f4fb647ab298ea89",
       "git_tracked": true
     },
     {
@@ -24,20 +24,20 @@
     },
     {
       "path": ".docs/03_models_and_experiment_configuration.md",
-      "size_bytes": 4308,
-      "sha256": "762fb2b1136eb0ff001c48662f357b1a3fc6432a43bc554c726a5d50c3c9ba6d",
+      "size_bytes": 4323,
+      "sha256": "7d2e7ff492dca8c59f9e242569f37c6688bbd9fa75d1d704c7d41fccff985e94",
       "git_tracked": true
     },
     {
       "path": ".docs/04_performance_and_comparison.md",
-      "size_bytes": 5556,
-      "sha256": "74d3f514a344d035a39efb27c73ee7c2b2f8bce4196641e4b13b63769172ae71",
+      "size_bytes": 5532,
+      "sha256": "c00fc995822da9919726a203d5122512c8061c7cde88d3481ccf5fc581fe19b5",
       "git_tracked": true
     },
     {
       "path": ".docs/05_reference_paper_reproduction_and_differences.md",
-      "size_bytes": 6113,
-      "sha256": "6e61136f7cf3297c06036aa6630672373d99a0568daf92a3faea679e71b0cfa7",
+      "size_bytes": 4801,
+      "sha256": "351727baddb8852b97c2372fe33bdd2507353ccee446035bb1c00b2a24b85170",
       "git_tracked": true
     },
     {
@@ -48,26 +48,38 @@
     },
     {
       "path": ".docs/07_responses_to_reviewers_fa.docx",
-      "size_bytes": 42386,
-      "sha256": "43b9cedb8c0f6905ad384433e6250fe109712166107d30d5b1dc0b226f102a61",
+      "size_bytes": 44402,
+      "sha256": "cd6d94461cdbe54f383420b518a3c56d688797c5015d86d1245fb5579efdd939",
       "git_tracked": true
     },
     {
       "path": ".docs/07_responses_to_reviewers_fa.md",
-      "size_bytes": 15155,
-      "sha256": "ff7db1e8e1de1bb811a7fadcdaa3aa3630c843d6cb6525a4d8727162c18e4481",
+      "size_bytes": 16509,
+      "sha256": "0cf04a827be9851a2bce568382e1c19270f95d3cbde6b27a9278926298704feb",
       "git_tracked": true
     },
     {
       "path": ".docs/08_artifact_inventory.md",
-      "size_bytes": 4482,
-      "sha256": "0e0144baf4bc360e49a3a71f80ff7a3b9e295dcb7c348fb0b128b87ad4017ea6",
+      "size_bytes": 4875,
+      "sha256": "82c0f2cca8e2b1c5f18ee1c240fed7df89f071e1810820e33f79a03c69480c58",
       "git_tracked": true
     },
     {
       "path": ".docs/09_final_experimental_report.md",
-      "size_bytes": 13063,
-      "sha256": "b8860a7e98f2b85d207d4ec916fcdeba8c85d8f39e67a208a57fdc25702fe15a",
+      "size_bytes": 13182,
+      "sha256": "cc92dd13e6fc597af67f390ef34517e11763f1e5e8e747cb89bd6682cb49b820",
+      "git_tracked": true
+    },
+    {
+      "path": ".docs/09_final_experimental_report_fa.docx",
+      "size_bytes": 786545,
+      "sha256": "0f360a60876c5f0c965cb78bf3a81882aaedf1d2656c73ad75103917a2b27b86",
+      "git_tracked": true
+    },
+    {
+      "path": ".docs/09_final_experimental_report_fa.md",
+      "size_bytes": 22790,
+      "sha256": "bf098f6436b58c04fadee5aedde161303ed59b8ee6c3a00771b8151455b8d311",
       "git_tracked": true
     },
     {
@@ -288,8 +300,8 @@
     },
     {
       "path": "README.md",
-      "size_bytes": 6519,
-      "sha256": "24443e4e0f71bc9c61768721cd6ee92658c6b0c1d8356fe83ac4f928457d44eb",
+      "size_bytes": 6698,
+      "sha256": "917ea4a8b1f04852b186b39618f31ae35d31488be230b8230327f23d5636906a",
       "git_tracked": true
     },
     {
@@ -1092,8 +1104,8 @@
     },
     {
       "path": "scripts/README.md",
-      "size_bytes": 1267,
-      "sha256": "168f661bc929febdc6f20fed0b7020bb727677bc38ceb83f07257f42a808d22f",
+      "size_bytes": 1458,
+      "sha256": "2f516f5c79cfe9fcefd5fb2bdec06f4aef610c96150b6a78a74de154b375366a",
       "git_tracked": true
     },
     {
@@ -1104,14 +1116,26 @@
     },
     {
       "path": "scripts/reporting/build_delivery_package.py",
-      "size_bytes": 10852,
-      "sha256": "3aa4fd8184492cc051389ed8e098a5e4ffe23690cab30a8cad75dd8fca6b6751",
+      "size_bytes": 11209,
+      "sha256": "973823a1fb473b762300497887d3c6fbf5331e9fa14e1c6e508d271e236d9b6c",
+      "git_tracked": true
+    },
+    {
+      "path": "scripts/reporting/generate_final_report_docx.py",
+      "size_bytes": 17219,
+      "sha256": "d2dadc8f04819d330538d9868b3527ba80101b5a30e9fcef2dd705b85d6bded1",
       "git_tracked": true
     },
     {
       "path": "scripts/reporting/generate_reviewer_docx.py",
-      "size_bytes": 5885,
-      "sha256": "7445184f771d4887d033f27a884b8a0bd645a19d057555f6710ae0c434d7b228",
+      "size_bytes": 5948,
+      "sha256": "32045154c86a9b49cd4821d04c5b15f7cb7fcc89b4dedf62d9130ef780bded88",
+      "git_tracked": true
+    },
+    {
+      "path": "scripts/reporting/persian_docx.py",
+      "size_bytes": 6546,
+      "sha256": "8d83a877d1b5ed8b276b22154fc633973875e26a7d70acd7ab19227108a623f6",
       "git_tracked": true
     },
     {
