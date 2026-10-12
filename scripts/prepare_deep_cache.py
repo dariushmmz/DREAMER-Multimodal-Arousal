@@ -23,17 +23,18 @@ from stress_classification.splits import SubjectSplit  # noqa: E402
 def main() -> None:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--config", type=Path, default=PROJECT_ROOT / "configs" / "dreamer_arousal_3class.yaml")
+    parser.add_argument("--mat", type=Path, help="Override the raw DREAMER .mat path from the config")
     parser.add_argument("--window-index", type=Path, default=PROJECT_ROOT / "data" / "processed" / "window_index.csv")
     parser.add_argument("--output-dir", type=Path, default=PROJECT_ROOT / "data" / "processed" / "deep_cache")
     args = parser.parse_args()
     config = load_config(args.config)
     split = SubjectSplit.from_mapping(config["split"])
     index = pd.read_csv(args.window_index)
-    data = load_dreamer(PROJECT_ROOT / config["dataset"]["mat_path"])
+    mat_path = args.mat or (PROJECT_ROOT / config["dataset"]["mat_path"])
+    data = load_dreamer(mat_path)
     manifest = write_deep_cache(data, index, args.output_dir, split)
     print(json.dumps(manifest["shapes"], indent=2))
 
 
 if __name__ == "__main__":
     main()
-

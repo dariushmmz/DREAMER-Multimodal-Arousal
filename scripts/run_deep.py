@@ -26,6 +26,7 @@ def main() -> None:
     parser.add_argument("--cache-dir", type=Path, default=PROJECT_ROOT / "data" / "processed" / "deep_cache")
     parser.add_argument("--output-dir", type=Path)
     parser.add_argument("--device")
+    parser.add_argument("--resume-checkpoint", type=Path)
     args = parser.parse_args()
     output = args.output_dir or (
         PROJECT_ROOT / "results" / "corrected" / "dreamer_arousal_3class" / args.model
@@ -37,10 +38,10 @@ def main() -> None:
         window_index=pd.read_csv(args.window_index),
         output_dir=output,
         device_name=args.device,
+        resume_checkpoint=args.resume_checkpoint,
     )
     print(json.dumps(result["metadata"], indent=2))
 
 
 if __name__ == "__main__":
     main()
-

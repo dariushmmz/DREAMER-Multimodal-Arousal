@@ -147,6 +147,7 @@ def train_experiment(
     window_index: pd.DataFrame,
     output_dir: str | Path,
     device_name: str | None = None,
+    resume_checkpoint: str | Path | None = None,
 ) -> dict[str, object]:
     started = time.perf_counter()
     seed = int(config["experiment"]["seed"])
@@ -204,7 +205,41 @@ def train_experiment(
     history_rows: list[dict[str, float | int]] = []
     log_path = destination / "training_log.jsonl"
     checkpoint_path = destination / "best_checkpoint.pt"
-    for epoch in range(1, int(settings["epochs"]) + 1):
+    last_checkpoint_path = destination / "last_checkpoint.pt"
+    start_epoch = 1
+    best_model_state: dict[str, torch.Tensor] | None = None
+    if resume_checkpoint is not None:
+        resume_path = Path(resume_checkpoint)
+        resume = torch.load(resume_path, map_location=device)
+        if resume.get("model_name") != model_name:
+            raise ValueError(f"resume checkpoint is for {resume.get('model_name')!r}, not {model_name!r}")
+        model.load_state_dict(resume["model_state_dict"])
+        optimizer.load_state_dict(resume["optimizer_state_dict"])
+        scheduler.load_state_dict(resume["scheduler_state_dict"])
+        if "scaler_state_dict" in resume:
+            scaler.load_state_dict(resume["scaler_state_dict"])
+        start_epoch = int(resume["epoch"]) + 1
+        best_f1 = float(resume["best_validation_f1_macro"])
+        best_epoch = int(resume["best_epoch"])
+        stale_epochs = int(resume["stale_epochs"])
+        history_rows = list(resume.get("history_rows", []))
+        best_model_state = resume.get("best_model_state_dict")
+        if best_model_state is not None:
+            torch.save(
+                {
+                    "model_name": model_name,
+                    "model_state_dict": best_model_state,
+                    "epoch": best_epoch,
+                    "validation_f1_macro": best_f1,
+                    "config": config,
+                },
+                checkpoint_path,
+            )
+        if history_rows and not log_path.exists():
+            with log_path.open("w", encoding="utf-8") as handle:
+                for previous_row in history_rows:
+                    handle.write(json.dumps(previous_row) + "\n")
+    for epoch in range(start_epoch, int(settings["epochs"]) + 1):
         train_loss, train_accuracy, train_f1 = _epoch(
             model,
             loaders["train"],
@@ -235,10 +270,13 @@ def train_experiment(
             best_f1 = validation_f1
             best_epoch = epoch
             stale_epochs = 0
+            best_model_state = {
+                name: value.detach().cpu().clone() for name, value in model.state_dict().items()
+            }
             torch.save(
                 {
                     "model_name": model_name,
-                    "model_state_dict": model.state_dict(),
+                    "model_state_dict": best_model_state,
                     "epoch": epoch,
                     "validation_f1_macro": validation_f1,
                     "config": config,
@@ -248,6 +286,23 @@ def train_experiment(
         else:
             stale_epochs += 1
         scheduler.step()
+        torch.save(
+            {
+                "model_name": model_name,
+                "model_state_dict": model.state_dict(),
+                "optimizer_state_dict": optimizer.state_dict(),
+                "scheduler_state_dict": scheduler.state_dict(),
+                "scaler_state_dict": scaler.state_dict(),
+                "epoch": epoch,
+                "best_epoch": best_epoch,
+                "best_validation_f1_macro": float(best_f1),
+                "stale_epochs": stale_epochs,
+                "history_rows": history_rows,
+                "best_model_state_dict": best_model_state,
+                "config": config,
+            },
+            last_checkpoint_path,
+        )
         if stale_epochs >= int(settings["early_stopping_patience"]):
             break
     checkpoint = torch.load(checkpoint_path, map_location=device)
