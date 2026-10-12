@@ -15,11 +15,11 @@
 
 | Artifact | Role | Audit finding |
 |---|---|---|
-| `notebooks/base_multimodal.ipynb` | Three-branch temporal CNN | Three-class valence; 10 s windows with 50% overlap; random 70/15/15 window split |
-| `notebooks/attention_multimodal.ipynb` | Multi-scale CNN with attention-like fusion | Three-class valence; same overlap and split leakage |
-| `notebooks/ml_models.ipynb` | SVM, random forest, kNN | Three-class arousal; random 80/20 window split; not comparable to deep models |
-| `src/eval_metrics.py` | Deep-model plots and metrics | Weighted metrics only; no provenance or subject-level audit |
-| `src/metrics.py` | Classical metrics | Macro metrics, but no group-aware evaluation |
+| `notebooks/legacy/legacy_base_multimodal_cnn.ipynb` | Three-branch temporal CNN | Three-class valence; 10 s windows with 50% overlap; random 70/15/15 window split |
+| `notebooks/legacy/legacy_attention_multimodal_cnn.ipynb` | Multi-scale CNN with attention-like fusion | Three-class valence; same overlap and split leakage |
+| `notebooks/legacy/legacy_classical_ml.ipynb` | SVM, random forest, kNN | Three-class arousal; random 80/20 window split; not comparable to deep models |
+| `src/legacy/eval_metrics.py` | Deep-model plots and metrics | Weighted metrics only; no provenance or subject-level audit |
+| `src/legacy/metrics.py` | Classical metrics | Macro metrics, but no group-aware evaluation |
 | `results/legacy/window_level_random_split/` | Historical outputs | Preserved; scientifically invalid for subject-independent claims |
 
 The legacy pipeline generated 16,606 windows. Its saved test results were
@@ -54,6 +54,6 @@ reports.
 - Existing reports moved to `.docs/legacy/`.
 - Existing results moved to
   `results/legacy/window_level_random_split/` and labeled as historical.
-- The CSV conversion utility moved to `scripts/convert_dreamer_csv.py`.
+- The optional CSV conversion utility is `scripts/data/export_dreamer_csv.py`.
 - Reusable code, configurations, tests, Kaggle execution, and corrected results
   are separated into dedicated directories.

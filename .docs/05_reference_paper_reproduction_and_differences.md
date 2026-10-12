@@ -63,13 +63,32 @@ and tasks were equivalent.
 |---|---|---|
 | Dataset | WESAD + CASE, 35 subjects | DREAMER, 23 subjects |
 | Ground truth | Rest/stress/amusement protocol states | Self-reported low/medium/high arousal |
-| Modalities | Claimed EEG + ECG + HRV | Actual DREAMER 14-channel EEG + ECG-derived HRV |
+| Modalities | Claimed EEG + ECG + HRV | DREAMER 14-channel EEG + raw ECG + ECG-derived HRV |
 | Epochs | 10 s, no overlap | 10 s, no overlap |
 | Split | Claimed subject-independent 80/10/10 | Fixed subject-independent 17/3/3 |
 | EEG representation | CWT 128×128×3, three ImageNet backbones | Raw temporal multi-scale Conv1D adaptation |
 | ECG representation | Raw CNN then three 2D backbones + 25 HRV | Raw Conv1D + 25 HRV descriptors |
 | Parameters | 42.7 M reported | 1.846 M attention adaptation |
 | Claim | Stress-state detection | Arousal classification only |
+
+## Evidence status and adapted concepts
+
+The following distinctions govern all claims in this project:
+
+- **Verified from the local PDF:** the paper describes 10-second epochs, CWT
+  images, three image backbones, raw ECG and 25 HRV variables, hierarchical
+  attention, a 512→256→128→3 head, 42.7 M parameters, and 95.7% accuracy.
+- **Verified from primary dataset documentation:** the published sensor lists
+  for WESAD and CASE do not include the EEG configurations attributed to them
+  in the paper. This prevents reconstruction of the reported input population
+  from the named public datasets alone.
+- **Adapted in this project:** non-overlapping 10-second windows, multi-scale
+  EEG processing, joint raw-ECG and HRV representation, modality attention,
+  a 512→256→128→3 head, Adam-family optimization, and cosine scheduling.
+- **Not reproduced:** WESAD+CASE population, rest/stress/amusement labels, CWT
+  images, VGG16/EfficientNetB0/ResNeXt50 branches, 42.7 M parameter scale, and
+  the reported split. These are substantive experimental differences, not
+  implementation details.
 
 ## Empirical outcome of the transparent adaptation
 

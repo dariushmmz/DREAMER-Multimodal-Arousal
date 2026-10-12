@@ -70,5 +70,5 @@ regenerated from the saved test probabilities—without retraining or changing
 any prediction—and the raw Kaggle files and their SHA-256 hashes were retained.
 Attention was submitted with the normalization correction already embedded.
 Final postprocessing treats the persisted CSV as canonical so rank metrics
-replay exactly even for tied scores; `scripts/verify_corrected_results.py`
+replay exactly even for tied scores; `scripts/results/verify_experiment_artifacts.py`
 confirms consistency for all seven models.
