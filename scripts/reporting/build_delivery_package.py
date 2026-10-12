@@ -62,9 +62,7 @@ def copy_reports() -> None:
     mapping = {
         "09_final_experimental_report.md": "FINAL_EXPERIMENTAL_REPORT.md",
         "09_final_experimental_report_fa.md": "FINAL_EXPERIMENTAL_REPORT_FA.md",
-        "09_final_experimental_report_fa.docx": "FINAL_EXPERIMENTAL_REPORT_FA.docx",
         "07_responses_to_reviewers_fa.md": "REVIEWER_RESPONSES_FA.md",
-        "07_responses_to_reviewers_fa.docx": "REVIEWER_RESPONSES_FA.docx",
         "05_reference_paper_reproduction_and_differences.md": "REFERENCE_PAPER_COMPARISON.md",
         "02_dataset_target_overlap_and_leakage.md": "DATA_AND_LEAKAGE_AUDIT.md",
         "03_models_and_experiment_configuration.md": "MODEL_CONFIGURATIONS.md",
@@ -114,16 +112,16 @@ def copy_results_and_models() -> None:
 def write_delivery_readme() -> None:
     text = """# StressClassification final client delivery
 
-This package contains the final experimental report in English Markdown and
-Persian Markdown/B Nazanin RTL DOCX, Persian reviewer responses in Markdown and
-B Nazanin RTL DOCX, the 2026 reference-paper comparison, reproducible source,
-validated corrected results, and fitted model files.
+This package contains the final experimental reports in English and Persian
+Markdown, Persian reviewer responses in Markdown, the 2026 reference-paper
+comparison, reproducible source, validated corrected results, and fitted model
+files. DOCX files are intentionally excluded from the delivery package.
 
 ## Start here
 
-1. Read `reports/FINAL_EXPERIMENTAL_REPORT_FA.docx` for the Persian client report
-   or `reports/FINAL_EXPERIMENTAL_REPORT.md` for the English Markdown report.
-2. Reviewer responses are in `reports/REVIEWER_RESPONSES_FA.md` and `.docx`.
+1. Read `reports/FINAL_EXPERIMENTAL_REPORT_FA.md` for the Persian client report
+   or `reports/FINAL_EXPERIMENTAL_REPORT.md` for the English report.
+2. Reviewer responses are in `reports/REVIEWER_RESPONSES_FA.md`.
 3. `reports/REFERENCE_PAPER_COMPARISON.md` explains why the 2026 result is not
    directly comparable and why the implemented attention model is an adaptation.
 4. Reproduction commands and project layout are in `source/README.md`.
@@ -135,6 +133,28 @@ method are documented in `manifests/CHECKPOINTS_AND_DATA.md`. Fitted PyTorch
 and classical model binaries are included under `artifacts/model_binaries/`.
 """
     (PACKAGE_ROOT / "README_DELIVERY.md").write_text(text, encoding="utf-8")
+
+
+def write_delivery_root_readme() -> None:
+    text = """# Client delivery
+
+`StressClassification_Final/` is the canonical delivery tree. It contains the
+final Markdown reports, organized reproducible source snapshot, processed
+metadata, validated result artifacts, figures, and local fitted-model files.
+DOCX reports are intentionally excluded.
+
+Run the following to rebuild the directory and deterministic archive:
+
+```powershell
+python scripts/reporting/build_delivery_package.py --zip
+```
+
+Large `*.pt` and `*.joblib` files inside the delivery tree and the generated ZIP
+are intentionally excluded from Git. They remain available locally and are
+covered by `StressClassification_Final/manifests/package_manifest.json` and
+`delivery_checksums.json`.
+"""
+    (DELIVERY_ROOT / "README.md").write_text(text, encoding="utf-8")
 
 
 def write_large_artifact_inventory() -> None:
@@ -256,6 +276,7 @@ def build(include_zip: bool) -> None:
     copy_data_metadata()
     copy_results_and_models()
     write_delivery_readme()
+    write_delivery_root_readme()
     write_large_artifact_inventory()
     manifest_path = write_package_manifest()
     if include_zip:
