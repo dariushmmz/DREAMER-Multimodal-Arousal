@@ -1,12 +1,14 @@
 # StressClassification final client delivery
 
-This package contains the final experimental report, Persian reviewer responses
-in Markdown and RTL DOCX, reference-paper comparison, reproducible source,
+This package contains the final experimental report in English Markdown and
+Persian Markdown/B Nazanin RTL DOCX, Persian reviewer responses in Markdown and
+B Nazanin RTL DOCX, the 2026 reference-paper comparison, reproducible source,
 validated corrected results, and fitted model files.
 
 ## Start here
 
-1. Read `reports/FINAL_EXPERIMENTAL_REPORT.md`.
+1. Read `reports/FINAL_EXPERIMENTAL_REPORT_FA.docx` for the Persian client report
+   or `reports/FINAL_EXPERIMENTAL_REPORT.md` for the English Markdown report.
 2. Reviewer responses are in `reports/REVIEWER_RESPONSES_FA.md` and `.docx`.
 3. `reports/REFERENCE_PAPER_COMPARISON.md` explains why the 2026 result is not
    directly comparable and why the implemented attention model is an adaptation.

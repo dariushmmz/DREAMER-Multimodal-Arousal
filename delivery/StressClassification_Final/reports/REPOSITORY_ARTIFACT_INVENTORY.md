@@ -7,12 +7,13 @@
 | `2c7b2fd` | Initial preservation baseline; original code/results untouched |
 | `afc21a8` | Repository restructuring and explicit legacy labeling |
 | `43ba248` | Non-overlapping, subject-independent pipeline, tests, config, cache, and bounded remote job |
-| `8aa7772` | Corrected classical results, modality audit, adapted 2023 baseline, and initial reviewer reports |
+| `8aa7772` | Corrected classical results, modality audit, stacking comparator, and initial reviewer reports |
 | `0509a1e` | Reproducible Kaggle CPU/GPU notebook workflow |
 | `60b84e8` | Float64 probability normalization and AUROC regression test |
 | `7055739` | Validated Kaggle Base CNN artifacts and preprocessing evidence |
 | `e035199` | Validated Attention artifacts, exact replay check, and final comparison figures |
 | `fa2814a` | Delivery-oriented source, notebook, and validation-tool organization |
+| `30fd97f` | B Nazanin Persian report and corrected 2026-paper reviewer framing |
 
 The machine-readable inventory `.docs/artifact_manifest.json` records byte size,
 SHA-256, and Git tracking state for every curated artifact and local large file.
@@ -44,7 +45,7 @@ SHA-256, and Git tracking state for every curated artifact and local large file.
 
 - Classical models: `results/corrected/dreamer_arousal_3class/classical/`
 - Modality ablation: `results/corrected/dreamer_arousal_3class/modality_ablation/`
-- Adapted 2023 stack:
+- Adapted stacking comparator (not the 2026 reference baseline):
   `results/corrected/dreamer_arousal_3class/paper_2023_adapted_stacking/`
 - Base CNN: `results/corrected/dreamer_arousal_3class/base_cnn/`
 - Paper-inspired attention:
@@ -69,7 +70,10 @@ are never used by the comparison builder.
 
 ## Final reports and client delivery
 
-- Final experimental report: `.docs/09_final_experimental_report.md`
+- Final experimental report: `.docs/09_final_experimental_report.md`, plus the
+  Persian source and B Nazanin RTL Word edition at
+  `.docs/09_final_experimental_report_fa.md` and
+  `.docs/09_final_experimental_report_fa.docx`
 - Final Persian reviewer responses: `.docs/07_responses_to_reviewers_fa.md`
   and `.docs/07_responses_to_reviewers_fa.docx`
 - Reference-paper comparison:
@@ -79,7 +83,9 @@ are never used by the comparison builder.
 - Package checksum record: `delivery/delivery_checksums.json`
 
 The package contains the reproducible source, curated corrected results,
-reports, figures, predictions, logs, and fitted-model binaries. The raw DREAMER
+reports in Markdown and DOCX, figures, predictions, logs, and fitted-model
+binaries. Both Persian DOCX deliverables use B Nazanin and validated RTL
+paragraph/table formatting. The raw DREAMER
 file and derived deep tensor cache remain outside the package; the package's
 `manifests/CHECKPOINTS_AND_DATA.md` records their exact sizes, SHA-256 values,
 expected locations, and reconstruction procedure. This makes the omission

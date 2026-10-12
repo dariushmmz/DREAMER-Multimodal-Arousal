@@ -19,15 +19,15 @@ training portion relevant to each model/fold.
 
 Selection metric is validation macro-F1. No model is refit with test data.
 
-### 2023-paper adapted stacking
+### Adapted stacking ensemble (separate comparator)
 
-The adaptation uses the paper's NB, LR, AdaBoost, kNN, RF, linear SVM, and RBF
-SVM base learners, ANOVA F-value feature ranking (64 selected features), and a
+The ensemble uses NB, LR, AdaBoost, kNN, RF, linear SVM, and RBF SVM base
+learners, ANOVA F-value feature ranking (64 selected features), and a
 logistic-regression meta learner. Five-fold out-of-fold base predictions are
 created with `GroupKFold`, so held-out subjects never occur in a fold's fit
 set. The meta-model C is selected from 0.1, 1, and 10 on the validation subjects;
-C=10 was selected. This is not a faithful stress reproduction because DREAMER
-arousal is not EO/AC1/AC2 stress and the acquisition hardware differs.
+C=10 was selected. This is a separate classical comparator and is not presented
+as a reproduction or baseline from the client-requested 2026 attention paper.
 
 ## Base multimodal CNN
 
